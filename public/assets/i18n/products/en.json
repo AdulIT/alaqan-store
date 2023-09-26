@@ -1,0 +1,90 @@
+{
+    "all": [
+        {
+            "name": "TS2000 Pro Turnstile",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "Turnstile TS1000M Pro",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "Turnstile FBL700",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "Locker Mini",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "Locker Small",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "Locker Medium",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "Locker Large",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "AirPalm Scanner",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "Internal Palm Scanner",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "Time tracking terminal",
+            "price": "from {{price}}"
+        }
+    ],
+    "turnstile": [
+        {
+            "name": "TS2000 Pro Turnstile",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "Turnstile TS1000M Pro",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "Turnstile FBL700",
+            "price": "from {{price}}"
+        }
+    ],
+    "locker": [
+        {
+            "name": "Locker Mini",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "Locker Small",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "Locker Medium",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "Locker Large",
+            "price": "from {{price}}"
+        }
+    ],
+    "scaner": [
+        {
+            "name": "AirPalm Scanner",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "Internal Palm Scanner",
+            "price": "from {{price}}"
+        },
+        {
+            "name": "Time tracking terminal",
+            "price": "from {{price}}"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+.hamburger
+{
+    position: relative;
+    width: 44px;
+    height: 44px;
+    padding: 13px;
+    border-radius: 10px;
+    background: #F5F5F7;
+    cursor: pointer;
+    display: flex;
+    place-content: center;
+    gap: 3px;
+    flex-direction: column;
+}
+
+.hamburger__item
+{
+    display: block;
+    width: 18px;
+    height: 3px;
+    background-color: #889097;
+    border-radius: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.close_btn:first-child, .close_btn:last-child
+{
+    position: absolute;
+    top: 36px;
+    transform: translateY(-50%) rotate(45deg);
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+}
+
+.close_btn:nth-child(2)
+{
+    display: none;
+}
+
+.close_btn:last-child
+{
+    transform: translateY(-50%) rotate(135deg);
+    -webkit-transform: translateY(-50%) rotate(135deg);
+    -moz-transform: translateY(-50%) rotate(135deg);
+    -ms-transform: translateY(-50%) rotate(135deg);
+}
+
+@media screen and (max-width: 575px) {
+    .close_btn:first-child, .close_btn:last-child
+    {
+        top: 30px;
+    }
+}

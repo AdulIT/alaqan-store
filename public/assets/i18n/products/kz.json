@@ -1,0 +1,90 @@
+{
+    "all": [
+        {
+            "name": "TS2000 Pro Турникеті",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "TS1000M Pro Турникеті",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "FBL700 Турникеті",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "Құлыпталатын шкаф Mini",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "Құлыпталатын шкаф Small",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "Құлыпталатын шкаф Medium",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "Құлыпталатын шкаф Large",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "AirPalm Сканері",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "InternalPalm Сканері",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "Уақытты есепке алу терминалы",
+            "price": "{{price}} бастап"
+        }
+    ],
+    "turnstile": [
+        {
+            "name": "TS2000 Pro Турникеті",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "TS1000M Pro Турникеті",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "FBL700 Турникеті",
+            "price": "{{price}} бастап"
+        }
+    ],
+    "locker": [
+        {
+            "name": "Құлыпталатын шкаф Mini",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "Құлыпталатын шкаф Small",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "Құлыпталатын шкаф Medium",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "Құлыпталатын шкаф Large",
+            "price": "{{price}} бастап"
+        }
+    ],
+    "scaner": [
+        {
+            "name": "AirPalm Сканері",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "InternalPalm Сканері",
+            "price": "{{price}} бастап"
+        },
+        {
+            "name": "Уақытты есепке алу терминалы",
+            "price": "{{price}} бастап"
+        }
+    ]
+}

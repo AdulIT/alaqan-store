@@ -1,0 +1,90 @@
+{
+    "all": [
+        {
+            "name": "Турникет TS2000 Pro",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Турникет TS1000M Pro",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Туникет FBL700",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Локер Mini",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Локер Small",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Локер Medium",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Локер Large",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Сканер AirPalm",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Сканер InternalPalm",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Терминал учета рабочего времени",
+            "price": "от {{price}}"
+        }
+    ],
+    "turnstile": [
+        {
+            "name": "Турникет TS2000 Pro",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Турникет TS1000M Pro",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Туникет FBL700",
+            "price": "от {{price}}"
+        }
+    ],
+    "locker": [
+        {
+            "name": "Локер Mini",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Локер Small",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Локер Medium",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Локер Large",
+            "price": "от {{price}}"
+        }
+    ],
+    "scaner": [
+        {
+            "name": "Сканер AirPalm",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Сканер InternalPalm",
+            "price": "от {{price}}"
+        },
+        {
+            "name": "Терминал учета рабочего времени",
+            "price": "от {{price}}"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+.main
+{
+    padding-top: 135px;
+    min-height: calc(1434px - 80px);
+    background: url(../../assets/img/products/bg-product.jpg) center center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.main_product__title,
+.main_product__descr
+{
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
+}
+.main_product__descr
+{
+    margin: 18px auto 0;
+    font-size: 32px;
+    font-weight: 500;
+    width: 684px;
+}

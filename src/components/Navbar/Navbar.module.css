@@ -1,0 +1,45 @@
+.menu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu__item
+{
+    padding: 10px 19px 12px;
+    border-radius: 16px;
+}
+.menu__link
+{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%; /* 21.6px */
+}
+.menu__item:hover
+{
+    background: #f8f8fb;
+}
+.current
+{
+    background: #F5F5F7;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 991px) {
+    .menu__item
+    {
+        padding: 10px 10px 12px;
+        border-radius: 16px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* .nav
+    {
+        display: none;
+    } */
+}

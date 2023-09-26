@@ -1,0 +1,17 @@
+.subheader {
+    padding: 18px 0;
+    background-color: #fff;
+}
+
+.subheader_title
+{
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.subheader_btns {
+    display: flex;
+    gap: 10px;
+}

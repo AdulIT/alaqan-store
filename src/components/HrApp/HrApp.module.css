@@ -1,0 +1,100 @@
+.hrapp
+{
+    padding: 60px 100px;
+}
+
+.title
+{
+    display: flex;
+    justify-content: center;
+    color: var(--heading-color);
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 100%; /* 56px */
+    letter-spacing: -2.24px;
+    gap: 16px;
+}
+
+.title_underlined
+{
+    position: relative;
+    display: flex;
+}
+.title_underlined::after
+{
+    content: url(../../assets/icons/prefectUnderline.svg);
+    position: absolute;
+    top: 30px;
+    left: -20%;
+}
+
+@media screen and (max-width: 1202px)
+{
+    .hrapp
+    {
+        padding: 60px;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    .hrapp
+    {
+        padding: 60px 0;
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    .hrapp
+    {
+        padding: 64px 0 32px;
+    }
+    .title
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 44px;
+        letter-spacing: -1.76px;
+    }
+    .title_underlined::after
+    {
+        left: -5%;
+    }
+}
+
+@media screen and (max-width: 575px)
+{
+    .hrapp
+    {
+        padding: 64px 16px 32px;
+    }
+    .title
+    {
+        text-align: center;
+        gap: 0;
+    }
+    .title_underlined::after
+    {
+        left: -5%;
+    }
+}
+
+@media screen and (max-width: 410px)
+{
+    .hrapp
+    {
+        padding: 64px 0;
+    }
+    .title
+    {
+        font-size: 32px;
+    }
+    .title_underlined::after
+    {
+        width: 80%;
+        left: -80%;
+    }
+}

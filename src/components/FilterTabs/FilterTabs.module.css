@@ -1,0 +1,27 @@
+.products_page
+{
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+.filters
+{
+    margin: 20px auto;
+    max-width: 544px;
+}
+.tabs
+{
+    margin: 20px auto;
+    vertical-align: middle;
+    display: inline-flex;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 38px;
+    background-color: #fff;
+}
+.btn__mobile:hover
+{
+    background-color: #F5F5F7 !important;
+    color: #1D1D1F !important;
+}
