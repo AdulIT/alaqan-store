@@ -6,7 +6,7 @@ import iphoneMockup from '../../assets/img/mobileApp/iPhone.png'
 import mobileiPhoneMockup from '../../assets/img/mobileApp/mobileiPhone.png'
 
 const MobileApp = () => {
-    const { t } = useTranslation(["home", "mobileApp"])
+    const { t } = useTranslation("mobileApp")
 
     return (
         <section className={cl.mobileapp} id="mobileapp">
@@ -14,10 +14,10 @@ const MobileApp = () => {
             <img className={cl.mobileapp__img_mobile} src={mobileiPhoneMockup} alt="iphone-mockup" />
             <div className={cl.mobileapp__text}>
                 <h3 className={cl.mobileapp__text_title}>
-                    {t("home:homeMobileTitle")}
+                    {t("mobileappTitle")}
                 </h3>
                 <p className={cl.mobileapp__text_descr}>
-                    {t("mobileApp:mobileappText")}
+                    {t("mobileappText")}
                 </p>
             </div>
         </section>

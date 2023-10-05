@@ -1,10 +1,10 @@
-import ts2000 from '../assets/img/products/ts2000.png'
+import ts2000 from '../assets/img/products/ts2000.svg'
 import ts1000 from '../assets/img/products/TS1000MPro.svg'
-import fbl700 from '../assets/img/products/fbl700.png'
-import lockerMini from '../assets/img/products/locker-mini-nobg.png'
-import lockerSmall from '../assets/img/products/locker-sm-nobg.png'
-import lockerMedium from '../assets/img/products/locker-md-nobg.png'
-import lockerLarge from '../assets/img/products/locker-l-nobg.png'
+import fbl700 from '../assets/img/products/fbl700.svg'
+import lockerMini from '../assets/img/products/locker-mini-nobg-2x.png'
+import lockerSmall from '../assets/img/products/locker-sm-nobg-2x.png'
+import lockerMedium from '../assets/img/products/locker-md-nobg-2x.png'
+import lockerLarge from '../assets/img/products/locker-l-nobg-1,5x.png'
 import airPalm from '../assets/img/products/airpalm.svg'
 import internalPalm from '../assets/img/products/internalPalm.svg'
 import terminalT1 from '../assets/img/products/terminalT1.svg'
@@ -17,6 +17,7 @@ const products = [
         name: 'Турникет TS2000 Pro',
         price: '1 250 000 ₸',
         type: 'turnstile',
+        tag: 'hit',
     },
     {
         id: 2,
@@ -25,6 +26,7 @@ const products = [
         name: 'Турникет TS1000M Pro',
         price: '1 250 000 ₸',
         type: 'turnstile',
+        tag: null,
     },
     {
         id: 3,
@@ -33,6 +35,7 @@ const products = [
         name: 'Туникет FBL700',
         price: '1 250 000 ₸',
         type: 'turnstile',
+        tag: null,
     },
     {
         id: 4,
@@ -41,6 +44,7 @@ const products = [
         name: 'Локер mini',
         price: '1 250 000 ₸',
         type: 'locker',
+        tag: null,
     },
     {
         id: 5,
@@ -49,6 +53,7 @@ const products = [
         name: 'Локер small',
         price: '1 250 000 ₸',
         type: 'locker',
+        tag: null,
     },
     {
         id: 6,
@@ -57,6 +62,7 @@ const products = [
         name: 'Локер medium',
         price: '1 250 000 ₸',
         type: 'locker',
+        tag: null,
     },
     {
         id: 7,
@@ -65,6 +71,7 @@ const products = [
         name: 'Локер large',
         price: '1 250 000 ₸',
         type: 'locker',
+        tag: null,
     },
     {
         id: 8,
@@ -73,6 +80,7 @@ const products = [
         name: 'Сканер AirPalm',
         price: '1 250 000 ₸',
         type: 'scaner',
+        tag: null,
     },
     {
         id: 9,
@@ -81,6 +89,7 @@ const products = [
         name: 'Сканер InternalPalm',
         price: '1 250 000 ₸',
         type: 'scaner',
+        tag: null,
     },
     {
         id: 10,
@@ -89,6 +98,7 @@ const products = [
         name: 'Терминал учета рабочего времени',
         price: '1 250 000 ₸',
         type: 'scaner',
+        tag: null,
     },
 ]
 

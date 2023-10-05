@@ -20,15 +20,17 @@ const Products = ({filter}) => {
             let isBgImg = false
             if (product.type === 'locker')
             {
-                isBgImg = false
+                isBgImg = true
             }
             return <ProductItem
                 key={product.id}
+                id={product.id}
                 productImg={product.img}
                 isLocker={isBgImg}
                 imgAlt={product.imgAlt}
                 productName={t(`all.${i}.name`)}
                 productPrice={t(`all.${i}.price`, {price: product.price})}
+                tag={product.tag}
             />
         })
     }
@@ -48,6 +50,7 @@ const Products = ({filter}) => {
                     imgAlt={product.imgAlt}
                     productName={t(`${product.type}.${i}.name`)}
                     productPrice={t(`${product.type}.${i}.price`, {price: product.price})}
+                    tag={product.tag}
                 />
         })       
     }

@@ -9,7 +9,7 @@
 {
     position: absolute;
     top: 15px;
-    left: 30px;
+    left: 140px;
     z-index: 10;
 }
 
@@ -17,14 +17,14 @@
 {
     position: absolute;
     bottom: 50px;
-    right: 5px;
+    right: 110px;
     z-index: 10;
 }
 
 .tabs__content
 {
     display: flex;
-    place-items: center;
+    place-content: center;
 }
 
 .tabs__content_img
