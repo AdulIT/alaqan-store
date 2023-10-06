@@ -1,6 +1,7 @@
 .specification
 {
-    padding: 100px;
+    padding: 100px 200px;
+    background-color: #fff;
 }
 
 .title
@@ -9,4 +10,30 @@
     font-weight: 700;
     line-height: normal;
     text-align: center;
+    margin-bottom: 21px;
+}
+
+.table_title
+{
+    padding: 10px 20px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.wrapper
+{
+    display: flex;
+    flex-direction: column;
+    gap: 49px;
+}
+
+.btn
+{
+    align-self: end;
+}
+
+.download_link
+{
+    color: #fff;
 }

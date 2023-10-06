@@ -33,7 +33,7 @@ const ProductSubheader = ({name}) => {
 
     const subheaderStyles =
     {
-        padding: '18px 100px',
+        padding: '18px 200px',
         backgroundColor: '#fff',
         display: 'flex',
         justifyContent: 'space-between',

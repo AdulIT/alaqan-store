@@ -7,6 +7,7 @@ import Specificity from '../components/Specificity/Specificity';
 import HrApp from '../components/HrApp/HrApp';
 import MobileApp from '../components/MobileApp/MobileApp';
 import Specifications from '../components/Specifications/Specifications';
+import Footer from '../components/Footer/Footer';
 
 function Product() {
     return (
@@ -22,6 +23,7 @@ function Product() {
                 <MobileApp />
                 <Specifications />
             </main>
+            <Footer />
         </>
     );
 }
