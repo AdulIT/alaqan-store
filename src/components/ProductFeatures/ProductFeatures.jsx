@@ -1,16 +1,14 @@
-import ProductFeature from '../ProductFeature/ProductFeature';
+import { useState } from 'react';
+
+import ProductFeature from '../Card/Card';
+import FlippableCard from '../FlippableCard/FlippableCard';
+
 import cl from './ProductFeatures.module.css'
 
-import shieldImg from '../../assets/img/productFeatures/shields.svg'
-import lightningImg from '../../assets/img/productFeatures/lightning.svg'
-import fireAlarmImg from '../../assets/img/productFeatures/fire-alarm.svg'
+import productFeatures from '../../data/productFeatures';
 
 const ProductFeatures = () => {
-    const productFeatures = [
-        { title: 'Качество материалов', img: shieldImg },
-        { title: 'Скорость работы', img: lightningImg },
-        { title: 'Аварийная система', img: fireAlarmImg },
-    ]
+    const [showFront, setShowFront] = useState(true)
 
     const lastItemStyles =
     {
@@ -39,12 +37,26 @@ const ProductFeatures = () => {
         }
     }
 
+    const handleClick = () =>
+    {
+        setShowFront(prev => !prev)
+    }
+
     const productFeaturesItem = productFeatures.map((item, i) =>
     {
         return (
-            <ProductFeature key={i} title={item.title} style={i === 2 ? lastItemStyles : {}}>
+            <FlippableCard
+                key={i}
+                showFront={showFront}
+                frontTitle={item.frontTitle}
+                backTitle={item.backTitle}
+                backText={item.backText}
+                style={i === 2 ? lastItemStyles : {}}>
                 <img src={item.img} alt="shield-img" style={imgStyles[i]} />
-            </ProductFeature>
+                {/* <FrontCard key={i} frontTitle={item.frontTitle}> */}
+                {/* </FrontCard>
+                <BackCard backTitle={item.backTitle} backText={item.backText} /> */}
+            </FlippableCard>
         )
     })
 

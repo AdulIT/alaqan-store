@@ -1,0 +1,8 @@
+.flippable_card
+{
+    position: relative;
+    border-radius: 30px;
+    /* background: #F5F5F7; */
+    perspective: 600px;
+    cursor: pointer;
+}

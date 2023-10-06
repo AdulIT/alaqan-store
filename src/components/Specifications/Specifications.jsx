@@ -14,7 +14,6 @@ import specificationFile from '../../assets/spec-Ts2000.pdf'
 
 const Specifications = () => {
 
-    console.log(columnBasic);
     const rowsBasic = columnBasic.map((item, i) =>
     {
         return <TableRow key={i} heading={item.heading} value={item.value} />
