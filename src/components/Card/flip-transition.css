@@ -1,4 +1,3 @@
-
 .flip-exit
 {
     transform: rotateY(0deg);
@@ -29,4 +28,37 @@
 .flip-enter-done
 {
     transform: rotateY(-0deg);
+}
+
+
+.flip-h-exit
+{
+    transform: rotateX(0deg);
+}
+
+.flip-h-exit-active
+{
+    transform: rotateX(180deg);
+    transition: transform 1000ms;
+    /* transition-timing-function: cubic-bezier(.22,.68,0,1.71); */
+}
+.flip-h-exit-done
+{
+    transform: rotateX(180deg);
+}
+
+.flip-h-enter
+{
+    transform: rotateX(180deg);
+}
+
+.flip-h-enter-active
+{
+    transform: rotateX(-0deg);
+    transition: transform 1000ms;
+    /* transition-timing-function: cubic-bezier(.22,.68,0,1.71); */
+}
+.flip-h-enter-done
+{
+    transform: rotateX(-0deg);
 }

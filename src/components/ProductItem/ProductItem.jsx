@@ -41,7 +41,7 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
         borderRadius: '17px',
         backgroundColor: '#1D1D1F',
         color: '#FFFFFF',
-        fontSize: '24px',
+        fontSize: '18px',
         lineHeight: 'normal',
         border: 'none',
         cursor: 'pointer',
@@ -85,10 +85,10 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
 
     const hitProductInfoName =
     {
-        width: '248px',
+        width: '252px',
         fontSize: '44px',
         fontStyle: 'normal',
-        fontWeight: 400,
+        fontWeight: 500,
         lineHeight: '100%',
     }
 

@@ -3,8 +3,8 @@
     width: 100%;
     height: 100%;
     position: relative;
-    border-radius: 30px;
-    background: #F5F5F7;
+    border-radius: 50px;
+    background: #303030;
 
     transform-style: preserve-3d;
 
@@ -12,13 +12,16 @@
 }
 
 .front_card,
-.back_card
+.back_card,
+.back_card_h
 {
     width: 100%;
     height: 100%;
+    border-radius: 30px;
 
     padding: 60px;
     position: absolute;
+    color: #F0F0F0;
 
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -40,7 +43,8 @@
     z-index: 10;
 }
 
-.back_card
+.back_card,
+.back_card_h
 {
     padding: 40px;
 
@@ -73,4 +77,9 @@
     position: absolute;
     bottom: 20px;
     right: 20px;
+}
+
+.back_card_h
+{
+    transform: rotateX(180deg);
 }
