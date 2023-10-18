@@ -22,7 +22,7 @@
     margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(2, 400px);
-    grid-template-rows: repeat(2, 600px);
+    grid-template-rows: repeat(1, 600px);
     gap: 20px;
     place-content: center;
 }

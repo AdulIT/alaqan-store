@@ -7,6 +7,8 @@ import './flip-transition.css'
 
 import closeSignIcon from '../../assets/icons/productFeatures/closeBlack.svg'
 import plusSignIcon from '../../assets/icons/productFeatures/plusSignIconWhite.svg'
+import plusSignIconBlack from '../../assets/icons/productFeatures/plusSignIconBlack.svg'
+
 
 
 
@@ -51,7 +53,8 @@ const CardHorizontal = ({frontTitle, backTitle, backText, onClick, children, ...
                 <h3 className={cl.front_title}> {frontTitle} </h3>
                     {children}
                 <Button styles={btnStyles}>
-                    <img className={cl.btn_icon} src={plusSignIcon} alt="plus-sign-icon" />
+                    {/* <img className={cl.btn_icon} src={plusSignIcon} alt="plus-sign-icon" /> */}
+                    <img className={cl.btn_icon} src={plusSignIconBlack} alt="plus-sign-icon" />
                 </Button>
             </div>
 

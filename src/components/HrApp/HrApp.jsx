@@ -9,7 +9,7 @@ const HrApp = () => {
         <section className={cl.hrapp} id="hrapp">
             <h2 className={cl.title}>
                 {t('hrappTitle')}
-                <span className={cl.title_underlined}>{t('hrappTitleUnderlined')}</span>
+                {/* <span className={cl.title_underlined}>{t('hrappTitleUnderlined')}</span> */}
             </h2>
 
             <Tabs />

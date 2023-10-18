@@ -7,11 +7,38 @@ import cl from './Specificity.module.css'
 import '../Card/flip-transition.css'
 
 import arrowRightIcon from '../../assets/icons/products/arrowRight.svg'
-import turnstileImg from '../../assets/img/productFeatures/turnstile.png'
+
+import ts2000 from '../../assets/img/specificity/ts2000pro.svg'
+import ts1000 from '../../assets/img/specificity/ts1000.svg'
+import fbl700 from '../../assets/img/specificity/fbl700.svg'
+
 import closeIcon from '../../assets/icons/productFeatures/closeGreen.svg'
+import { useLocation } from 'react-router-dom';
 
 const Specificity = () => {
     const [showFront, setShowFront] = useState(true)
+    const location = useLocation()
+
+    const turnstileImgs = {
+        '/product/1': {
+            0: ts2000,
+            style: {}
+        },
+        '/product/2': {
+            0: ts1000,
+            style: {
+                padding: '0 100px 40px 0',
+                borderRadius: '30px 0 0 0'
+            }
+        },
+        '/product/3': {
+            0: fbl700,
+            style: {
+                padding: '0 100px 40px 0',
+                borderRadius: '30px 0 0 0'
+            }
+        },
+    }
 
     const btnStyles =
     {
@@ -30,7 +57,7 @@ const Specificity = () => {
 
     return (
         <div className={cl.specificity}>
-            <h3 className={cl.title}> Особенности нашей <br /> системы. </h3>
+            <h3 className={cl.title}> Особенности</h3>
 
             <CSSTransition
                 in={showFront}
@@ -43,8 +70,8 @@ const Specificity = () => {
                         setShowFront((prev) => !prev)
                     }}
                 >
-                    <div className={cl.front}>
-                        <img src={turnstileImg} alt="turnstile" />
+                    <div className={cl.front} style={turnstileImgs[location.pathname].style}>
+                        <img style={{borderRadius: '30px 0 0 0'}} src={turnstileImgs[location.pathname][0]} alt="turnstile" />
                         <div>
                             <p className={cl.text}>
                                 Как это <br /> работает?

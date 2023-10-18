@@ -12,7 +12,7 @@ import encryptionIcon from '../../assets/icons/products/shield-stroke.svg'
 import speedIcon from '../../assets/icons/products/timer-stroke.svg'
 import smileyIcon from '../../assets/icons/products/smiley-stroke.svg'
 
-const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPrice, tag}) => {
+const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPrice, tag, children}) => {
     const navigate = useNavigate()
 
     const [isVisible, setIsVisible] = useState(false)
@@ -226,7 +226,7 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
                             onClick={openProductCard}
                         >
                             {t("btn")}
-                            {/* <Link to={'/product'} style={tag ? hitBtnTextStyle : btnTextStyle}>{t("btn")}</Link> */}
+                            {/* <Link to={'/product/ts2000'} style={tag ? hitBtnTextStyle : btnTextStyle}>{t("btn")}</Link> */}
                             <img src={arrowRightIcon} alt="arrow-right-icon" />    
                         </Button>
                     </div>

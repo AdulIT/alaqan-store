@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import i18n from "../../i18n";
+import { Link, useNavigate } from 'react-router-dom'
+
 
 import ProductItem from '../ProductItem/ProductItem';
 import products from '../../data/products'
@@ -31,7 +33,9 @@ const Products = ({filter}) => {
                 productName={t(`all.${i}.name`)}
                 productPrice={t(`all.${i}.price`, {price: product.price})}
                 tag={product.tag}
-            />
+            >
+                {/* <Link to={`/product/${product.id}`} style={tag ? hitBtnTextStyle : btnTextStyle}>{t("btn")}</Link> */}
+            </ProductItem>
         })
     }
     else
@@ -51,7 +55,9 @@ const Products = ({filter}) => {
                     productName={t(`${product.type}.${i}.name`)}
                     productPrice={t(`${product.type}.${i}.price`, {price: product.price})}
                     tag={product.tag}
-                />
+                >
+                    {/* <Link to={`/product/${product.id}`} style={tag ? hitBtnTextStyle : btnTextStyle}>{t("btn")}</Link> */}
+                </ProductItem>
         })       
     }
     

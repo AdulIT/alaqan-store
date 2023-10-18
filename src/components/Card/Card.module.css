@@ -57,16 +57,17 @@
 
 .back_title
 {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: -1.44px;
+    letter-spacing: -1.6px;
     margin-bottom: 30px;
     text-align-last: left;
 }
 
 .back_text
 {
+    max-width: 491px;
     font-size: 18px;
     font-weight: 400;
     line-height: 140%;

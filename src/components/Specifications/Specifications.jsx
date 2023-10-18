@@ -11,12 +11,14 @@ import {columnCommon} from '../../data/table';
 import downloadIcon from '../../assets/icons/productFeatures/downloadSimple.svg'
 
 import specificationFile from '../../assets/spec-Ts2000.pdf'
+import { useLocation } from 'react-router-dom';
 
 const Specifications = () => {
+    const location = useLocation()
 
     const rowsBasic = columnBasic.map((item, i) =>
     {
-        return <TableRow key={i} heading={item.heading} value={item.value} />
+        return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
     })
 
     const rowsAdditional = columnAdditional.map((item, i) =>
@@ -26,7 +28,7 @@ const Specifications = () => {
 
     const rowsCommon = columnCommon.map((item, i) =>
     {
-        return <TableRow key={i} heading={item.heading} value={item.value} />
+        return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
     })
 
     const btnStyles =

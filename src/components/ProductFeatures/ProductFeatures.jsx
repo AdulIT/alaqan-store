@@ -4,6 +4,7 @@ import {FlippableCard, FlippableCardHorizontal} from '../FlippableCard/Flippable
 
 import cl from './ProductFeatures.module.css'
 import glowImg from '../../assets/img/productFeatures/glow.png'
+import plusSignIconBlack from '../../assets/icons/productFeatures/plusSignIconBlack.svg'
 
 import productFeatures from '../../data/productFeatures';
 
@@ -14,7 +15,8 @@ const ProductFeatures = () => {
     {
         // position: 'relative',
         gridColumn: '1/3',
-        display: 'grid'
+        display: 'grid',
+        height: '300px'
     }
 
     const imgStyles =
@@ -31,9 +33,12 @@ const ProductFeatures = () => {
         },
         2: {
             position: 'absolute',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            bottom: '60px',
+            right: '0',
+            // transform: 'translateX(-50%)',
+            bottom: '0',
+            width: '342px',
+            height: '290px',
+            borderRadius: '0 0 30px 0'
         }
     }
 
@@ -87,7 +92,8 @@ const ProductFeatures = () => {
 
     return (
         <section className={cl.features}>
-            <h2 className={cl.title}> Узнайте... </h2>
+            {/* <h2 className={cl.title}> Узнайте... </h2> */}
+            <h2 className={cl.title}> Преимущества </h2>
             <div className={cl.features_wrapper}>
                 { productFeaturesItem }
             </div>

@@ -7,9 +7,19 @@ import cl from './ProductSubheader.modue.css'
 
 import arrowRightIcon from '../../assets/icons/products/arrowRight.svg'
 import fileIcon from '../../assets/icons/file.svg'
+import { useLocation } from 'react-router-dom';
 
 
 const ProductSubheader = ({name}) => {
+
+    const location = useLocation()
+    console.log(location.pathname);
+
+    const turnstileNames = {
+        '/product/1': 'TS2000 Pro',
+        '/product/2': 'TS1000M Pro',
+        '/product/3': 'FBL700',
+    }
 
     const specificationBtnStyles =
     {
@@ -47,7 +57,7 @@ const ProductSubheader = ({name}) => {
 
     return (
         <div className={cl.subheader} style={subheaderStyles}>
-            <h2 className={cl.subheader_title}> {name} Турникет Alaqan TS2000 Pro  </h2>
+            <h2 className={cl.subheader_title}> {name} Турникет Alaqan {turnstileNames[location.pathname]}  </h2>
 
             <div className={cl.subheader_btns} style={subheaderBtnsStyles}>
                 <HashLink to={'#specification'}>

@@ -12,7 +12,9 @@ import {
 import Error from './pages/Error'
 
 import './i18n'
-import Product from './pages/product.jsx';
+import Product from './pages/TS2000.jsx';
+import TS1000Pro from './pages/TS1000Pro';
+import FBL700 from './pages/FBL700.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,8 +22,16 @@ const router = createBrowserRouter([
     element: <App />
   },
   {
-    path: '/product/:id',
+    path: '/product/1',
     element: <Product />
+  },
+  {
+    path: '/product/2',
+    element: <TS1000Pro />
+  },
+  {
+    path: '/product/3',
+    element: <FBL700 />
   },
   {
     path: '*',

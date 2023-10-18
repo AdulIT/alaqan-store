@@ -44,7 +44,8 @@
     backface-visibility: hidden;
 
     display: flex;
-    padding: 0 100px 40px 0;
+    /* padding: 0 100px 40px 0; */
+    padding: 0 100px 0px 0;
     justify-content: space-between;
     align-items: center;
 }
