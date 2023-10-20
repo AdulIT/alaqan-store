@@ -1,14 +1,11 @@
-import React from 'react';
-
-import cl from './TableRow.module.css'
-
+/* eslint-disable react/prop-types */
 const TableRow = ({ heading, value }) => {
     return (
         <tr>
-            <td>{ heading }</td>
-            <td>{ value }</td>
+            <td>{heading}</td>
+            <td>{value}</td>
         </tr>
-    );
-};
+    )
+}
 
-export default TableRow;
+export default TableRow
