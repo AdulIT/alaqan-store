@@ -47,7 +47,7 @@ const ProductFeatures = () => {
         left: '50%',
         top: '50%',
         transform: 'translate(-50%, -35%)',
-        zIndex: 10,
+        // zIndex: 10,
     }
 
     const productFeaturesItem = productFeatures.map((item, i) =>

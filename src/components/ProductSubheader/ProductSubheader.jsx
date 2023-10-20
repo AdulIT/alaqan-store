@@ -13,7 +13,7 @@ import { useLocation } from 'react-router-dom';
 const ProductSubheader = ({name}) => {
 
     const location = useLocation()
-    console.log(location.pathname);
+    // console.log(location.pathname);
 
     const turnstileNames = {
         '/product/1': 'TS2000 Pro',
@@ -43,6 +43,9 @@ const ProductSubheader = ({name}) => {
 
     const subheaderStyles =
     {
+        // position: 'fixed',
+        // top: 0,
+        // left: 0,
         padding: '18px 200px',
         backgroundColor: '#fff',
         display: 'flex',

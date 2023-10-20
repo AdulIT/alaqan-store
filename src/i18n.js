@@ -15,7 +15,7 @@ i18n.use(Backend).use(LanguageDetector)
       loadPath: '/assets/i18n/{{ns}}/{{lng}}.json'
     },
     // disabled in production
-    debug: true,
+    debug: false,
     fallbackLng: 'en',
     ns: ["common"],
     interpolation: {

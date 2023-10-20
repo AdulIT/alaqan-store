@@ -14,7 +14,7 @@ const Language = ({footer, mobile}) => {
 
     let currentLang = 0
 
-    console.log(i18n.language);
+    // console.log(i18n.language);
 
     useEffect(() =>
     {

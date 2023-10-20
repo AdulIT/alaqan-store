@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 import { HashLink } from 'react-router-hash-link'
 import { useTranslation } from 'react-i18next'
 
@@ -12,16 +13,28 @@ import Hamburger from '../Hamburger/Hamburger';
 import paperPlaneTilt from '../../assets/icons/paperPlaneTilt.svg'
 import { useState } from 'react';
 import NavbarMobile from '../NavbarMobile/NavbarMobile';
+import { useRef } from 'react';
+import { useEffect } from 'react';
 
 
 const Header = () => {
     const { t } = useTranslation(["headers"])
     const [hamburgerActive, setHamburgerActive] = useState(false)
+    const [headerComputedStyleHeight, setHeaderComputedStyleHeight] = useState(0)
+
+    // const headerRef = useRef(null)
+    // // let headerComputedStyleHeight
+
+    // useEffect(() => {
+    //     headerComputedStyleHeight = window.getComputedStyle(ReactDOM.findDOMNode(headerRef.current)).getPropertyValue('height')
+    // }, [])
+    
+
 
     function handleClick()
     {
         setHamburgerActive(prev => !prev)
-        console.log('click')
+        // console.log('click')
     }
 
     const btnStyles = 

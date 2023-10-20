@@ -5,6 +5,8 @@
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
+    border-bottom: 1px solid var(--light-grays-line, #E7E9EA);
+
 }
 .header .container
 {
@@ -50,7 +52,7 @@
 @media screen and (max-width: 991px) {
     .header
     {
-        padding: 14px 0;
+        padding: 14px 30px;
     }
     .lang
     {
