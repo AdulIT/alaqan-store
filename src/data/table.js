@@ -1,4 +1,23 @@
 
+const columnBasicScaner = [
+    {
+        heading: 'Производитель',
+        '/product/10': 'Alaqan',
+    },
+    {
+        heading: 'Страна производитель',
+        '/product/10': 'Китай',
+    },
+    {
+        heading: 'Тип устройства',
+        '/product/10': 'Биометрический сканер',
+    },
+    {
+        heading: 'Тип установки',
+        '/product/10': 'Настенный',
+    },
+];
+
 const columnBasic = [
     {
         heading: 'Производитель',
@@ -51,38 +70,124 @@ const columnBasic = [
     },
 ];
 
-const columnAdditional = [
+const columnAdditionalScaner = [
     {
         heading: 'Управление устройством ',
-        value: 'Кнопки консоли, Радиобрелок, Пульт управления, ПК (опционально), СКУД (опционально)',
+        '/product/10': 'Сенсорная клавиатура, TFT-экран',
     },
     {
-        heading: 'Консоль с кнопками в штатной комплектации',
-        value: 'Да',
-    },
-    {
-        heading: 'Датчик прохода',
-        value: 'Трипод тумбовый',
-    },
-    {
-        heading: 'Счетчик прохода',
-        value: 'Да',
-    },
-    {
-        heading: 'Обогреватель',
-        value: 'Да',
+        heading: 'Дисплей',
+        '/product/10': '2,4-дюймовый цветной (TFT)',
     },
     {
         heading: 'Индикация',
-        value: 'Световая/Звуковая',
+        '/product/10': 'Световая',
+    },
+    {
+        heading: 'Стандарт шифрования',
+        '/product/10': 'AES-128',
+    },
+];
+
+const columnAdditional = [
+    {
+        heading: 'Управление устройством ',
+        '/product/1': 'Кнопки консоли, Радиобрелок, Пульт управления, ПК (опционально), СКУД (опционально)',
+        '/product/2': 'Кнопки консоли, Радиобрелок, Пульт управления, ПК (опционально), СКУД (опционально)',
+        '/product/3': 'Кнопки консоли, Радиобрелок, Пульт управления, ПК (опционально), СКУД (опционально)',
+        // value: 'Кнопки консоли, Радиобрелок, Пульт управления, ПК (опционально), СКУД (опционально)',
+    },
+    {
+        heading: 'Консоль с кнопками в штатной комплектации',
+        '/product/1': 'Да',
+        '/product/2': 'Да',
+        '/product/3': 'Да',
+        // value: 'Да',
+    },
+    {
+        heading: 'Датчик прохода',
+        '/product/1': 'Трипод тумбовый',
+        '/product/2': 'Трипод тумбовый',
+        '/product/3': 'Трипод тумбовый',
+        // value: 'Трипод тумбовый',
+    },
+    {
+        heading: 'Счетчик прохода',
+        '/product/1': 'Да',
+        '/product/2': 'Да',
+        '/product/3': 'Да',
+        // value: 'Да',
+    },
+    {
+        heading: 'Обогреватель',
+        '/product/1': 'Да',
+        '/product/2': 'Да',
+        '/product/3': 'Да',
+        // value: 'Да',
+    },
+    {
+        heading: 'Индикация',
+        '/product/1': 'Световая/Звуковая',
+        '/product/2': 'Световая/Звуковая',
+        '/product/3': 'Световая/Звуковая',
+        // value: 'Световая/Звуковая',
     },
     {
         heading: 'Защита оборудования от воды и пыли',
-        value: 'IP34',
+        '/product/1': 'IP34',
+        '/product/2': 'IP34',
+        '/product/3': 'IP34',
+        // value: 'IP34',
     },
     {
         heading: 'Вандалозащищенность',
-        value: 'Да',
+        '/product/1': 'Да',
+        '/product/2': 'Да',
+        '/product/3': 'Да',
+        // value: 'Да',
+    },
+];
+
+const columnCommonScaner = [
+    {
+        heading: 'Питание',
+        '/product/10': '12V, 3A',
+    },
+    {
+        heading: 'Связь по сети',
+        '/product/10': 'Wi-Fi, TCP/IP',
+    },
+    {
+        heading: 'Подключение к аварийной системе',
+        '/product/10': 'Да',
+    },
+    {
+        heading: 'Cкорость распознавания',
+        '/product/10': '<0.4 сек.',
+    },
+    {
+        heading: 'Диапазон расстояния распознавания ладони',
+        '/product/10': '18-35 см',
+    },
+    {
+        heading: 'Минимальная рабочая температура',
+        '/product/10': '0 град.',
+    },
+    {
+        heading: 'Максимальная рабочая температура',
+        '/product/10': '40 град.',
+    },
+    {
+        heading: 'Длина',
+        '/product/10': '159.8 мм',
+    },
+    {
+        heading: 'Ширина',
+        '/product/10': '80.7 мм',
+    },
+    {
+        heading: 'Высота',
+        '/product/10': '41 мм',
     },
 ];
 
@@ -166,4 +271,4 @@ const columnCommon = [
     },
 ];
 
-export { columnBasic, columnAdditional, columnCommon }
+export { columnBasic, columnAdditional, columnCommon, columnBasicScaner, columnAdditionalScaner, columnCommonScaner }

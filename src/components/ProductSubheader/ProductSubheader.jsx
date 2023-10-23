@@ -14,9 +14,10 @@ const ProductSubheader = ({ name }) => {
     // console.log(location.pathname);
 
     const turnstileNames = {
-        '/product/1': 'TS2000 Pro',
-        '/product/2': 'TS1000M Pro',
-        '/product/3': 'FBL700',
+        '/product/1': 'Турникет Alaqan TS2000 Pro',
+        '/product/2': 'Турникет Alaqan TS1000M Pro',
+        '/product/3': 'Турникет Alaqan FBL700',
+        '/product/10': 'Сканер доступа прохода Alaqan InternalPalms',
     }
 
     const specificationBtnStyles = {
@@ -54,7 +55,7 @@ const ProductSubheader = ({ name }) => {
         <div className={cl.subheader} style={subheaderStyles}>
             <h2 className={cl.subheader_title}>
                 {' '}
-                {name} Турникет Alaqan {turnstileNames[location.pathname]}{' '}
+                {name}  {turnstileNames[location.pathname]}{' '}
             </h2>
 
             <div className={cl.subheader_btns} style={subheaderBtnsStyles}>

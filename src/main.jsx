@@ -15,6 +15,7 @@ import './i18n'
 import Product from './pages/TS2000.jsx';
 import TS1000Pro from './pages/TS1000Pro';
 import FBL700 from './pages/FBL700.jsx';
+import TerminalT1 from './pages/TerminalT1.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: '/product/3',
     element: <FBL700 />
+  },
+  {
+    path: '/product/10',
+    element: <TerminalT1 />
   },
   {
     path: '*',

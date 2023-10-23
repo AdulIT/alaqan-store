@@ -11,6 +11,7 @@ import arrowRightIcon from '../../assets/icons/products/arrowRight.svg'
 import ts2000 from '../../assets/img/specificity/ts2000pro.svg'
 import ts1000 from '../../assets/img/specificity/ts1000.svg'
 import fbl700 from '../../assets/img/specificity/fbl700.svg'
+import terminalT1 from '../../assets/img/specificity/terminalT1.svg'
 
 import closeIcon from '../../assets/icons/productFeatures/closeGreen.svg'
 import { useLocation } from 'react-router-dom';
@@ -21,20 +22,27 @@ const Specificity = () => {
 
     const turnstileImgs = {
         '/product/1': {
-            0: ts2000,
+            img: ts2000,
             style: {}
         },
         '/product/2': {
-            0: ts1000,
+            img: ts1000,
             style: {
                 padding: '0 100px 40px 0',
                 borderRadius: '30px 0 0 0'
             }
         },
         '/product/3': {
-            0: fbl700,
+            img: fbl700,
             style: {
                 padding: '0 100px 40px 0',
+                borderRadius: '30px 0 0 0'
+            }
+        },
+        '/product/10': {
+            img: terminalT1,
+            style: {
+                padding: '0 100px 70px 0',
                 borderRadius: '30px 0 0 0'
             }
         },
@@ -70,8 +78,8 @@ const Specificity = () => {
                         setShowFront((prev) => !prev)
                     }}
                 >
-                    <div className={cl.front} style={turnstileImgs[location.pathname].style}>
-                        <img style={{borderRadius: '30px 0 0 0'}} src={turnstileImgs[location.pathname][0]} alt="turnstile" />
+                    <div className={cl.front} style={turnstileImgs[location.pathname]?.style}>
+                        <img style={{borderRadius: '30px 0 0 0'}} src={turnstileImgs[location.pathname]?.img} alt="turnstile" />
                         <div>
                             <p className={cl.text}>
                                 Как это <br /> работает?

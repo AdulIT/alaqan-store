@@ -6,7 +6,7 @@ import cl from './ProductFeatures.module.css'
 import glowImg from '../../assets/img/productFeatures/glow.png'
 import plusSignIconBlack from '../../assets/icons/productFeatures/plusSignIconBlack.svg'
 
-import productFeatures from '../../data/productFeatures';
+import {productFeatures, scanerProductFeatures} from '../../data/productFeatures';
 
 const ProductFeatures = () => {
     const [showFront, setShowFront] = useState(true)
@@ -25,6 +25,7 @@ const ProductFeatures = () => {
             position: 'absolute',
             right: 0,
             bottom: '0px',
+            borderRadius: '0 0 30px 0'
         },
         1: {
             position: 'absolute',
@@ -90,12 +91,29 @@ const ProductFeatures = () => {
         }
     })
 
+    const scanerProductFeaturesItem = scanerProductFeatures.map((item, i) =>
+    {
+        return (
+            <FlippableCard
+                key={i}
+                showFront={showFront}
+                frontTitle={item.frontTitle}
+                backTitle={item.backTitle}
+                backText={item.backText}
+                // style={i === 2 ? lastItemStyles : {}}
+            >
+                <img src={item.img} alt="shield-img" style={imgStyles[0]} />
+                {i === 1 ? <img src={glowImg} alt="glow-img" style={glowImgStyles} /> : ''}
+            </FlippableCard>
+        )
+    })
+
     return (
         <section className={cl.features}>
             {/* <h2 className={cl.title}> Узнайте... </h2> */}
             <h2 className={cl.title}> Преимущества </h2>
             <div className={cl.features_wrapper}>
-                { productFeaturesItem }
+                { location.pathname === '/product/10' ? scanerProductFeaturesItem : productFeaturesItem }
             </div>
         </section>
     );

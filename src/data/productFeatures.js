@@ -2,6 +2,10 @@ import shieldImg from '../assets/img/productFeatures/shields.svg'
 import lightningImg from '../assets/img/productFeatures/lightning.svg'
 import fireAlarmImg from '../assets/img/productFeatures/alarm.svg'
 
+import scanningImg from '../assets/img/productFeatures/scanning.png'
+import padlockImg from '../assets/img/productFeatures/padlock.svg'
+import dartsImg from '../assets/img/productFeatures/darts.svg'
+
 const productFeatures = [
     {
         frontTitle: 'Качество материалов',
@@ -23,4 +27,31 @@ const productFeatures = [
     },
 ]
 
-export default productFeatures
+const scanerProductFeatures = [
+    {
+        frontTitle: 'Бесконтактное сканирование',
+        img: scanningImg,
+        backTitle: 'Забота о здоровье',
+        backText: 'Alaqan не требует контакта с поверхностью. Технология препятствует распространению заболеваний.',
+    },
+    {
+        frontTitle: 'Скорость считывания',
+        img: lightningImg,
+        backTitle: 'Скорость считывания',
+        backText: 'Сканирование вен ладони происходит быстро - за 0,3 секунды. ',
+    },
+    {
+        frontTitle: 'Точность сканирования',
+        img: dartsImg,
+        backTitle: 'Точность идентификации',
+        backText: 'Вероятность того, что вас примут за другого человека - ~0.0001%. Вероятность ошибки распознания - ~0.068%.',
+    },
+    {
+        frontTitle: 'Безопасность данных',
+        img: padlockImg,
+        backTitle: 'Шифрование',
+        backText: 'Биометрия нигде не хранится. Рисунок вен зашифровывается в код без риска утечки данных.',
+    },
+]
+
+export {productFeatures, scanerProductFeatures}

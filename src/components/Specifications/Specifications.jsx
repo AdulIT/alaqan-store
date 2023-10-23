@@ -4,9 +4,7 @@ import Button from '../UI/button/Button'
 
 import cl from './Specifications.module.css'
 
-import { columnBasic } from '../../data/table'
-import { columnAdditional } from '../../data/table'
-import { columnCommon } from '../../data/table'
+import { columnBasic, columnAdditional, columnCommon, columnBasicScaner, columnAdditionalScaner, columnCommonScaner } from '../../data/table'
 
 import downloadIcon from '../../assets/icons/productFeatures/downloadSimple.svg'
 
@@ -15,18 +13,41 @@ import { useLocation } from 'react-router-dom'
 
 const Specifications = () => {
     const location = useLocation()
+    console.log(location);
 
-    const rowsBasic = columnBasic.map((item, i) => {
-        return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
-    })
+    const rowsBasic = location.pathname === '/product/10'
+        ?
+        columnBasicScaner.map((item, i) => {
+            return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
+        })
+        :
+        columnBasic.map((item, i) => {
+            return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
+        })
 
-    const rowsAdditional = columnAdditional.map((item, i) => {
-        return <TableRow key={i} heading={item.heading} value={item.value} />
-    })
+    // const rowsBasic = columnBasic.map((item, i) => {
+    //     return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
+    // })
 
-    const rowsCommon = columnCommon.map((item, i) => {
-        return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
-    })
+    const rowsAdditional = location.pathname === '/product/10'
+        ?
+        columnAdditionalScaner.map((item, i) => {
+            return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
+        })
+        :
+        columnAdditional.map((item, i) => {
+            return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
+        })
+
+    const rowsCommon = location.pathname === '/product/10'
+        ?
+        columnCommonScaner.map((item, i) => {
+            return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
+        })
+        :
+        columnCommon.map((item, i) => {
+            return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
+        })
 
     const btnStyles = {
         padding: '10px 20px 12px 20px',

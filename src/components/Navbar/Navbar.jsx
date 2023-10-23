@@ -26,20 +26,20 @@ const Navbar = ({...props}) => {
                 <li className={cl.menu__item}>
                     <a className={cl.menu__link} href='https://alaqan.kz/'>{t("headers:overview")}</a>
                 </li>
-                <li className={cl.menu__item}>
+                {/* <li className={cl.menu__item}>
                     <Link className={cl.menu__link} to={'/'}>{t("business")}</Link>
+                </li> */}
+                <li className={cl.menu__item}>
+                    <Link className={cl.menu__link} to={'https://alaqan.kz/mektep'}>{t("mektep")}</Link>
                 </li>
                 <li className={cl.menu__item}>
-                    <a className={cl.menu__link} href=''>{t("mektep")}</a>
-                </li>
-                <li className={cl.menu__item}>
-                    <a className={cl.menu__link} href=''>{t("pay")}</a>
+                    <Link className={cl.menu__link} to={'https://alaqan.kz/pay'}>{t("pay")}</Link>
                 </li>
                 <li className={cl.menu__item + ' ' + cl.current}>
                     <Link className={cl.menu__link + ' ' + cl.current} to={'/'}>{t("store")}</Link>
                 </li>
                 <li className={cl.menu__item}>
-                    <a className={cl.menu__link} href=''>{t("headers:about")}</a>
+                    <Link className={cl.menu__link} to={'https://alaqan.kz/mass-media'}>{t("headers:about")}</Link>
                 </li>
             </ul>
         </nav>
