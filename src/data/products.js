@@ -32,7 +32,7 @@ const products = [
         id: 3,
         img: fbl700,
         imgAlt: 'fbl700-img',
-        name: 'Туникет FBL700',
+        name: 'Турникет FBL700',
         price: '1 250 000 ₸',
         type: 'turnstile',
         tag: null,

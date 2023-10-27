@@ -2,7 +2,7 @@ import React from 'react'
 import cl from './MobileApp.module.css'
 import { useTranslation } from 'react-i18next'
 
-import iphoneMockup from '../../assets/img/mobileApp/iPhone.png'
+import iphoneMockup from '../../assets/img/mobileApp/iPhone-ru.png'
 import mobileiPhoneMockup from '../../assets/img/mobileApp/mobileiPhone.png'
 
 const MobileApp = () => {

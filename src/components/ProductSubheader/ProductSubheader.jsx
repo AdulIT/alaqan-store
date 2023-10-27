@@ -17,7 +17,7 @@ const ProductSubheader = ({ name }) => {
         '/product/1': 'Турникет Alaqan TS2000 Pro',
         '/product/2': 'Турникет Alaqan TS1000M Pro',
         '/product/3': 'Турникет Alaqan FBL700',
-        '/product/10': 'Сканер доступа прохода Alaqan InternalPalms',
+        '/product/10': 'Терминал учета рабочего времени Alaqan T1',
     }
 
     const specificationBtnStyles = {

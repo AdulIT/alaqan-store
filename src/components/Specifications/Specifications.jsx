@@ -13,7 +13,7 @@ import { useLocation } from 'react-router-dom'
 
 const Specifications = () => {
     const location = useLocation()
-    console.log(location);
+    // console.log(location);
 
     const rowsBasic = location.pathname === '/product/10'
         ?

@@ -42,10 +42,10 @@
 }
 
 
-@media screen and (max-width: 1202px) {
+@media screen and (max-width: 1200px) {
     .header
     {
-        padding: 14px 60px;
+        padding: 14px 50px;
     }
 }
 

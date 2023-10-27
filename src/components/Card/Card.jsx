@@ -1,6 +1,5 @@
 import { CSSTransition } from 'react-transition-group';
 
-
 import Button from '../UI/button/Button';
 import cl from './Card.module.css'
 import './flip-transition.css'
@@ -8,9 +7,6 @@ import './flip-transition.css'
 import closeSignIcon from '../../assets/icons/productFeatures/closeBlack.svg'
 import plusSignIcon from '../../assets/icons/productFeatures/plusSignIconWhite.svg'
 import plusSignIconBlack from '../../assets/icons/productFeatures/plusSignIconBlack.svg'
-
-
-
 
 const Card = ({frontTitle, backTitle, backText, onClick, children, ...props}) => {
     const btnStyles =

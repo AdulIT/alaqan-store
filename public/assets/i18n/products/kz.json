@@ -13,19 +13,19 @@
             "price": "{{price}} бастап"
         },
         {
-            "name": "Құлыпталатын шкаф Mini",
+            "name": "Локер Mini",
             "price": "{{price}} бастап"
         },
         {
-            "name": "Құлыпталатын шкаф Small",
+            "name": "Локер Small",
             "price": "{{price}} бастап"
         },
         {
-            "name": "Құлыпталатын шкаф Medium",
+            "name": "Локер Medium",
             "price": "{{price}} бастап"
         },
         {
-            "name": "Құлыпталатын шкаф Large",
+            "name": "Локер Large",
             "price": "{{price}} бастап"
         },
         {
@@ -57,19 +57,19 @@
     ],
     "locker": [
         {
-            "name": "Құлыпталатын шкаф Mini",
+            "name": "Локер Mini",
             "price": "{{price}} бастап"
         },
         {
-            "name": "Құлыпталатын шкаф Small",
+            "name": "Локер Small",
             "price": "{{price}} бастап"
         },
         {
-            "name": "Құлыпталатын шкаф Medium",
+            "name": "Локер Medium",
             "price": "{{price}} бастап"
         },
         {
-            "name": "Құлыпталатын шкаф Large",
+            "name": "Локер Large",
             "price": "{{price}} бастап"
         }
     ],

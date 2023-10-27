@@ -37,7 +37,7 @@ const columnBasic = [
         heading: 'Тип устройства',
         '/product/1': 'Трипод тумбовый',
         '/product/2': 'Трипод тумбовый',
-        '/product/3': 'Трипод тумбовый',
+        '/product/3': 'Однополосный турникет с откидным барьером',
         // value: 'Трипод тумбовый',
     },
     {
@@ -58,7 +58,7 @@ const columnBasic = [
         heading: 'Ширина прохода',
         '/product/1': '520 мм',
         '/product/2': '520 мм',
-        '/product/3': '520 мм',
+        '/product/3': '600 мм',
         // value: '520 мм',
     },
     {
@@ -108,7 +108,7 @@ const columnAdditional = [
         heading: 'Датчик прохода',
         '/product/1': 'Трипод тумбовый',
         '/product/2': 'Трипод тумбовый',
-        '/product/3': 'Трипод тумбовый',
+        '/product/3': 'Да',
         // value: 'Трипод тумбовый',
     },
     {
@@ -196,14 +196,14 @@ const columnCommon = [
         heading: 'Питание',
         '/product/1': 'Сеть 220В',
         '/product/2': 'Сеть 220В',
-        '/product/3': 'Сеть 220В',
+        '/product/3': 'Сеть 240В',
         // value: 'Сеть 220В',
     },
     {
         heading: 'Напряжение',
         '/product/1': '220В',
         '/product/2': '220В',
-        '/product/3': '220В',
+        '/product/3': '240В',
         // value: '220В',
     },
     {
@@ -238,7 +238,7 @@ const columnCommon = [
         heading: 'Длина',
         '/product/1': '1110 мм',
         '/product/2': '520 мм',
-        '/product/3': '1400 мм',
+        '/product/3': '1200 мм',
         // value: '1110 мм',
     },
     {
@@ -252,21 +252,21 @@ const columnCommon = [
         heading: 'Высота',
         '/product/1': '980 мм',
         '/product/2': '1010 мм',
-        '/product/3': '1000 мм',
+        '/product/3': '980 мм',
         // value: '980 мм',
     },
     {
-        heading: 'Вес',
+        heading: 'Вес брутто/нетто',
         '/product/1': '46 кг',
         '/product/2': '50 кг',
-        '/product/3': '97 кг',
+        '/product/3': '90 кг/80 кг',
         // value: '46 кг',
     },
     {
         heading: 'Гарантийный срок',
         '/product/1': '12 мес',
         '/product/2': '12 мес',
-        '/product/3': '24 мес',
+        '/product/3': '12 мес',
         // value: '12 мес',
     },
 ];

@@ -2,6 +2,8 @@ import { useTranslation } from 'react-i18next'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { useMatchMedia } from '../../hooks/useMatchMedia'
 
 import cl from './ProductItem.module.css'
 
@@ -14,18 +16,22 @@ import smileyIcon from '../../assets/icons/products/smiley-stroke.svg'
 
 const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPrice, tag, children}) => {
     const navigate = useNavigate()
+    const location = useLocation()
 
     const [isVisible, setIsVisible] = useState(false)
     const { t } = useTranslation(["tabs"])
 
+    const {isSmallMobile, isMediumMobile, isMobile, isMediumTablet, isTablet} = useMatchMedia();
+
     const openProductCard = async () =>
     {
         navigate('/product/' + id)
+        // console.log(location.pathname);
     }
 
     const btnStyle =
     {
-        padding: '14px',
+        padding: isTablet ? '10px' : '14px',
         borderRadius: '14px',
         backgroundColor: '#1D1D1F',
         color: '#FFFFFF',
@@ -33,11 +39,12 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
         lineHeight: 'normal',
         border: 'none',
         cursor: 'pointer',
+        gap: '4px'
     }
 
     const hitBtnStyle =
     {
-        padding: '14px 20px 16px',
+        padding: isTablet ? '12px 15px 14px' : '14px 20px 16px',
         borderRadius: '17px',
         backgroundColor: '#1D1D1F',
         color: '#FFFFFF',
@@ -56,11 +63,12 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
 
     const hitProductStyles =
     {
-        padding: '35px 39px 39px 44px',
-        gridColumn: '1/4',
+        padding: isMediumTablet ? '0 39px 0 44px' : '35px 39px 39px 44px',
+        gridColumn: isMediumTablet ? '1/3' : '1/4',
         display: 'grid',
-        gridTemplateColumns: '357px 2fr',
-        gap: '84px',
+        gridTemplateColumns: isMediumTablet ? '1fr 1fr' : '357px 2fr',
+        gap: isMediumTablet ? '10px' : '84px',
+        height: isMediumTablet ? '350px' : 'initial',
     }
 
     const productImgStyles =
@@ -80,13 +88,13 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
     const hitProductImgStyles =
     {
         display: 'flex',
-        width: '357px',
+        width: isMediumTablet ? '250px' : '357px',
     }
 
     const hitProductInfoName =
     {
         width: '252px',
-        fontSize: '44px',
+        fontSize: isTablet ? '36px' : '44px',
         fontStyle: 'normal',
         fontWeight: 500,
         lineHeight: '100%',
@@ -101,12 +109,13 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
         justifyContent: 'space-between',
         borderRadius: '17px',
         background: '#F5F5F7',
+        width: '100%',
     }
 
     const hitProductInfoPrice =
     {
         color: '#1D1D1F',
-        fontSize: '24px',
+        fontSize: isTablet ? '20px' : '24px',
         fontStyle: 'normal',
         fontWeight: 500,
         lineHeight: 'normal',
@@ -121,8 +130,16 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
 
     const hitBtnTextStyle = {
         color: '#FFFFFF',
-        fontSize: '24px',
+        fontSize: isTablet ? '14px' : '24px',
         lineHeight: 'normal',
+    }
+
+    const hitProductBtnIcon = {
+        width: '14px',
+    }
+
+    const productBtnIcon = {
+        width: '14px',
     }
 
 
@@ -131,27 +148,8 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
             <div
                 className={cl.product__card}
                 style={tag ? hitProductStyles : bgImg}
-                // onMouseEnter={() => setIsVisible(true)}
-                // onMouseLeave={() => setIsVisible(false)}
             >
-                {/* {isLocker ? '' :
-                    <picture className={cl.product__card_picture}>
-                        <source srcSet={productImg} type='image/png' />
-                        <img src={productImg} alt={imgAlt} className={cl.product_img} />
-                    </picture>
-                } */}
-                <picture
-                    className={cl.product__card_picture}
-                    // initial={{ y: 0, scale: 1 }}
-                    // animate={{ y: 0, scale: 1 }}
-                    // exit={{ y: 0, scale: 1 }}
-                    // transition={{
-                    //     // repeat: 1,
-                    //     // repeatType: "reverse",
-                    //     // type: 'spring',
-                    //     ease: [0.17, 0.67, 0.83, 0.67]
-                    // }}
-                >
+                <picture className={cl.product__card_picture}>
                     <source srcSet={productImg} type='image/png' />
                     <img
                         src={productImg}
@@ -159,33 +157,6 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
                         style={tag ? hitProductImgStyles : productImgStyles}
                     />
                 </picture>
-
-                    {/* {
-                        isVisible && (
-                            <motion.div
-                                initial={{height: 0}}
-                                animate={{height: '115px'}}
-                                exit={{height: 0}}
-                                style={{overflow: 'hidden'}}
-                                transition={{
-                                    duration: 0.6,
-                                    ease: [0.01, 0.01, 0.02, 0.02]
-                                }}
-                                className={cl.product__info}
-                            >
-                                <p className={cl.product__info_name}>{productName}</p>
-                                <div  className={cl.product__info_action}>
-                                    <p  className={cl.product__info_price}>{productPrice}</p>
-                                    <Button styles={btnStyle}
-                                        className={cl.btn}
-                                    >
-                                        {t("btn")}
-                                        <img src={arrowRightIcon} alt="arrow-right-icon" />    
-                                    </Button>
-                                </div>
-                            </motion.div>
-                        )
-                    } */}
 
                 <div
                     className={cl.product__info}
@@ -200,11 +171,11 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
                             <div className={cl.benefits}>
                                 <div className={cl.benefit__item}>
                                     <img className={cl.benefit__item_img} src={encryptionIcon} alt="" />
-                                    <p className={cl.benefit__item_title}> Корпус из нержавеющей стали марки SUS </p>
+                                    <p className={cl.benefit__item_title}> {isMediumTablet ? 'Сталь SUS' : 'Корпус из нержавеющей стали марки SUS'}</p>
                                 </div>
                                 <div className={cl.benefit__item}>
                                     <img className={cl.benefit__item_img} src={speedIcon} alt="" />
-                                    <p className={cl.benefit__item_title + ' ' + cl.benefit__item_title_2}> Скорость прохода 30 человек /минуту </p>
+                                    <p className={cl.benefit__item_title + ' ' + cl.benefit__item_title_2}>{isMediumTablet ? '30 чел/мин' : 'Скорость прохода 30 человек / минуту' }</p>
                                 </div>
                                 <div className={cl.benefit__item}>
                                     <img className={cl.benefit__item_img} src={smileyIcon} alt="" />
@@ -225,9 +196,9 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
                             className={cl.btn}
                             onClick={openProductCard}
                         >
-                            {t("btn")}
-                            {/* <Link to={'/product/ts2000'} style={tag ? hitBtnTextStyle : btnTextStyle}>{t("btn")}</Link> */}
-                            <img src={arrowRightIcon} alt="arrow-right-icon" />    
+                            {/* {t("btn")} */}
+                            <Link to={`/product/${id}`} style={tag ? hitBtnTextStyle : btnTextStyle}>{t("btn")}</Link>
+                            <img style={tag ? hitProductBtnIcon : productBtnIcon} src={arrowRightIcon} alt="arrow-right-icon" />    
                         </Button>
                     </div>
                 </div>

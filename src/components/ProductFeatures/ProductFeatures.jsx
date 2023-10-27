@@ -9,7 +9,7 @@ import plusSignIconBlack from '../../assets/icons/productFeatures/plusSignIconBl
 import {productFeatures, scanerProductFeatures} from '../../data/productFeatures';
 
 const ProductFeatures = () => {
-    const [showFront, setShowFront] = useState(true)
+    // const [showfront, setshowfront] = useState(true)
 
     const lastItemStyles =
     {
@@ -58,7 +58,7 @@ const ProductFeatures = () => {
             return (
                 <FlippableCard
                     key={i}
-                    showFront={showFront}
+                    // showfront={showfront}
                     frontTitle={item.frontTitle}
                     backTitle={item.backTitle}
                     backText={item.backText}
@@ -76,7 +76,7 @@ const ProductFeatures = () => {
             return (
                 <FlippableCardHorizontal
                     key={i}
-                    showFront={showFront}
+                    // showfront={showfront}
                     frontTitle={item.frontTitle}
                     backTitle={item.backTitle}
                     backText={item.backText}
@@ -96,7 +96,7 @@ const ProductFeatures = () => {
         return (
             <FlippableCard
                 key={i}
-                showFront={showFront}
+                // showfront={showfront}
                 frontTitle={item.frontTitle}
                 backTitle={item.backTitle}
                 backText={item.backText}
