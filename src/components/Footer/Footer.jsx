@@ -1,5 +1,5 @@
-import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 import cl from './Footer.module.css'
 
@@ -70,7 +70,8 @@ const Footer = () => {
 
                 <div className={cl.footer__footer}>
                     <p className={cl.footer__footer_text + ' ' + cl.rights}> {t("footerCopyright")} </p>
-                    <p className={cl.footer__footer_text}> {t("footerUserAgr")} </p>
+                    <Link className={cl.footer__footer_text} to={'https://alaqan.kz/docs/public-contract'} target={'_blank'}> {t("footerPublicOffer")} </Link>
+                    <Link className={cl.footer__footer_text} to={'https://alaqan.kz/docs/privacy-policy'} target={'_blank'}> {t("footerPrivacyPolicy")} </Link>
                     <Language footer={true}></Language>
                 </div>
             </div>

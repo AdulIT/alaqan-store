@@ -1,4 +1,6 @@
 import { HashLink } from 'react-router-hash-link'
+import { Link } from "react-scroll";
+import { scroller } from 'react-scroll';
 
 import Button from '../UI/button/Button'
 
@@ -51,6 +53,15 @@ const ProductSubheader = ({ name }) => {
         gap: '10px',
     }
 
+    const handleClick = () =>
+    {
+        scroller.scrollTo('specification', {
+            duration: 500,
+            // delay: 100,
+            smooth: 'easeInOutCubic',
+          });
+    }
+
     return (
         <div className={cl.subheader} style={subheaderStyles}>
             <h2 className={cl.subheader_title}>
@@ -59,13 +70,17 @@ const ProductSubheader = ({ name }) => {
             </h2>
 
             <div className={cl.subheader_btns} style={subheaderBtnsStyles}>
-                <HashLink to={'#specification'}>
-                    <Button styles={specificationBtnStyles}>
+                {/* <Link
+                    to="specification"
+                    smooth={'linear'}
+                    duration={400}
+                > */}
+                    <Button styles={specificationBtnStyles} onClick={handleClick}>
                         <img src={fileIcon} alt='file-icon' />
                         Спецификация
                     </Button>
-                </HashLink>
-                <Button styles={constructorBtnStyles}>
+                {/* </Link> */}
+                <Button styles={constructorBtnStyles} className={cl.subheader_btn__constructor}>
                     Собрать турникет
                     <img src={arrowRightIcon} alt='arrow-right-icon' />
                 </Button>

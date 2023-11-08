@@ -84,7 +84,7 @@ const Specificity = () => {
                             <p className={cl.text}>
                                 Как это <br /> работает?
                             </p>
-                            <Button styles={btnStyles}>
+                            <Button styles={btnStyles} className={cl.front_btn__learn_more}>
                                 Узнать больше
                                 <img src={arrowRightIcon} alt="arrow-right-icon" />
                             </Button>

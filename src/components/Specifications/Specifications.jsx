@@ -1,3 +1,5 @@
+import { Element } from 'react-scroll';
+
 import Table from '../UI/table/Table'
 import TableRow from '../UI/tableRow/TableRow'
 import Button from '../UI/button/Button'
@@ -58,7 +60,7 @@ const Specifications = () => {
     }
 
     return (
-        <section id='specification' className={cl.specification}>
+        <Element name='specification' id='specification' className={cl.specification}>
             <h2 className={cl.title}> Спецификация </h2>
 
             <div className={cl.wrapper}>
@@ -84,7 +86,7 @@ const Specifications = () => {
                     </a>
                 </Button>
             </div>
-        </section>
+        </Element>
     )
 }
 

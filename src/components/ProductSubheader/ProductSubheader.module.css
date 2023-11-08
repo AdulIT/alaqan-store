@@ -10,3 +10,8 @@
     display: flex;
     gap: 10px;
 }
+
+.subheader_btn__constructor:hover
+{
+    background-color: #0066EB !important;
+}

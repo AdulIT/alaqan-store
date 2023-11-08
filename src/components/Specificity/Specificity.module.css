@@ -50,6 +50,11 @@
     align-items: center;
 }
 
+.front_btn__learn_more:hover
+{
+    opacity: .8;
+}
+
 .text
 {
     font-size: 64px;

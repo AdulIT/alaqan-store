@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next'
 import i18n from "../../i18n";
 import { Link, useNavigate } from 'react-router-dom'
@@ -13,10 +14,13 @@ import cl from './Products.module.css'
 const Products = ({filter}) => {
     const productRef = useRef(null)
 
-    // useEffect(() => {
-    //     const computedStyles = getComputedStyle(productRef.current)
+    const [computedStyles, setComputedStyles] = useState([])
 
-    //     console.log(computedStyles.gridColumn);
+    // useEffect(() => {
+    //     const computedStyles = window.getComputedStyle(productRef.current)
+
+    //     console.log(getComputedStyle(productRef.current));
+    //     // console.log(computedStyles.gridColumn);
     // }, [])
 
     const { t } = useTranslation(["products"])

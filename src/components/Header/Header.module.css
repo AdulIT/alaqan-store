@@ -36,6 +36,11 @@
     gap: 20px;
 }
 
+.header__btn:hover
+{
+    background-color: #0066EB !important;
+}
+
 .header__btn_mobile, .header__hamburger
 {
     display: none;

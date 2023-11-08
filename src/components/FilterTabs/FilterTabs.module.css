@@ -25,3 +25,10 @@
     background-color: #F5F5F7 !important;
     color: #1D1D1F !important;
 }
+
+@media screen and (max-width: 766px) {
+    .tabs
+    {
+        margin: 15px auto;
+    }
+}

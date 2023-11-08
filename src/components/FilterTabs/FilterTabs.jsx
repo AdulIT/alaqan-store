@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useMatchMedia } from '../../hooks/useMatchMedia'
 
 import cl from './FilterTabs.module.css'
 
@@ -11,9 +12,12 @@ const FilterTabs = () => {
     const [isActive, setIsActive] = useState(false)
     const [toggleState, setToggleState] = useState('all')
 
+    const {isSmallMobile, isMediumMobile, isMobile} = useMatchMedia();
+
+
     const btnStyles = 
     {
-        padding: '14px 30px 16px 30px',
+        padding: isMobile ? '10px 12px' : '14px 30px 16px 30px',
         borderRadius: '34px',
         backgroundColor: '#FFF',
         color: isActive ? '#1D1D1F' : '#889097',

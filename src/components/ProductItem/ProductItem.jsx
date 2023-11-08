@@ -44,7 +44,7 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
 
     const hitBtnStyle =
     {
-        padding: isTablet ? '12px 15px 14px' : '14px 20px 16px',
+        padding: isTablet ? '12px 15px 14px' : '14px',
         borderRadius: '17px',
         backgroundColor: '#1D1D1F',
         color: '#FFFFFF',
@@ -130,7 +130,7 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
 
     const hitBtnTextStyle = {
         color: '#FFFFFF',
-        fontSize: isTablet ? '14px' : '24px',
+        fontSize: isTablet ? '14px' : '18px',
         lineHeight: 'normal',
     }
 

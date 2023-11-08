@@ -53,7 +53,7 @@ const Language = ({footer, mobile}) => {
     {
         i18n.changeLanguage(langKey)
         currentLang = langKey
-        // console.log(langKey);
+        console.log(currentLang);
         setIsClicked(false)
     }
 
@@ -90,6 +90,8 @@ const Language = ({footer, mobile}) => {
     }
 
     const dropdownStyles = stylesForFooter || stylesForMobile
+
+    // console.log(langItem[currentLang]);
 
     return (
         <div className={cl.lang_select} ref={rootRef}>
