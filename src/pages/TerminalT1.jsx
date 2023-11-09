@@ -1,5 +1,7 @@
 import { Suspense } from 'react'
 
+import { useScrollHeader } from '../hooks/useScrollHeader';
+
 import ProductSubheader from '../components/ProductSubheader/ProductSubheader';
 import Header from '../components/Header/Header';
 import ProductMain from '../components/ProductMain/ProductMain';
@@ -12,10 +14,12 @@ import Specifications from '../components/Specifications/Specifications';
 import Footer from '../components/Footer/Footer';
 
 function TerminalT1() {
+    const {headerClosedStyles, fixedSubheaderStyles} = useScrollHeader()
+
     return (
         <Suspense fallback={null}>
-            <Header />
-            <ProductSubheader />
+            <Header style={headerClosedStyles} />
+            <ProductSubheader style={fixedSubheaderStyles} />
             <main>
                 <ProductMain />
                 <Benefit />

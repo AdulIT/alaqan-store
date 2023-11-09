@@ -1,12 +1,14 @@
 .header
 {
+    position: fixed;
     padding: 18px 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
     border-bottom: 1px solid var(--light-grays-line, #E7E9EA);
-
+    transition: top 0.5s;
+    z-index: 100;
 }
 .header .container
 {

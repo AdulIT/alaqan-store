@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 
 import cl from './Benefits.module.css'
 
-import benefits from '../../data/benefits'
+// import benefits from '../../data/benefits'
 import BenefitItem from '../BenefitItem/BenefitItem'
 
 import encryptionIcon from '../../assets/icons/products/shield.svg'
@@ -15,7 +15,7 @@ import crosshairIcon from '../../assets/icons/products/crosshair.svg'
 import passwordIcon from '../../assets/icons/products/password.svg'
 
 const Benefits = () => {
-    const { t } = useTranslation(["benefits"])
+    // const { t } = useTranslation(["benefits"])
     const location = useLocation()
     // const benefitItem = benefits.map((item, i) =>
     //     {

@@ -1,3 +1,15 @@
+.subheader
+{
+    position: fixed;
+    padding: 14px 200px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    transition: top .5s;
+}
+
 .subheader_title
 {
     color: #000;

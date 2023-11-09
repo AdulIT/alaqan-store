@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link'
 import { useTranslation } from 'react-i18next'
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 import Navbar from '../Navbar/Navbar';
 import Language from '../Language/Language';
@@ -15,26 +15,16 @@ import NavbarMobile from '../NavbarMobile/NavbarMobile';
 import { useMatchMedia } from '../../hooks/useMatchMedia';
 
 
-const Header = () => {
+const Header = ({...props}) => {
     const { t } = useTranslation(["headers"])
+
     const [hamburgerActive, setHamburgerActive] = useState(false)
-    const [headerComputedStyleHeight, setHeaderComputedStyleHeight] = useState(0)
 
     const {isMediumTablet} = useMatchMedia()
-
-    // const headerRef = useRef(null)
-    // // let headerComputedStyleHeight
-
-    // useEffect(() => {
-    //     headerComputedStyleHeight = window.getComputedStyle(ReactDOM.findDOMNode(headerRef.current)).getPropertyValue('height')
-    // }, [])
-    
-
 
     function handleClick()
     {
         setHamburgerActive(prev => !prev)
-        // console.log('click')
     }
 
     const btnStyles = 
@@ -62,7 +52,7 @@ const Header = () => {
     }
 
     return (
-        <header className={cl.header}>
+        <header className={cl.header} {...props}>
             {/* <div className="container" style={containerStyles}> */}
                 <div className={cl.header__left}>
                     <img className={cl.header_logo} src={alaqanLogo} alt="alaqan-logo" />

@@ -14,7 +14,6 @@ const FilterTabs = () => {
 
     const {isSmallMobile, isMediumMobile, isMobile} = useMatchMedia();
 
-
     const btnStyles = 
     {
         padding: isMobile ? '10px 12px' : '14px 30px 16px 30px',

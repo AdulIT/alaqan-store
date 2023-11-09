@@ -1,6 +1,7 @@
-import { HashLink } from 'react-router-hash-link'
-import { Link } from "react-scroll";
+import { useLocation } from 'react-router-dom'
+import { useEffect, useState, useRef } from 'react';
 import { scroller } from 'react-scroll';
+import { useInView } from 'react-intersection-observer';
 
 import Button from '../UI/button/Button'
 
@@ -8,12 +9,29 @@ import cl from './ProductSubheader.module.css'
 
 import arrowRightIcon from '../../assets/icons/products/arrowRight.svg'
 import fileIcon from '../../assets/icons/file.svg'
-import { useLocation } from 'react-router-dom'
 
 // eslint-disable-next-line react/prop-types
-const ProductSubheader = ({ name }) => {
+const ProductSubheader = ({ name, ...props }) => {
     const location = useLocation()
-    // console.log(location.pathname);
+    const [computedStyle, setComputedStyle] = useState(null)
+
+    const { ref: subheaderRef, inView, entry } = useInView({
+        threshold: 1,
+    });
+
+    useEffect(() =>
+    {
+        // console.log(inView);
+        // setComputedStyle(window.getComputedStyle(subheaderRef.current).getPropertyValue('top'))
+
+        // const observer = new IntersectionObserver((entries) =>
+        // {
+        //     const entry = entries[0]
+        //     console.log('entry', entry);
+        // }, {})
+
+        // observer.observe(subheaderRef.current)
+    }, [inView])
 
     const turnstileNames = {
         '/product/1': 'Турникет Alaqan TS2000 Pro',
@@ -40,46 +58,32 @@ const ProductSubheader = ({ name }) => {
         gap: '6px',
     }
 
-    const subheaderStyles = {
-        padding: '18px 200px',
-        backgroundColor: '#fff',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-    }
-
     const subheaderBtnsStyles = {
         display: 'flex',
         gap: '10px',
     }
 
-    const handleClick = () =>
+    const scrolTo = () =>
     {
         scroller.scrollTo('specification', {
             duration: 500,
             // delay: 100,
-            smooth: 'easeInOutCubic',
+            smooth: 'easeInCubic',
           });
     }
 
     return (
-        <div className={cl.subheader} style={subheaderStyles}>
+        <div className={cl.subheader} {...props}>
             <h2 className={cl.subheader_title}>
                 {' '}
                 {name}  {turnstileNames[location.pathname]}{' '}
             </h2>
 
             <div className={cl.subheader_btns} style={subheaderBtnsStyles}>
-                {/* <Link
-                    to="specification"
-                    smooth={'linear'}
-                    duration={400}
-                > */}
-                    <Button styles={specificationBtnStyles} onClick={handleClick}>
-                        <img src={fileIcon} alt='file-icon' />
-                        Спецификация
-                    </Button>
-                {/* </Link> */}
+                <Button styles={specificationBtnStyles} onClick={scrolTo}>
+                    <img src={fileIcon} alt='file-icon' />
+                    Спецификация
+                </Button>
                 <Button styles={constructorBtnStyles} className={cl.subheader_btn__constructor}>
                     Собрать турникет
                     <img src={arrowRightIcon} alt='arrow-right-icon' />

@@ -18,7 +18,7 @@
   scroll-behavior: smooth;
 }
 
-*
+*, ::after, ::before
 {
   font-family: 'Inter', sans-serif;
   padding: 0;
