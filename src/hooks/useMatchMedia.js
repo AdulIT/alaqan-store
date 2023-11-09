@@ -21,7 +21,7 @@ export const useMatchMedia = () => {
         mediaQueryLists.forEach((mql) => mql.addEventListener('change', handler))
 
         return () => mediaQueryLists.forEach((mql) => mql.removeEventListener('change', handler))
-    });
+    }, []);
 
     return ['isSmallMobile', 'isMediumMobile', 'isMobile', 'isMediumTablet', 'isTablet'].reduce((acc, screen, index) => ({
         ...acc,
