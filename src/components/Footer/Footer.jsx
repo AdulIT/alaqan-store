@@ -49,9 +49,8 @@ const Footer = () => {
                         <div className={cl.footer__nav_container}>
                             <p className={cl.footer__nav_title}> {t("footerNavCompany")} </p>
                             <ul className={cl.footer__nav_menu}>
-                                <li className={cl.footer__nav_menu__item}> <a href="#">{t("footerNavAbout")}</a> </li>
-                                <li className={cl.footer__nav_menu__item}> <a href="#">{t("footerNavPricing")}</a> </li>
-                                <li className={cl.footer__nav_menu__item}> <a href="#">{t("footerNavJobs")}</a> </li>
+                                <li className={cl.footer__nav_menu__item}> <a href="https://alaqan.kz/about">{t("footerNavAbout")}</a> </li>
+                                <li className={cl.footer__nav_menu__item}> <a href="#contactUs">{t("footerNavJobs")}</a> </li>
                             </ul>
                         </div>
 
