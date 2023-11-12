@@ -47,6 +47,7 @@ const Products = ({filter}) => {
         {
                 return <ProductItem
                     key={product.id}
+                    id={product.id}
                     productImg={product.img}
                     imgAlt={product.imgAlt}
                     productName={t(`${product.type}.${i}.name`)}
