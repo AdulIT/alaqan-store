@@ -43,7 +43,6 @@ const FilterTabs = () => {
                 <div className={cl.tabs}>
                     <Button
                         styles={toggleState === 'all' ? btnStylesActive : btnStyles}
-                        // styles={btnStylesActive}
                         className={cl.btn__mobile}
                         onClick={() => toggleTab('all')}
                     >
@@ -51,7 +50,6 @@ const FilterTabs = () => {
                     </Button>
                     <Button
                         styles={toggleState === 'turnstile' ? btnStylesActive : btnStyles}
-                        // styles={btnStyles}
                         className={cl.btn__mobile}
                         onClick={() => toggleTab('turnstile')}
                     >
@@ -59,7 +57,6 @@ const FilterTabs = () => {
                     </Button>
                     <Button
                         styles={toggleState === 'locker' ? btnStylesActive : btnStyles}
-                        // styles={btnStyles}
                         className={cl.btn__mobile}
                         onClick={() => toggleTab('locker')}
                     >
@@ -67,7 +64,6 @@ const FilterTabs = () => {
                     </Button>
                     <Button
                         styles={toggleState === 'scaner' ? btnStylesActive : btnStyles}
-                        // styles={btnStyles}
                         className={cl.btn__mobile}
                         onClick={() => toggleTab('scaner')}
                     >

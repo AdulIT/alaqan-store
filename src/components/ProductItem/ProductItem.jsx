@@ -14,7 +14,7 @@ import encryptionIcon from '../../assets/icons/products/shield-stroke.svg'
 import speedIcon from '../../assets/icons/products/timer-stroke.svg'
 import smileyIcon from '../../assets/icons/products/smiley-stroke.svg'
 
-const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPrice, tag, children}) => {
+const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) => {
     const navigate = useNavigate()
     const location = useLocation()
 
@@ -26,7 +26,6 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
     const openProductCard = async () =>
     {
         navigate('/product/' + id)
-        // console.log(location.pathname);
     }
 
     const btnStyle =
@@ -53,12 +52,6 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
         border: 'none',
         cursor: 'pointer',
         gap: '4px',
-    }
-
-    const bgImg =
-    {
-        background: '',
-        // background: isLocker ? `url(${productImg}) center center/cover no-repeat` : '#FFF',
     }
 
     const hitProductStyles =
@@ -147,7 +140,7 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
         <AnimatePresence initial={true}>
             <div
                 className={cl.product__card}
-                style={tag ? hitProductStyles : bgImg}
+                style={hitProductStyles}
             >
                 <picture className={cl.product__card_picture}>
                     <source srcSet={productImg} type='image/png' />
@@ -196,7 +189,6 @@ const ProductItem = ({id, productImg, isLocker, imgAlt, productName, productPric
                             className={cl.btn}
                             onClick={openProductCard}
                         >
-                            {/* {t("btn")} */}
                             <Link to={`/product/${id}`} style={tag ? hitBtnTextStyle : btnTextStyle}>{t("btn")}</Link>
                             <img style={tag ? hitProductBtnIcon : productBtnIcon} src={arrowRightIcon} alt="arrow-right-icon" />    
                         </Button>

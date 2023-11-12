@@ -12,72 +12,47 @@ import products from '../../data/products'
 import cl from './Products.module.css'
 
 const Products = ({filter}) => {
-    const productRef = useRef(null)
-
-    const [computedStyles, setComputedStyles] = useState([])
-
-    // useEffect(() => {
-    //     const computedStyles = window.getComputedStyle(productRef.current)
-
-    //     console.log(getComputedStyle(productRef.current));
-    //     // console.log(computedStyles.gridColumn);
-    // }, [])
-
     const { t } = useTranslation(["products"])
 
-    const {isMediumTablet} = useMatchMedia();
+    const {isMediumMobile, isMobile, isMediumTablet} = useMatchMedia();
 
-    const productsStyle = {
-        gridTemplateRows: isMediumTablet ? '350px' : '454px',
-    }
+    let productsStyle = {}
 
     let productItem
 
     if (filter === 'all')
     {
+        productsStyle = {
+            gridTemplateRows: isMediumTablet ? '350px' : '454px',
+        }
         productItem = products.map((product, i) =>
         {
-            let isBgImg = false
-            if (product.type === 'locker')
-            {
-                isBgImg = true
-            }
             return <ProductItem
                 key={product.id}
                 id={product.id}
                 productImg={product.img}
-                isLocker={isBgImg}
                 imgAlt={product.imgAlt}
                 productName={t(`all.${i}.name`)}
                 productPrice={t(`all.${i}.price`, {price: product.price})}
                 tag={product.tag}
-                // ref={productRef}
-            >
-                {/* <Link to={`/product/${product.id}`} style={tag ? hitBtnTextStyle : btnTextStyle}>{t("btn")}</Link> */}
-            </ProductItem>
+            />
         })
     }
     else
     {
+        productsStyle = {
+            gridTemplateRows: (isMediumTablet && filter === 'turnstile') ? '350px' : '454px',
+        }
         productItem = products.filter((product) => product.type === filter).map((product, i) =>
         {
-            let isBgImg = false
-                if (product.type === 'locker')
-                {
-                    isBgImg = false
-                }
                 return <ProductItem
                     key={product.id}
                     productImg={product.img}
-                    isLocker={isBgImg}
                     imgAlt={product.imgAlt}
                     productName={t(`${product.type}.${i}.name`)}
                     productPrice={t(`${product.type}.${i}.price`, {price: product.price})}
                     tag={product.tag}
-                    // ref={productRef}
-                >
-                    {/* <Link to={`/product/${product.id}`} style={tag ? hitBtnTextStyle : btnTextStyle}>{t("btn")}</Link> */}
-                </ProductItem>
+                />
         })       
     }
     
