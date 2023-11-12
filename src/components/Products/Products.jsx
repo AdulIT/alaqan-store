@@ -14,7 +14,7 @@ import cl from './Products.module.css'
 const Products = ({filter}) => {
     const { t } = useTranslation(["products"])
 
-    const {isMediumMobile, isMobile, isMediumTablet} = useMatchMedia();
+    const {isSmallMobile, isMobile, isMediumTablet} = useMatchMedia();
 
     let productsStyle = {}
 
@@ -23,7 +23,7 @@ const Products = ({filter}) => {
     if (filter === 'all')
     {
         productsStyle = {
-            gridTemplateRows: isMediumTablet ? '350px' : '454px',
+            gridTemplateRows: isSmallMobile ? '175px' : isMobile ? '200px' : (isMediumTablet ? '350px' : '454px'),
         }
         productItem = products.map((product, i) =>
         {
@@ -41,7 +41,19 @@ const Products = ({filter}) => {
     else
     {
         productsStyle = {
-            gridTemplateRows: (isMediumTablet && filter === 'turnstile') ? '350px' : '454px',
+            gridTemplateRows:
+                (isSmallMobile && filter === 'turnstile') ? '175px'                
+                    :
+                isSmallMobile ? '240px'
+                    :
+                (isMobile && filter === 'turnstile') ? '200px'
+                    :
+                isMobile ? '300px'
+                    :
+                ((isMediumTablet && filter === 'turnstile') ? '350px'
+                    :
+                '454px'
+            ),
         }
         productItem = products.filter((product) => product.type === filter).map((product, i) =>
         {

@@ -6,8 +6,8 @@ const queries = [
     // '(min-width: 600px)',
     // '(min-width: 900px)',
     // '(min-width: 1200px)',
+    '(max-width: 409px)',
     '(max-width: 575px)',
-    '(min-width: 576px)',
     '(max-width: 766px)',
     '(max-width: 991px)',
     '(max-width: 1200px)',
@@ -28,7 +28,7 @@ export const useMatchMedia = () => {
         return () => mediaQueryLists.forEach((mql) => mql.removeEventListener('change', handler))
     }, []);
 
-    return ['isMobile', 'isMediumMobile', 'isMobile', 'isMediumTablet', 'isTablet'].reduce((acc, screen, index) => ({
+    return ['isMicroMobile', 'isSmallMobile', 'isMobile', 'isMediumTablet', 'isTablet'].reduce((acc, screen, index) => ({
         ...acc,
         [screen]: values[index],
     }), {});

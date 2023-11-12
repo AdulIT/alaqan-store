@@ -18,16 +18,21 @@
 @media screen and (max-width: 991px) {
     .products {
         padding: 0;
-        grid-template-columns: repeat(2, 333px); /* 333px */
-        /* grid-template-rows: 350px; */
+        grid-template-columns: repeat(2, 333px);
     }
 }
 
 @media screen and (max-width: 766px) {
     .products {
-        grid-template-columns: repeat(2, 180px);
-        grid-template-rows: 175px;
-        grid-auto-rows: 240px;
+        grid-template-columns: repeat(2, 240px) !important;
+        grid-auto-rows: 300px;
         gap: 15px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .products {
+        grid-template-columns: repeat(2, 180px) !important;
+        grid-auto-rows: 240px;
     }
 }

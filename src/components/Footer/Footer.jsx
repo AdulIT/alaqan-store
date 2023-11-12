@@ -21,11 +21,13 @@ const Footer = () => {
 
     return (
         <footer className={cl.footer}>
-            <div className="container">
+            {/* <div className="container"> */}
                 <div className={cl.footer__wrapper}>
                     <div className={cl.footer__alaqan}>
-                        <img className={cl.footer__alaqan_img} src={alaqanLogo} alt="alaqan-logo" />
-                        <img className={cl.footer__alaqan_img} src={alaqanText} alt="alaqan-logo-text" />
+                        <div className={cl.footer__logo}>
+                            <img className={cl.footer__alaqan_img} src={alaqanLogo} alt="alaqan-logo" />
+                            <img className={cl.footer__alaqan_img} src={alaqanText} alt="alaqan-logo-text" />
+                        </div>
 
                         <p className={cl.footer__alaqan_info}> {t("footerAlaqanInfo")} </p>
 
@@ -73,7 +75,7 @@ const Footer = () => {
                     <Link className={cl.footer__footer_text} to={'https://alaqan.kz/docs/privacy-policy'} target={'_blank'}> {t("footerPrivacyPolicy")} </Link>
                     <Language footer={true}></Language>
                 </div>
-            </div>
+            {/* </div> */}
         </footer>
     )
 }

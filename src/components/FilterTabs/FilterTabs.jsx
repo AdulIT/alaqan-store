@@ -12,24 +12,26 @@ const FilterTabs = () => {
     const [isActive, setIsActive] = useState(false)
     const [toggleState, setToggleState] = useState('all')
 
-    const {isSmallMobile, isMediumMobile, isMobile} = useMatchMedia();
+    const {isMicroMobile, isSmallMobile, isMobile} = useMatchMedia();
 
     const btnStyles = 
     {
-        padding: isMobile ? '10px 12px' : '14px 30px 16px 30px',
+        padding: isSmallMobile ? '10px 12px' : isMobile ? '10px 14px 12px' : '14px 30px 16px 30px',
         borderRadius: '34px',
         backgroundColor: '#FFF',
         color: isActive ? '#1D1D1F' : '#889097',
         border: 'none',
+        fontSize: isSmallMobile ? '14px' : isMobile ? '16px' : '18px',
     }
 
     const btnStylesActive =
     {
-        padding: '14px 30px 16px 30px',
+        padding: isSmallMobile ? '10px 12px' : isMobile ? '10px 14px 12px' : '14px 30px 16px 30px',
         borderRadius: '34px',
         backgroundColor: '#F5F5F7',
         color: '#1D1D1F',
         border: 'none',
+        fontSize: isSmallMobile ? '14px' : isMobile ? '16px' : '18px',
     }
 
     const toggleTab = (state) =>

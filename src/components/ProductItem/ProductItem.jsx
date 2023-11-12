@@ -21,7 +21,7 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
     const [isVisible, setIsVisible] = useState(false)
     const { t } = useTranslation(["tabs"])
 
-    const {isSmallMobile, isMediumMobile, isMobile, isMediumTablet, isTablet} = useMatchMedia();
+    const {isSmallMobile, isMobile, isMediumTablet, isTablet} = useMatchMedia();
 
     const openProductCard = async () =>
     {
@@ -41,8 +41,15 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
         gap: '4px'
     }
 
+    const bgImg =
+    {
+        background: '',
+        // background: isLocker ? `url(${productImg}) center center/cover no-repeat` : '#FFF',
+    }
+
     const hitBtnStyle =
     {
+
         padding: isTablet ? '12px 15px 14px' : '14px',
         borderRadius: '17px',
         backgroundColor: '#1D1D1F',
@@ -56,24 +63,28 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
 
     const hitProductStyles =
     {
-        padding: isMediumTablet ? '0 39px 0 44px' : '35px 39px 39px 44px',
+        padding: isMobile ? '0 19px 0 15px' : (isMediumTablet ? '0 39px 0 44px' : '35px 39px 39px 44px'),
         gridColumn: isMediumTablet ? '1/3' : '1/4',
         display: 'grid',
         gridTemplateColumns: isMediumTablet ? '1fr 1fr' : '357px 2fr',
-        gap: isMediumTablet ? '10px' : '84px',
-        height: isMediumTablet ? '350px' : 'initial',
+        gap: isMobile ? '40px' : (isMediumTablet ? '10px' : '84px'),
     }
 
     const productImgStyles =
     {
         position: 'absolute',
-        top: '40%',
+        top: isSmallMobile && id === 10 ? '30%' : '40%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
         zIndex: 10,
         display: 'flex',
         margin: '0 auto',
-        maxWidth: '70%',
+        maxWidth: isSmallMobile && id === 7 ? '90%'
+                  : isSmallMobile && id === 6 ? '80%'
+                  : isSmallMobile && id === 10 ? '30%'
+                  : isSmallMobile ? '50%' 
+                  : isMobile && id === 10 ? '30%' 
+                  : (isMobile ? '60%' : '70%'),
         height: 'auto',
         objectFit: 'cover'
     }
@@ -81,13 +92,13 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
     const hitProductImgStyles =
     {
         display: 'flex',
-        width: isMediumTablet ? '250px' : '357px',
+        width: isMobile ? '130px' : (isMediumTablet ? '250px' : '357px'),
     }
 
     const hitProductInfoName =
     {
-        width: '252px',
-        fontSize: isTablet ? '36px' : '44px',
+        width: isMobile ? '115px' : '252px',
+        fontSize: isSmallMobile ? '16px' : isMobile ? '20px' : (isTablet ? '36px' : '44px'),
         fontStyle: 'normal',
         fontWeight: 500,
         lineHeight: '100%',
@@ -96,19 +107,19 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
     const hitProductInfoAction =
     {
         marginTop: 0,
-        paddingLeft: '20px',
+        paddingLeft: isMobile ? '0' : '20px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
         borderRadius: '17px',
-        background: '#F5F5F7',
+        background: isMobile ? 'transparent' : '#F5F5F7',
         width: '100%',
     }
 
     const hitProductInfoPrice =
     {
         color: '#1D1D1F',
-        fontSize: isTablet ? '20px' : '24px',
+        fontSize: isMobile ? '16px' : (isTablet ? '20px' : '24px'),
         fontStyle: 'normal',
         fontWeight: 500,
         lineHeight: 'normal',
@@ -140,7 +151,8 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
         <AnimatePresence initial={true}>
             <div
                 className={cl.product__card}
-                style={hitProductStyles}
+                style={tag ? hitProductStyles : bgImg}
+                onClick={() => isMobile ? openProductCard() : ''}
             >
                 <picture className={cl.product__card_picture}>
                     <source srcSet={productImg} type='image/png' />
@@ -181,17 +193,28 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
                         className={cl.product__info_action}
                         style={tag ? hitProductInfoAction : {}}
                     >
-                        <p
-                            className={cl.product__info_price}
-                            style={tag ? hitProductInfoPrice : {}}
-                        >{productPrice}</p>
-                        <Button styles={tag ? hitBtnStyle : btnStyle}
-                            className={cl.btn}
-                            onClick={openProductCard}
-                        >
-                            <Link to={`/product/${id}`} style={tag ? hitBtnTextStyle : btnTextStyle}>{t("btn")}</Link>
-                            <img style={tag ? hitProductBtnIcon : productBtnIcon} src={arrowRightIcon} alt="arrow-right-icon" />    
-                        </Button>
+                        {isMobile ?
+                            (<p
+                                className={cl.product__info_price}
+                                style={tag ? hitProductInfoPrice : {}}
+                            >{productPrice}</p>
+                            )
+                        :
+                            <>
+                                <p
+                                    className={cl.product__info_price}
+                                    style={tag ? hitProductInfoPrice : {}}
+                                >{productPrice}</p>
+                                <Button styles={tag ? hitBtnStyle : btnStyle}
+                                    className={cl.btn}
+                                    onClick={openProductCard}
+                                >
+                                    <Link to={`/product/${id}`} style={tag ? hitBtnTextStyle : btnTextStyle}>{t("btn")}</Link>
+                                    <img style={tag ? hitProductBtnIcon : productBtnIcon} src={arrowRightIcon} alt="arrow-right-icon" />    
+                                </Button>
+                            </>
+                        }
+                        
                     </div>
                 </div>
             </div>
