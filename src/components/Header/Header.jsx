@@ -13,14 +13,26 @@ import Hamburger from '../Hamburger/Hamburger';
 import paperPlaneTilt from '../../assets/icons/paperPlaneTilt.svg'
 import NavbarMobile from '../NavbarMobile/NavbarMobile';
 import { useMatchMedia } from '../../hooks/useMatchMedia';
+import { useEffect } from 'react';
 
 
 const Header = ({...props}) => {
     const { t } = useTranslation(["headers"])
-
     const [hamburgerActive, setHamburgerActive] = useState(false)
-
     const {isMediumTablet} = useMatchMedia()
+
+    useEffect(() =>
+    {
+        const body = document.body
+        if (hamburgerActive)
+        {
+            body.style.overflow = 'hidden'
+        }
+        else
+        {
+            body.style.overflow = 'auto'
+        }
+    }, [hamburgerActive])
 
     function handleClick()
     {
@@ -44,16 +56,8 @@ const Header = ({...props}) => {
         backgroundColor: '#007AFF',
     }
 
-    const containerStyles =
-    {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between'
-    }
-
     return (
         <header className={cl.header} {...props}>
-            {/* <div className="container" style={containerStyles}> */}
                 <div className={cl.header__left}>
                     <img className={cl.header_logo} src={alaqanLogo} alt="alaqan-logo" />
                     <Navbar className={cl.header__nav} />
@@ -88,7 +92,6 @@ const Header = ({...props}) => {
                         <Button className={cl.header__btn} styles={btnStyles}>{t("getStarted")}</Button>
                     </HashLink>
                 </div>
-            {/* </div> */}
         </header>
     );
 };

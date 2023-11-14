@@ -20,7 +20,12 @@ export const useScrollHeader = () =>
     {
         const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop
 
-        if (currentScrollTop > lastScrollToTop)
+        if (currentScrollTop === 0)
+        {
+            setHeaderClosed(false)
+            setSubheaderFixed(false)
+        }
+        else if (currentScrollTop > lastScrollToTop)
         {
             setHeaderClosed(true)
             setSubheaderFixed(true)

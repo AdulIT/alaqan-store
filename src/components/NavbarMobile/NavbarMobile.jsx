@@ -19,25 +19,22 @@ const NavbarMobile = ({hamburgerState}) => {
     // }
 
     return (
-        <nav className={cl.nav}>
+        <nav className={cl.nav} style={menuStyles}>
             <ul className={cl.menu} style={menuStyles}>
                 <li className={cl.menu__item}>
                     <a className={cl.menu__link} href='https://alaqan.kz/'>{t("headers:overview")}</a>
                 </li>
-                <li className={cl.menu__item + ' ' + cl.current}>
-                    <Link className={cl.menu__link + ' ' + cl.current} to={'/'}>{t("business")}</Link>
+                <li className={cl.menu__item}>
+                    <a className={cl.menu__link} href='https://alaqan.kz/mektep'>{t("mektep")}</a>
                 </li>
                 <li className={cl.menu__item}>
-                    <a className={cl.menu__link} href=''>{t("mektep")}</a>
+                    <a className={cl.menu__link} href='https://alaqan.kz/pay'>{t("pay")}</a>
                 </li>
                 <li className={cl.menu__item}>
-                    <a className={cl.menu__link} href=''>{t("pay")}</a>
+                    <a className={cl.menu__link + ' ' + cl.active} href='/'>{t("store")}</a>
                 </li>
                 <li className={cl.menu__item}>
-                    <a className={cl.menu__link} href=''>{t("store")}</a>
-                </li>
-                <li className={cl.menu__item}>
-                    <a className={cl.menu__link} href=''>{t("headers:about")}</a>
+                    <a className={cl.menu__link} href='https://alaqan.kz/about'>{t("headers:about")}</a>
                 </li>
                 <Language mobile={true} />
             </ul>

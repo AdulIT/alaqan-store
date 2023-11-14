@@ -155,6 +155,10 @@
         flex-direction: column;
         gap: 44px;
     }
+    .footer__nav_menu
+    {
+        align-items: center;
+    }
     .line
     {
         display: none;

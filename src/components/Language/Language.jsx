@@ -11,8 +11,8 @@ const Language = ({footer, mobile}) => {
     const { i18n } = useTranslation(["common"])
     const [isClicked, setIsClicked] = useState(false)
     const rootRef = useRef(null)
-
-    let currentLang = 0
+    const [currentLangIndex, setCurrentLangIndex] = useState(0)
+    const [currentLang, setCurrentLang] = useState('')
 
     // console.log(i18n.language);
 
@@ -38,13 +38,13 @@ const Language = ({footer, mobile}) => {
         switch(localStorage.getItem('i18nextLng'))
         {
             case 'en':
-                currentLang = 0
+                setCurrentLangIndex(0)
                 break;
             case 'kz':
-                currentLang = 1
+                setCurrentLangIndex(1)
                 break;
             case 'ru':
-                currentLang = 2
+                setCurrentLangIndex(2)
                 break;
         }
     }, [i18n.changeLanguage])
@@ -52,12 +52,12 @@ const Language = ({footer, mobile}) => {
     function handleLanguageChange(langKey)
     {
         i18n.changeLanguage(langKey)
-        currentLang = langKey
-        console.log(currentLang);
+        setCurrentLangIndex(langKey)
+        // console.log(currentLangIndex);
         setIsClicked(false)
     }
 
-    // console.log(currentLang);
+    // console.log(currentLangIndex);
 
     const langItem = langs.map((lang, i) =>
     {
@@ -69,14 +69,23 @@ const Language = ({footer, mobile}) => {
                 value={lang.key}
                 onClick={() => handleLanguageChange(lang.key)}
             >
-                {/* {i === 0 ? currentLang = lang.language : ''} */}
+                {/* {i === 0 ? currentLangIndex = lang.language : ''} */}
                 {lang.language}
             </li>
         )
     })
 
-    // console.log(`current lang: ${currentLang}`);
-    // console.log(langItem[currentLang].props.children);
+    function showCurrentLanguage(index)
+    {
+        if (mobile || footer)
+        {
+            // setCurrentLang(langItem[index]?.props?.children)
+            // console.log(langItem[index]?.props?.children)
+        }
+    }
+
+    // console.log(`current lang: ${currentLangIndex}`);
+    // console.log(langItem[currentLangIndex].props.children);
     // console.log(langItem);
 
     const stylesForFooter =
@@ -91,7 +100,7 @@ const Language = ({footer, mobile}) => {
 
     const dropdownStyles = stylesForFooter || stylesForMobile
 
-    // console.log(langItem[currentLang]);
+    // console.log(langItem[currentLangIndex]);
 
     return (
         <div className={cl.lang_select} ref={rootRef}>
@@ -104,14 +113,23 @@ const Language = ({footer, mobile}) => {
             </ul>
             
             <div className={cl.lang_select__icon} onClick={() => setIsClicked(prev => !prev)}>
-                <svg className={cl.lang_globeIcon} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#1D1D1F" strokeWidth="1.5" strokeMiterlimit="10"/>
-                    <path d="M3.51562 9H20.4844" stroke="#1D1D1F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M3.51562 15H20.4844" stroke="#1D1D1F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 20.7562C14.0711 20.7562 15.75 16.8358 15.75 11.9999C15.75 7.16396 14.0711 3.24365 12 3.24365C9.92893 3.24365 8.25 7.16396 8.25 11.9999C8.25 16.8358 9.92893 20.7562 12 20.7562Z" stroke="#1D1D1F" strokeWidth="1.5" strokeMiterlimit="10"/>
-                </svg>
-                    { footer ? langItem[currentLang].props.children : '' }
-                <img className={!isClicked ? cl.lang_arrowDownIcon : cl.lang_arrowDownIcon + ' ' + cl.rotateArrow} src={arrowDownIcon} alt="globe" />
+                {!mobile &&
+                    <svg className={cl.lang_globeIcon} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#1D1D1F" strokeWidth="1.5" strokeMiterlimit="10"/>
+                        <path d="M3.51562 9H20.4844" stroke="#1D1D1F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M3.51562 15H20.4844" stroke="#1D1D1F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M12 20.7562C14.0711 20.7562 15.75 16.8358 15.75 11.9999C15.75 7.16396 14.0711 3.24365 12 3.24365C9.92893 3.24365 8.25 7.16396 8.25 11.9999C8.25 16.8358 9.92893 20.7562 12 20.7562Z" stroke="#1D1D1F" strokeWidth="1.5" strokeMiterlimit="10"/>
+                    </svg>
+                }
+                    <p style={mobile ? {marginTop: '44px'} : {}}>
+                        { showCurrentLanguage(currentLangIndex) }
+                    </p>
+                <img
+                    style={mobile ? {marginTop: '44px'} : {}}
+                    className={!isClicked ? cl.lang_arrowDownIcon : cl.lang_arrowDownIcon + ' ' + cl.rotateArrow}
+                    src={arrowDownIcon}
+                    alt="arrow-down-icon"
+                />
             </div>
         </div>
     )

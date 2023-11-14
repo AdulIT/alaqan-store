@@ -89,6 +89,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     .header__btn, .header__nav, .lang
     {
@@ -122,6 +123,11 @@
     .header
     {
         padding: 8px 16px;
+    }
+    .header_logo
+    {
+        width: 24px;
+        height: 24px;
     }
 }
 

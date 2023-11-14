@@ -16,7 +16,7 @@ const FilterTabs = () => {
 
     const btnStyles = 
     {
-        padding: isSmallMobile ? '10px 12px' : isMobile ? '10px 14px 12px' : '14px 30px 16px 30px',
+        padding: isMicroMobile ? '5px 7px' : isSmallMobile ? '10px 12px' : isMobile ? '10px 14px 12px' : '14px 30px 16px 30px',
         borderRadius: '34px',
         backgroundColor: '#FFF',
         color: isActive ? '#1D1D1F' : '#889097',
@@ -26,7 +26,7 @@ const FilterTabs = () => {
 
     const btnStylesActive =
     {
-        padding: isSmallMobile ? '10px 12px' : isMobile ? '10px 14px 12px' : '14px 30px 16px 30px',
+        padding: isMicroMobile ? '5px 7px' : isSmallMobile ? '10px 12px' : isMobile ? '10px 14px 12px' : '14px 30px 16px 30px',
         borderRadius: '34px',
         backgroundColor: '#F5F5F7',
         color: '#1D1D1F',

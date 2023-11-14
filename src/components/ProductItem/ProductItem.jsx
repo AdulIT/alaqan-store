@@ -21,7 +21,7 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
     const [isVisible, setIsVisible] = useState(false)
     const { t } = useTranslation(["tabs"])
 
-    const {isSmallMobile, isMobile, isMediumTablet, isTablet} = useMatchMedia();
+    const {isMicroMobile, isSmallMobile, isMobile, isMediumTablet, isTablet} = useMatchMedia();
 
     const openProductCard = async () =>
     {
@@ -63,17 +63,17 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
 
     const hitProductStyles =
     {
-        padding: isMobile ? '0 19px 0 15px' : (isMediumTablet ? '0 39px 0 44px' : '35px 39px 39px 44px'),
+        padding: isMicroMobile ? '0' : isMobile ? '0 19px 0 15px' : (isMediumTablet ? '0 39px 0 44px' : '35px 39px 39px 44px'),
         gridColumn: isMediumTablet ? '1/3' : '1/4',
         display: 'grid',
         gridTemplateColumns: isMediumTablet ? '1fr 1fr' : '357px 2fr',
-        gap: isMobile ? '40px' : (isMediumTablet ? '10px' : '84px'),
+        gap: isMicroMobile ? '0' : isMobile ? '40px' : (isMediumTablet ? '10px' : '84px'),
     }
 
     const productImgStyles =
     {
         position: 'absolute',
-        top: isSmallMobile && id === 10 ? '30%' : '40%',
+        top: isMicroMobile && id === 2 ? '33%' : isMicroMobile && id === 3 ? '34%': isSmallMobile && id === 10 ? '30%' : '40%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
         zIndex: 10,
