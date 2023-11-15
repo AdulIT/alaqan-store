@@ -1,12 +1,11 @@
-import React from 'react';
+import { useLocation } from 'react-router-dom';
+
 import cl from './ProductMain.module.css'
 
-// import turnstileImg from '../../assets/img/products/turnstile.svg'
 import ts2000 from '../../assets/img/products/turnstile-ts2000.svg'
 import ts1000 from '../../assets/img/products/turnstile-ts1000.svg'
 import fbl700 from '../../assets/img/products/turnstile-fbl700.svg'
 import terminalT1 from '../../assets/img/products/alaqan-terminalT1.svg'
-import { useLocation } from 'react-router-dom';
 
 const ProductMain = () => {
     const location = useLocation()

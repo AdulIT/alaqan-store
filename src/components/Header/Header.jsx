@@ -1,20 +1,18 @@
-import React from 'react';
 import { HashLink } from 'react-router-hash-link'
 import { useTranslation } from 'react-i18next'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useMatchMedia } from '../../hooks/useMatchMedia';
 
 import Navbar from '../Navbar/Navbar';
 import Language from '../Language/Language';
 import Button from '../UI/button/Button';
-import cl from './Header.module.css'
-
-import alaqanLogo from '/alaqan.svg'
 import Hamburger from '../Hamburger/Hamburger';
-import paperPlaneTilt from '../../assets/icons/paperPlaneTilt.svg'
 import NavbarMobile from '../NavbarMobile/NavbarMobile';
-import { useMatchMedia } from '../../hooks/useMatchMedia';
-import { useEffect } from 'react';
 
+import cl from './Header.module.css';
+
+import alaqanLogo from '/alaqan.svg';
+import paperPlaneTilt from '../../assets/icons/paperPlaneTilt.svg';
 
 const Header = ({...props}) => {
     const { t } = useTranslation(["headers"])

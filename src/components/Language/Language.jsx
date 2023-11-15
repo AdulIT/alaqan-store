@@ -1,6 +1,6 @@
 import React from 'react'
 import cl from './Language.module.css'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 import arrowDownIcon from '../../assets/icons/arrowDown.svg'
@@ -51,9 +51,9 @@ const Language = ({footer, mobile}) => {
 
     function handleLanguageChange(langKey)
     {
+        console.log(langKey);
         i18n.changeLanguage(langKey)
-        setCurrentLangIndex(langKey)
-        // console.log(currentLangIndex);
+        // setCurrentLangIndex(langKey)
         setIsClicked(false)
     }
 
@@ -69,23 +69,23 @@ const Language = ({footer, mobile}) => {
                 value={lang.key}
                 onClick={() => handleLanguageChange(lang.key)}
             >
-                {/* {i === 0 ? currentLangIndex = lang.language : ''} */}
+                {/* {i === 0 ? currentLangIndex = lang.language : ''} console.log(lang.key) */ }
                 {lang.language}
             </li>
         )
     })
+    const currentLanguage = useMemo(showCurrentLanguage, [i18n.changeLanguage])
 
-    function showCurrentLanguage(index)
+    function showCurrentLanguage()
     {
-        if (mobile || footer)
+        if ((mobile || footer))
         {
-            // setCurrentLang(langItem[index]?.props?.children)
-            // console.log(langItem[index]?.props?.children)
+            setCurrentLang(langItem[currentLangIndex]?.props.children)
+            return currentLang
         }
     }
 
-    // console.log(`current lang: ${currentLangIndex}`);
-    // console.log(langItem[currentLangIndex].props.children);
+    // console.log(langItem[currentLangIndex]?.props);
     // console.log(langItem);
 
     const stylesForFooter =
@@ -122,7 +122,7 @@ const Language = ({footer, mobile}) => {
                     </svg>
                 }
                     <p style={mobile ? {marginTop: '44px'} : {}}>
-                        { showCurrentLanguage(currentLangIndex) }
+                        { currentLanguage }
                     </p>
                 <img
                     style={mobile ? {marginTop: '44px'} : {}}

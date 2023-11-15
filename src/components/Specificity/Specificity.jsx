@@ -1,20 +1,19 @@
 import { useState } from 'react'
 import { CSSTransition } from 'react-transition-group';
+import { useLocation } from 'react-router-dom';
 
 import Button from '../UI/button/Button'
-import cl from './Specificity.module.css'
 
+import cl from './Specificity.module.css'
 import '../Card/flip-transition.css'
 
 import arrowRightIcon from '../../assets/icons/products/arrowRight.svg'
-
 import ts2000 from '../../assets/img/specificity/ts2000pro.svg'
 import ts1000 from '../../assets/img/specificity/ts1000.svg'
 import fbl700 from '../../assets/img/specificity/fbl700.svg'
 import terminalT1 from '../../assets/img/specificity/terminalT1.svg'
-
 import closeIcon from '../../assets/icons/productFeatures/closeGreen.svg'
-import { useLocation } from 'react-router-dom';
+
 
 const Specificity = () => {
     const [showFront, setShowFront] = useState(true)
