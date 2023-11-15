@@ -13,7 +13,7 @@
 .main_product__descr
 {
     text-align: center;
-    font-size: 64px;
+    font-size: 6.4rem;
     font-style: normal;
     font-weight: 700;
     color: #fff;
@@ -21,7 +21,7 @@
 .main_product__descr
 {
     margin: 18px auto 100px;
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 500;
     width: 684px;
 }

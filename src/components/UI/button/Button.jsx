@@ -11,7 +11,7 @@ const Button = ({children, styles, ...props}) => {
         color: styles.color,
         width: styles.width,
         height: styles.height,
-        fontSize: styles.fontSize ?? '18px',
+        fontSize: styles.fontSize ?? '1.8rem',
         fontWeight: styles.fontWeight ?? 500,
         lineHeight: styles.lineHeight ?? '120%',
         letterSpacing: styles.letterSpacing || ' ',

@@ -29,7 +29,7 @@
 
 .front_title
 {
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 700;
     line-height: 120%;
     letter-spacing: -1.6px;
@@ -57,7 +57,7 @@
 
 .back_title
 {
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 700;
     line-height: 120%;
     letter-spacing: -1.6px;
@@ -68,7 +68,7 @@
 .back_text
 {
     max-width: 491px;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 400;
     line-height: 140%;
 }

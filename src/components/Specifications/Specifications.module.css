@@ -2,11 +2,12 @@
 {
     padding: 100px 200px;
     background-color: #fff;
+    scroll-snap-align: start;
 }
 
 .title
 {
-    font-size: 64px;
+    font-size: 6.4rem;
     font-weight: 700;
     line-height: normal;
     text-align: center;
@@ -16,7 +17,7 @@
 .table_title
 {
     padding: 10px 20px;
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 600;
     line-height: normal;
 }

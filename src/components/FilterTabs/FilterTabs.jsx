@@ -21,7 +21,7 @@ const FilterTabs = () => {
         backgroundColor: '#FFF',
         color: isActive ? '#1D1D1F' : '#889097',
         border: 'none',
-        fontSize: isSmallMobile ? '14px' : isMobile ? '16px' : '18px',
+        fontSize: isSmallMobile ? '1.4rem' : isMobile ? '1.6rem' : '1.8rem',
     }
 
     const btnStylesActive =
@@ -31,7 +31,7 @@ const FilterTabs = () => {
         backgroundColor: '#F5F5F7',
         color: '#1D1D1F',
         border: 'none',
-        fontSize: isSmallMobile ? '14px' : isMobile ? '16px' : '18px',
+        fontSize: isSmallMobile ? '1.4rem' : isMobile ? '1.6rem' : '1.8rem',
     }
 
     const toggleTab = (state) =>

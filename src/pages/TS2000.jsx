@@ -20,7 +20,7 @@ function Product() {
         <Suspense fallback={null}>
             <Header style={headerClosedStyles} />
             <ProductSubheader style={fixedSubheaderStyles} />
-            <main>
+            <main style={{scrollSnapType: 'y mandatory'}}>
                 <ProductMain />
                 <Benefit />
                 <ProductFeatures />

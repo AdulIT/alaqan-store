@@ -34,7 +34,7 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
         borderRadius: '14px',
         backgroundColor: '#1D1D1F',
         color: '#FFFFFF',
-        fontSize: '14px',
+        fontSize: '1.4rem',
         lineHeight: 'normal',
         border: 'none',
         cursor: 'pointer',
@@ -54,7 +54,7 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
         borderRadius: '17px',
         backgroundColor: '#1D1D1F',
         color: '#FFFFFF',
-        fontSize: '18px',
+        fontSize: '1.8rem',
         lineHeight: 'normal',
         border: 'none',
         cursor: 'pointer',
@@ -98,7 +98,7 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
     const hitProductInfoName =
     {
         width: isMobile ? '115px' : '252px',
-        fontSize: isSmallMobile ? '16px' : isMobile ? '20px' : (isTablet ? '36px' : '44px'),
+        fontSize: isSmallMobile ? '1.6rem' : isMobile ? '2rem' : (isTablet ? '3.6rem' : '4.4rem'),
         fontStyle: 'normal',
         fontWeight: 500,
         lineHeight: '100%',
@@ -119,7 +119,7 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
     const hitProductInfoPrice =
     {
         color: '#1D1D1F',
-        fontSize: isMobile ? '16px' : (isTablet ? '20px' : '24px'),
+        fontSize: isMobile ? '1.6rem' : (isTablet ? '2rem' : '2.4rem'),
         fontStyle: 'normal',
         fontWeight: 500,
         lineHeight: 'normal',
@@ -128,13 +128,13 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
     const btnTextStyle =
     {
         color: '#FFFFFF',
-        fontSize: '14px',
+        fontSize: '1.4rem',
         lineHeight: 'normal',
     }
 
     const hitBtnTextStyle = {
         color: '#FFFFFF',
-        fontSize: isTablet ? '14px' : '18px',
+        fontSize: isTablet ? '1.4rem' : '1.8rem',
         lineHeight: 'normal',
     }
 

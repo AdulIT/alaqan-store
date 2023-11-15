@@ -2,6 +2,7 @@ import { useLocation } from 'react-router-dom'
 import { useEffect, useState, useRef } from 'react';
 import { scroller } from 'react-scroll';
 import { useInView } from 'react-intersection-observer';
+import { HashLink } from 'react-router-hash-link';
 
 import Button from '../UI/button/Button'
 
@@ -68,8 +69,28 @@ const ProductSubheader = ({ name, ...props }) => {
         scroller.scrollTo('specification', {
             duration: 500,
             // delay: 100,
-            smooth: 'easeInCubic',
+            // smooth: 'easeInCubic',
           });
+    }
+    // onClick={scrolTo}
+
+    const handleClick = (e) =>
+    {
+        const specificationElement = document.getElementById('specification')
+
+        if (specificationElement)
+        {
+            const offsetTop = specificationElement.offsetTop
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth',
+            })
+            // document.getElementById('specification').scrollIntoView({
+            //     behavior: 'smooth',
+            //     block: 'start'
+            // })
+        }
+        
     }
 
     return (
@@ -80,10 +101,11 @@ const ProductSubheader = ({ name, ...props }) => {
             </h2>
 
             <div className={cl.subheader_btns} style={subheaderBtnsStyles}>
-                <Button styles={specificationBtnStyles} onClick={scrolTo}>
+                <Button styles={specificationBtnStyles} onClick={handleClick}>
                     <img src={fileIcon} alt='file-icon' />
                     Спецификация
                 </Button>
+                
                 <Button styles={constructorBtnStyles} className={cl.subheader_btn__constructor}>
                     Собрать турникет
                     <img src={arrowRightIcon} alt='arrow-right-icon' />

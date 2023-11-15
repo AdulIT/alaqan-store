@@ -2,7 +2,7 @@
 {
     padding: 100px 200px 32px;
     background-color: #fff;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 .footer__wrapper
@@ -25,7 +25,7 @@
 .footer__alaqan_info
 {
     margin: 24px 0;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 160%; /* 22.4px */
 }
@@ -44,7 +44,7 @@
 
 .footer__nav_title
 {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 600;
     line-height: 140%;
 }
@@ -61,7 +61,7 @@
 
 .footer__nav_menu__item a
 {
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 140%;
 }

@@ -7,7 +7,7 @@
 .title
 {
     text-align: center;
-    font-size: 80px;
+    font-size: 8rem;
     font-weight: 700;
     line-height: 120%; /* 96px */
     letter-spacing: -3.2px;
@@ -57,7 +57,7 @@
 
 .text
 {
-    font-size: 64px;
+    font-size: 6.4rem;
     font-weight: 700;
     line-height: 120%;
     letter-spacing: -2.56px;
@@ -76,7 +76,7 @@
 
 .back_title
 {
-    font-size: 36px;
+    font-size: 3.6rem;
     font-weight: 700;
     line-height: 120%;
     letter-spacing: -1.44px;
@@ -86,7 +86,7 @@
 
 .back_text
 {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 400;
     line-height: 140%;
 }
