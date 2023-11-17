@@ -5,11 +5,11 @@
     flex-direction: column;
     place-content: center;
 }
-.filters
+/* .filters
 {
     margin: 20px auto;
     max-width: 544px;
-}
+} */
 .tabs
 {
     margin: 20px auto;
@@ -20,9 +20,14 @@
     border-radius: 38px;
     background-color: #fff;
 }
+
+.btn__mobile
+{
+    position: relative;
+}
+
 .btn__mobile:hover
 {
-    background-color: #F5F5F7 !important;
     color: #1D1D1F !important;
 }
 
