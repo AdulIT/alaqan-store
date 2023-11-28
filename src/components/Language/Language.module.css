@@ -120,5 +120,8 @@
 }
 
 @media screen and (max-width: 767px) {
-
+    .active
+    {
+        top: -110px;
+    }
 }

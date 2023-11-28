@@ -18,16 +18,11 @@ function App() {
     <>
       <Suspense fallback={null}>
         <Header style={headerClosedStyles} />
-        {/* <div className="container">
-          <Header />
-        </div> */}
         <main className='main'>
           <div className="container">
             <FilterTabs />
-            {/* <HrApp />
-            <MobileApp /> */}
           </div>
-          {/* <ContactUs /> */}
+            {/* <ContactUs /> */}
         </main>
           <Footer />
       </Suspense>

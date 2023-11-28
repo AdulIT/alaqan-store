@@ -24,6 +24,11 @@
     line-height: 160%; /* 28.8px */
 }
 
+.btn_soon
+{
+    margin-top: 40px;
+}
+
 .mobileapp__img_mobile
 {
     display: none;

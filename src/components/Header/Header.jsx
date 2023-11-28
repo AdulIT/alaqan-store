@@ -1,6 +1,9 @@
 import { HashLink } from 'react-router-hash-link'
 import { useTranslation } from 'react-i18next'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useDispatch } from 'react-redux';
+
+import {changeHeaderHeight} from '../../store/headerSlice';
 import { useMatchMedia } from '../../hooks/useMatchMedia';
 
 import Navbar from '../Navbar/Navbar';
@@ -18,6 +21,18 @@ const Header = ({...props}) => {
     const { t } = useTranslation(["headers"])
     const [hamburgerActive, setHamburgerActive] = useState(false)
     const {isMediumTablet} = useMatchMedia()
+    const headerRef = useRef(null)
+
+    const dispatch = useDispatch()
+
+    useEffect(() =>
+    {
+        const computedHeaderHeight = window.getComputedStyle(headerRef.current).getPropertyValue('height')
+        dispatch(changeHeaderHeight({
+            computedHeaderHeight
+        }))
+    }, [])
+
 
     useEffect(() =>
     {
@@ -55,7 +70,7 @@ const Header = ({...props}) => {
     }
 
     return (
-        <header className={cl.header} {...props}>
+        <header className={cl.header} ref={headerRef} {...props}>
                 <div className={cl.header__left}>
                     <img className={cl.header_logo} src={alaqanLogo} alt="alaqan-logo" />
                     <Navbar className={cl.header__nav} />
@@ -71,18 +86,6 @@ const Header = ({...props}) => {
                     </HashLink>
                     <NavbarMobile hamburgerState={hamburgerActive} />
                 </div>
-                
-                {/* <div className={cl.header__left}>
-                    <Hamburger className={cl.header__hamburger} onClick={handleClick} isActive={hamburgerActive} />
-                    <img className={cl.header_logo} src={alaqanLogo} alt="alaqan-logo" />
-                    <Navbar className={cl.header__nav} />
-                    <HashLink to={'#contactus'}>
-                        <Button styles={btnStylesMobile} className={cl.header__btn_mobile}>
-                            <img src={paperPlaneTilt} alt="paper-plane-tilt" />
-                        </Button>
-                    </HashLink>
-                    <NavbarMobile hamburgerState={hamburgerActive} />
-                </div> */}
                 
                 <div className={cl.lang}>
                     <Language />

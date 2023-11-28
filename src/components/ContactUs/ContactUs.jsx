@@ -38,7 +38,7 @@ const ContactUs = () => {
 
     return (
         <section className={cl.contact} id="contactus">
-            <div className="container">
+            {/* <div className="container"> */}
                 <div className={cl.contact__wrapper}>
                     <div className={cl.contact__left}>
                         <h3 className={cl.contact__title}> {t("contactTitle")} </h3>
@@ -101,7 +101,7 @@ const ContactUs = () => {
                     <a href="tel: +7 777 777 7777" className={cl.contact__footer_call}>{t("contactCallText")} +7 777 777 7777</a>
                 </div>
                 {openModal && <Modal closeModal={setOpenModal} />}
-            </div>
+            {/* </div> */}
         </section>
     )
 }

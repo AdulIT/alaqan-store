@@ -95,7 +95,7 @@ const Language = ({footer, mobile}) => {
 
     const stylesForMobile =
     {
-        top: mobile ? '35px' : '',
+        top: mobile ? '-100px' : '',
     }
 
     const dropdownStyles = stylesForFooter || stylesForMobile

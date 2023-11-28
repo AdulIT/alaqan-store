@@ -60,7 +60,7 @@ const FilterTabs = () => {
                                     <motion.span
                                         layoutId="bubble"
                                         style={bubbleStyles}
-                                        transition={{ type: "spring", bounce: 0.1, duration: 0.9 }}
+                                        transition={{ type: "spring", bounce: 0.1, duration: 0.7 }}
                                     />
                                 )}
                                 <span style={{position: 'relative', zIndex: 10}}>

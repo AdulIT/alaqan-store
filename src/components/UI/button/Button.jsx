@@ -1,6 +1,6 @@
-import React from 'react'
 import cl from './Button.module.css'
 
+/* eslint react/prop-types: 0 */
 const Button = ({children, styles, ...props}) => {
 
     const btnStyles =
