@@ -27,3 +27,12 @@
     gap: 20px;
     place-content: center;
 }
+
+@media screen and (max-width: 1200px)
+{
+    .features
+    {
+        margin-top: 145px;
+        padding: 180px 210px;
+    }
+}

@@ -18,6 +18,7 @@ const MobileApp = () => {
         fontSize: '2.4rem',
         fontWeight: 700,
         cursor: 'pointer',
+        backgroundColor: 'transparent',
     }
 
     return (

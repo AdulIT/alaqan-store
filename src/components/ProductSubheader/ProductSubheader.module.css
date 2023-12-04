@@ -27,3 +27,12 @@
 {
     background-color: #0066EB !important;
 }
+
+
+@media screen and (max-width: 1200px)
+{
+    .subheader
+    {
+        padding: 14px 50px;
+    }
+}
