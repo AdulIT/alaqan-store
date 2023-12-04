@@ -44,7 +44,7 @@ export const useScrollHeader = () =>
     {
         position: (isHeaderClosed && isSubheaderFixed) ? 'fixed' : (!isHeaderClosed && isSubheaderFixed) ? 'fixed' : 'fixed',
         top: (isHeaderClosed && isSubheaderFixed) ? `-${headerHeight}` : (!isHeaderClosed && isSubheaderFixed) ? 0 : 0,
-        width: '100%',
+        width: '100vw',
         // left: 0,
         // right: 0,
     }
@@ -53,7 +53,7 @@ export const useScrollHeader = () =>
     {
         position: isSubheaderFixed ? 'fixed' : 'fixed',
         top: isHeaderClosed ? 0 : headerHeight,
-        width: '100%',
+        width: '100vw',
         // left: 0,
         // right: 0,
     }

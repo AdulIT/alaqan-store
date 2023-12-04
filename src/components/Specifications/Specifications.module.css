@@ -43,3 +43,11 @@
 {
     background-color: #0066EB !important;
 }
+
+@media screen and (max-width: 1200px)
+{
+    .specification
+    {
+        padding: 100px;
+    }
+}
