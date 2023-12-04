@@ -108,11 +108,21 @@ const ProductFeatures = () => {
         )
     })
 
+    let featuresWrapperStyles = {}
+
+    if (location.pathname === '/product/1' || location.pathname === '/product/2' || location.pathname === '/product/3')
+    {
+        featuresWrapperStyles = 
+            {
+                gridTemplateRows: '600px 300px'
+            }
+    }
+
     return (
         <section className={cl.features}>
             {/* <h2 className={cl.title}> Узнайте... </h2> */}
             <h2 className={cl.title}> Преимущества </h2>
-            <div className={cl.features_wrapper}>
+            <div className={cl.features_wrapper} style={featuresWrapperStyles}>
                 { location.pathname === '/product/10' ? scanerProductFeaturesItem : productFeaturesItem }
             </div>
         </section>

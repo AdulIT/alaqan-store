@@ -42,7 +42,7 @@ const Products = ({filter}) => {
     {
         productsStyle = {
             gridTemplateRows:
-                (isSmallMobile && filter === 'turnstile') ? '175px'                
+                (isSmallMobile && filter === 'turnstile') ? '175px'
                     :
                 isSmallMobile ? '240px'
                     :
