@@ -75,7 +75,7 @@ textarea
   } */
 }
 
-@media screen and (max-width: 991px) {
+/* @media screen and (max-width: 991px) {
   .container
   {
     width: 720px;
@@ -94,4 +94,4 @@ textarea
   {
     width: 100%;
   }
-}
+} */

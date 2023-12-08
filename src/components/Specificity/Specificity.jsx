@@ -69,7 +69,9 @@ const Specificity = () => {
     const imgStyles =
     {
         borderRadius: '30px 0 0 0',
-        width: isMediumTablet ? '60%' : 'auto', 
+        width: '100%',
+        height: '100%',
+        aspectRatio: '0.5'
     }
 
     return (

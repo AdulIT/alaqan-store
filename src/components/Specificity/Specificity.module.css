@@ -17,7 +17,7 @@
 {
     margin: 100px auto 0;
     max-width: 940px;
-    height: 520px;
+    min-height: 520px;
     border-radius: 30px;
     background: #FFF;
     /* display: flex;
@@ -128,7 +128,7 @@
     .wrapper
     {
         margin-top: 50px;
-        height: 377px;
+        min-height: 377px;
     }
     .front
     {
