@@ -63,7 +63,10 @@
 {
     .benefits
     {
+        margin: 0 auto;
         padding: 60px 0;
+        background-color: var(--heading-color);
+        flex-direction: column;
     }
 }
 
@@ -71,12 +74,11 @@
 {
     .benefits
     {
+        
         padding: 40px 0;
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: space-between;
         gap: 64px;
     }
-
 }

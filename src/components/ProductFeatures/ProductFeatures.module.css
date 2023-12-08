@@ -36,3 +36,24 @@
         padding: 180px 210px;
     }
 }
+
+@media screen and (max-width: 991px)
+{
+    .features
+    {
+        margin-top: 0;
+        padding: 180px 30px;
+    }
+    .title
+    {
+        font-size: 6rem;
+    }
+    .features_wrapper
+    {
+        grid-template-columns: 400px;
+        grid-template-rows: repeat(3, 500px) !important;
+        grid-auto-rows: 600px;
+        gap: 20px;
+        place-content: center;
+    }
+}

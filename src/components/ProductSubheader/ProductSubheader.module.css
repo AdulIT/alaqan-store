@@ -36,3 +36,15 @@
         padding: 14px 100px;
     }
 }
+
+@media screen and (max-width: 991px)
+{
+    .subheader
+    {
+        padding: 14px 30px;
+    }
+    .subheader_title
+    {
+        font-size: 1.8rem;
+    }
+}
