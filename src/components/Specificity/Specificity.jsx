@@ -7,6 +7,8 @@ import Button from '../UI/button/Button'
 import cl from './Specificity.module.css'
 import '../Card/flip-transition.css'
 
+import { useMatchMedia } from '../../hooks/useMatchMedia'
+
 import arrowRightIcon from '../../assets/icons/products/arrowRight.svg'
 import ts2000 from '../../assets/img/specificity/ts2000pro.png'
 import ts1000 from '../../assets/img/specificity/ts1000.svg'
@@ -18,6 +20,8 @@ import closeIcon from '../../assets/icons/productFeatures/closeGreen.svg'
 const Specificity = () => {
     const [showFront, setShowFront] = useState(true)
     const location = useLocation()
+
+    const {isMediumTablet} = useMatchMedia();
 
     const turnstileImgs = {
         '/product/1': {
@@ -62,6 +66,12 @@ const Specificity = () => {
         letterSpacing: '-0.72px',
     }
 
+    const imgStyles =
+    {
+        borderRadius: '30px 0 0 0',
+        width: isMediumTablet ? '60%' : 'auto', 
+    }
+
     return (
         <div className={cl.specificity}>
             <h3 className={cl.title}> Особенности</h3>
@@ -78,7 +88,7 @@ const Specificity = () => {
                     }}
                 >
                     <div className={cl.front} style={turnstileImgs[location.pathname]?.style}>
-                        <img style={{borderRadius: '30px 0 0 0'}} src={turnstileImgs[location.pathname]?.img} alt="turnstile" />
+                        <img style={imgStyles} src={turnstileImgs[location.pathname]?.img} alt="turnstile" />
                         <div>
                             <p className={cl.text}>
                                 Как это <br /> работает?

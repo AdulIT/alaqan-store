@@ -42,7 +42,7 @@
     .features
     {
         margin-top: 0;
-        padding: 180px 30px;
+        padding: 50px;
     }
     .title
     {
@@ -50,6 +50,7 @@
     }
     .features_wrapper
     {
+        margin-top: 50px;
         grid-template-columns: 400px;
         grid-template-rows: repeat(3, 500px) !important;
         grid-auto-rows: 600px;
