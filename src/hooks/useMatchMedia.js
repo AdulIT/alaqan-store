@@ -7,7 +7,7 @@ const queries = [
     // '(min-width: 900px)',
     // '(min-width: 1200px)',
     '(max-width: 409px)',
-    '(max-width: 575px)',
+    '(max-width: 576px)',
     '(max-width: 766px)',
     '(max-width: 991px)',
     '(max-width: 1200px)',

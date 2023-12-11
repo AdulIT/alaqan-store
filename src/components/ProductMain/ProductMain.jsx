@@ -1,5 +1,7 @@
 import { useLocation } from 'react-router-dom';
 
+import { useMatchMedia } from '../../hooks/useMatchMedia'
+
 import cl from './ProductMain.module.css'
 
 import ts2000 from '../../assets/img/products/turnstile-ts2000.svg'
@@ -10,10 +12,13 @@ import terminalT1 from '../../assets/img/products/alaqan-terminalT1.svg'
 const ProductMain = () => {
     const location = useLocation()
 
+    const {isMobile, isSmallMobile} = useMatchMedia();
+
     const turnstileNames = {
         '/product/1': {
-            text: `Турникет-трипод Alaqan TS2000 Pro \n классика для офисных зданий`,
-            title: 'Безопасная классика',
+            text: isSmallMobile ? `Турникет-трипод Alaqan \n TS2000 Pro классика \n для офисных зданий`
+            : `Турникет-трипод Alaqan TS2000 Pro \n классика для офисных зданий`,
+            title: isSmallMobile ? 'Безопасная \n классика' : 'Безопасная классика',
             img: ts2000,
         },
         '/product/2': {

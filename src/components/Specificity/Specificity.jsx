@@ -16,12 +16,11 @@ import fbl700 from '../../assets/img/specificity/fbl700.svg'
 import terminalT1 from '../../assets/img/specificity/terminalT1.svg'
 import closeIcon from '../../assets/icons/productFeatures/closeGreen.svg'
 
-
 const Specificity = () => {
     const [showFront, setShowFront] = useState(true)
     const location = useLocation()
 
-    const {isMediumTablet} = useMatchMedia();
+    const {isMediumTablet, isMobile} = useMatchMedia();
 
     const turnstileImgs = {
         '/product/1': {
@@ -68,10 +67,10 @@ const Specificity = () => {
 
     const imgStyles =
     {
-        borderRadius: '30px 0 0 0',
-        width: '100%',
-        height: '100%',
-        aspectRatio: '0.5'
+        borderRadius: isMobile ? '30px 0 30px' :'30px 0 0 0',
+        width: isMobile ? '336px' : '100%',
+        height: isMobile ? '390px' : '100%',
+        aspectRatio: isMobile ? '2 / 3' : '0.5',
     }
 
     return (
@@ -106,7 +105,7 @@ const Specificity = () => {
                         <div className={cl.back_info}>
                             <h3 className={cl.back_title}> Сканирование </h3>
                             <p className={cl.back_text}>
-                                Сканируйте уникальный
+                                Сканируйте уникальный <br />
                                 рисунок вен ладони.
                             </p>
                         </div>
@@ -114,21 +113,24 @@ const Specificity = () => {
                         <div className={cl.back_info}>
                             <h3 className={cl.back_title}> Шифрование </h3>
                             <p className={cl.back_text}>
-                                Рисунок вен ладони зашифрован в цифровой код.
+                                Рисунок вен ладони <br />
+                                зашифрован в цифровой код.
                             </p>
                         </div>
 
                         <div className={cl.back_info}>
                             <h3 className={cl.back_title}> Поиск </h3>
                             <p className={cl.back_text}>
-                                Код сравнивается в базе зарегистрированных пользователей.
+                                Код сравнивается в базе зарегистрированных <br />
+                                пользователей.
                             </p>
                         </div>
 
                         <div className={cl.back_info}>
                             <h3 className={cl.back_title}> Доступ </h3>
                             <p className={cl.back_text}>
-                                Уникальный код найден – доступ подтвержден.
+                                Уникальный код найден – <br />
+                                доступ подтвержден.
                             </p>
                         </div>
                         <img className={cl.close_btn} src={closeIcon} alt="close-green-icon" />

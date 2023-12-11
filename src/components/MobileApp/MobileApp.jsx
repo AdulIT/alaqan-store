@@ -3,19 +3,23 @@ import { useTranslation } from 'react-i18next'
 
 import Button from '../UI/button/Button'
 
+import { useMatchMedia } from '../../hooks/useMatchMedia'
+
 import iphoneMockup from '../../assets/img/mobileApp/iPhone-ru.png'
-import mobileiPhoneMockup from '../../assets/img/mobileApp/mobileiPhone.png'
+import mobileiPhoneMockup from '../../assets/img/mobileApp/mobileiPhone-ru.png'
 
 const MobileApp = () => {
     const { t } = useTranslation("mobileApp")
 
+    const {isMobile} = useMatchMedia();
+
     const btnStyles =
     {
-        padding: '14px 20px 15px',
+        padding: isMobile ? '12px 20px 13px' : '14px 20px 15px',
         borderRadius: '38px',
-        border: '4px solid #007AFF',
+        border: isMobile ? '3px solid #007AFF' : '4px solid #007AFF',
         color: '#007AFF',
-        fontSize: '2.4rem',
+        fontSize: isMobile ? '2rem' : '2.4rem',
         fontWeight: 700,
         cursor: 'pointer',
         backgroundColor: 'transparent',

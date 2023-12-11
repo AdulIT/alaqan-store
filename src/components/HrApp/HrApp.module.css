@@ -6,8 +6,9 @@
 
 .title
 {
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    /* display: flex;
+    justify-content: center; */
     color: var(--heading-color);
     font-size: 5.6rem;
     font-weight: 500;
@@ -53,10 +54,10 @@
     }
     .title
     {
-        display: flex;
+        /* display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
         font-size: 4.4rem;
         letter-spacing: -1.76px;
     }

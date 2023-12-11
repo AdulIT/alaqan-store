@@ -48,3 +48,20 @@
         font-size: 1.8rem;
     }
 }
+
+@media screen and (max-width: 767px)
+{
+    .subheader
+    {
+        padding: 14px 30px;
+    }
+    .subheader_title
+    {
+        display: none;
+    }
+    .subheader_btns
+    {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
