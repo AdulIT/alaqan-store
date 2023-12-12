@@ -7,6 +7,7 @@ import Button from '../UI/button/Button'
 import cl from './Specifications.module.css'
 
 import { columnBasic, columnAdditional, columnCommon, columnBasicScaner, columnAdditionalScaner, columnCommonScaner } from '../../data/table'
+import { useMatchMedia } from '../../hooks/useMatchMedia'
 
 import downloadIcon from '../../assets/icons/productFeatures/downloadSimple.svg'
 
@@ -16,6 +17,7 @@ import { useLocation } from 'react-router-dom'
 const Specifications = () => {
     const location = useLocation()
     // console.log(location);
+    const {isSmallMobile, isMicroMobile} = useMatchMedia();
 
     const rowsBasic = location.pathname === '/product/10'
         ?
@@ -52,11 +54,11 @@ const Specifications = () => {
         })
 
     const btnStyles = {
-        padding: '10px 20px 12px 20px',
-        borderRadius: '16px',
+        padding: isSmallMobile ? '13px' : '10px 20px 12px 20px',
+        borderRadius: isSmallMobile ? '10px' : '16px',
         backgroundColor: '#007AFF',
         color: '#fff',
-        gap: '10px',
+        gap: isSmallMobile ? 'none' : '10px',
     }
 
     return (
@@ -82,7 +84,9 @@ const Specifications = () => {
                         download='specification-ts2000'
                     >
                         {' '}
-                        Скачать PDF{' '}
+                        {
+                            isSmallMobile ? ' ' : 'Скачать PDF'
+                        }
                     </a>
                 </Button>
             </div>
@@ -90,4 +94,4 @@ const Specifications = () => {
     )
 }
 
-export default Specifications
+export default Specifications;

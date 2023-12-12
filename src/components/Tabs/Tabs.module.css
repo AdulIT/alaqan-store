@@ -123,12 +123,16 @@
         width: 16px;
         height: 26px;
         right: 7px;
-        bottom: 40px;
+        bottom: 80px;
         transform: rotate(18deg);
+    }
+    .tabs__header
+    {
+        margin-top: 40px;
     }
 }
 
-@media screen and (max-width: 410px)
+@media screen and (max-width: 409px)
 {
     .tabs_decorative_up
     {
@@ -147,7 +151,7 @@
 
     .tabs__header
     {
-        overflow: scroll;
+        /* overflow: scroll; */
         margin-top: 40px;
     }
 }

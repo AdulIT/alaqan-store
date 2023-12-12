@@ -195,3 +195,12 @@
         font-size: 4.4rem;
     }
 }
+
+@media screen and (max-width: 576px)
+{
+    .front
+    {
+        padding: 0;
+        width: 264px;
+    }
+}

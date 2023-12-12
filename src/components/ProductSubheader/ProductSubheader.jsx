@@ -4,6 +4,8 @@ import { scroller } from 'react-scroll';
 import { useInView } from 'react-intersection-observer';
 import { HashLink } from 'react-router-hash-link';
 
+import { useMatchMedia } from '../../hooks/useMatchMedia'
+
 import Button from '../UI/button/Button'
 
 import cl from './ProductSubheader.module.css'
@@ -19,6 +21,8 @@ const ProductSubheader = ({ name, ...props }) => {
     const { ref: subheaderRef, inView, entry } = useInView({
         threshold: 1,
     });
+
+    const {isSmallMobile, isMicroMobile} = useMatchMedia();
 
     useEffect(() =>
     {
@@ -42,21 +46,25 @@ const ProductSubheader = ({ name, ...props }) => {
     }
 
     const specificationBtnStyles = {
-        padding: '10px 20px 12px 20px',
+        padding: isSmallMobile ? '8px 15px 10px 15px' : '10px 20px 12px 20px',
         borderRadius: '16px',
         backgroundColor: 'transparent',
         color: '#1D1D1F',
+        fontSize: isSmallMobile ? '16px' : '18px',
         border: '1px solid #E7E9EA',
-        gap: '6px',
+        gap: '4px',
+        display: (isSmallMobile || isMicroMobile) ? 'block' : 'flex',
     }
 
     const constructorBtnStyles = {
-        padding: '10px 20px 12px 20px',
+        padding: isSmallMobile ? '8px 15px 10px' : '10px 20px 12px 20px',
         borderRadius: '16px',
         backgroundColor: '#007AFF',
         color: '#FFFFFF',
         border: 'none',
-        gap: '6px',
+        gap: '4px',
+        fontSize: isSmallMobile ? '16px' : '18px',
+        display: (isSmallMobile || isMicroMobile) ? 'block' : 'flex',
     }
 
     const subheaderBtnsStyles = {

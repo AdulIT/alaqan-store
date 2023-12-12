@@ -17,7 +17,7 @@ const Button = ({children, styles, ...props}) => {
         letterSpacing: styles.letterSpacing || ' ',
         border: styles.border,
         cursor: 'pointer',
-        display: 'flex',
+        display: styles.display || 'flex',
         alignItems: 'center',
         juctifyContent: 'space-between',
         gap: styles.gap || 'none'

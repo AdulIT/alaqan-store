@@ -20,7 +20,7 @@ const Specificity = () => {
     const [showFront, setShowFront] = useState(true)
     const location = useLocation()
 
-    const {isMediumTablet, isMobile} = useMatchMedia();
+    const {isMediumTablet, isMobile, isSmallMobile} = useMatchMedia();
 
     const turnstileImgs = {
         '/product/1': {
@@ -70,6 +70,7 @@ const Specificity = () => {
         borderRadius: isMobile ? '30px 0 30px' :'30px 0 0 0',
         width: isMobile ? '336px' : '100%',
         height: isMobile ? '390px' : '100%',
+        marginLeft: isSmallMobile ? '73px' : '0',
         aspectRatio: isMobile ? '2 / 3' : '0.5',
     }
 

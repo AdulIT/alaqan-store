@@ -49,15 +49,15 @@ const Benefits = () => {
                 <>
                     <div className={cl.benefit__item}>
                         <img className={cl.benefit__item_img} src={encryptionIcon} alt="" />
-                        <p className={cl.benefit__item_title}> Корпус из стали SUS </p>
+                        <p className={cl.benefit__item_title}> Корпус из <br /> стали SUS </p>
                     </div>
                     <div className={cl.benefit__item}>
                         <img className={cl.benefit__item_img} src={speedIcon} alt="" />
-                        <p className={cl.benefit__item_title + ' ' + cl.benefit__item_title_2}> Скорость прохода 30 человек / минуту </p>
+                        <p className={cl.benefit__item_title + ' ' + cl.benefit__item_title_2}> Скорость прохода <br /> 30 человек / минуту </p>
                     </div>
                     <div className={cl.benefit__item}>
                         <img className={cl.benefit__item_img} src={smileyIcon} alt="" />
-                        <p className={cl.benefit__item_title}> Система “анти-паника” </p>
+                        <p className={cl.benefit__item_title}> Система <br /> “анти-паника” </p>
                     </div>
                 </>
             }

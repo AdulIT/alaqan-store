@@ -86,4 +86,35 @@ table
     {
         font-size: 2rem;
     }
+    tr,
+    td
+    {
+        padding: 3px 7px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 576px)
+{
+    .specification
+    {
+        padding: 64px 35px;
+    }
+    .title
+    {
+        font-size: 2.4rem;
+        margin-bottom: 10px;
+    }
+    table
+    {
+        margin-bottom: 16px;
+    }
+    table:last-child
+    {
+        margin-bottom: 10px;
+    }
+    .table_title
+    {
+        font-size: 1.6rem;
+    }
 }

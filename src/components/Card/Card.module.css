@@ -84,3 +84,11 @@
 {
     transform: rotateX(180deg);
 }
+
+@media screen and (max-width: 576px)
+{
+    .back_title
+    {
+        font-size: 2.4rem;
+    }
+}
