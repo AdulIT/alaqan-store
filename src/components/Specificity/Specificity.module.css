@@ -106,8 +106,14 @@
     height: 100%;
 }
 
-
-@media screen and (max-width: 1200px)
+@media screen and (min-width: 1200px)
+{
+    .front
+    {
+        gap: 68px;
+    }
+}
+@media screen and (max-width: 1199px)
 {
     .specificity
     {
@@ -206,13 +212,17 @@
     .wrapper
     {
         border-radius: 20px;
-        min-height: 525px;
+        min-height: 630px;
     }
 }
 @media screen and (max-width: 409px)
 {
     .wrapper
     {
-        min-height: 525px;
+        min-height: 580px;
+    }
+    .front
+    {
+        gap: 50px;
     }
 }

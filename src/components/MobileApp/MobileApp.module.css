@@ -12,6 +12,7 @@
     font-weight: 600;
     line-height: 120%; /* 48px */
     letter-spacing: -1.6px;
+    white-space: pre-line;
 }
 
 .mobileapp__text_descr

@@ -54,6 +54,7 @@ const ProductSubheader = ({ name, ...props }) => {
         border: '1px solid #E7E9EA',
         gap: '4px',
         display: isMicroMobile ? 'flex' : isSmallMobile ? 'block' : 'flex',
+        justifyContent: isMicroMobile ? 'center' : '',
     }
 
     const constructorBtnStyles = {
@@ -65,6 +66,7 @@ const ProductSubheader = ({ name, ...props }) => {
         gap: '4px',
         fontSize: isSmallMobile ? '16px' : '18px',
         display: isMicroMobile ? 'flex' : isSmallMobile || isMicroMobile ? 'block' : 'flex',
+        justifyContent: isMicroMobile ? 'center' : '',
     }
 
     const subheaderBtnsStyles = {

@@ -18,8 +18,8 @@ const Button = ({children, styles, ...props}) => {
         border: styles.border,
         cursor: 'pointer',
         display: styles.display || 'flex',
-        alignItems: 'center',
-        juctifyContent: 'space-between',
+        alignItems: styles.alignItems || 'center',
+        justifyContent: styles.justifyContent || 'space-between',
         gap: styles.gap || 'none'
     }
 
