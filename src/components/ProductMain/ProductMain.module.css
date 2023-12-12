@@ -65,6 +65,16 @@
 
 @media screen and (max-width: 576px)
 {
+    .main
+    {
+        padding-top: 132px;
+        min-height: calc(638px - 80px);
+        background: url(../../assets/img/products/bg-product-mobile.jpg) center center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* gap: 100px; */
+    }
     .main_product__title,
     .main_product__descr
     {
