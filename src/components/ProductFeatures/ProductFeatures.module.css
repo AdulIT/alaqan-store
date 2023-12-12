@@ -86,3 +86,13 @@
         grid-auto-rows: 520px;
     }
 }
+
+@media screen and (max-width: 409px)
+{
+    .features_wrapper
+    {
+        grid-template-columns: 310px;
+        grid-template-rows: repeat(3, 420px) !important;
+        grid-auto-rows: 420px;
+    }
+}

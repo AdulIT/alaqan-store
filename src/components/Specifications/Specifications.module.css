@@ -118,3 +118,16 @@ table
         font-size: 1.6rem;
     }
 }
+
+@media screen and (max-width: 409px)
+{
+    .specification
+    {
+        padding: 64px 16px;
+    }
+    tr,
+    td
+    {
+        padding: 5px;
+    }
+}

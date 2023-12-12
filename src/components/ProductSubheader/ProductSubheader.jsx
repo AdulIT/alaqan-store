@@ -46,25 +46,25 @@ const ProductSubheader = ({ name, ...props }) => {
     }
 
     const specificationBtnStyles = {
-        padding: isSmallMobile ? '8px 15px 10px 15px' : '10px 20px 12px 20px',
+        padding: isMicroMobile ? '8px 60px 10px' : isSmallMobile ? '8px 15px 10px 15px' : '10px 20px 12px 20px',
         borderRadius: '16px',
         backgroundColor: 'transparent',
         color: '#1D1D1F',
         fontSize: isSmallMobile ? '16px' : '18px',
         border: '1px solid #E7E9EA',
         gap: '4px',
-        display: (isSmallMobile || isMicroMobile) ? 'block' : 'flex',
+        display: isMicroMobile ? 'flex' : isSmallMobile ? 'block' : 'flex',
     }
 
     const constructorBtnStyles = {
-        padding: isSmallMobile ? '8px 15px 10px' : '10px 20px 12px 20px',
+        padding: isMicroMobile ? '8px 47px 10px' : isSmallMobile ? '8px 15px 10px' : '10px 20px 12px 20px',
         borderRadius: '16px',
         backgroundColor: '#007AFF',
         color: '#FFFFFF',
         border: 'none',
         gap: '4px',
         fontSize: isSmallMobile ? '16px' : '18px',
-        display: (isSmallMobile || isMicroMobile) ? 'block' : 'flex',
+        display: isMicroMobile ? 'flex' : isSmallMobile || isMicroMobile ? 'block' : 'flex',
     }
 
     const subheaderBtnsStyles = {
@@ -110,13 +110,17 @@ const ProductSubheader = ({ name, ...props }) => {
 
             <div className={cl.subheader_btns} style={subheaderBtnsStyles}>
                 <Button styles={specificationBtnStyles} onClick={handleClick}>
-                    <img src={fileIcon} alt='file-icon' />
+                    {
+                        isMicroMobile ? '' : <img src={fileIcon} alt='file-icon' />
+                    }
                     Спецификация
                 </Button>
                 
                 <Button styles={constructorBtnStyles} className={cl.subheader_btn__constructor}>
                     Собрать турникет
-                    <img src={arrowRightIcon} alt='arrow-right-icon' />
+                    {
+                        isMicroMobile ? '' : <img src={arrowRightIcon} alt='arrow-right-icon' />
+                    }
                 </Button>
             </div>
         </div>

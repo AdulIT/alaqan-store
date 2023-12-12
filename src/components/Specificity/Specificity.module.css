@@ -203,4 +203,16 @@
         padding: 0;
         width: 264px;
     }
+    .wrapper
+    {
+        border-radius: 20px;
+        min-height: 525px;
+    }
+}
+@media screen and (max-width: 409px)
+{
+    .wrapper
+    {
+        min-height: 525px;
+    }
 }

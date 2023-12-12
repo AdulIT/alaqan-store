@@ -6,3 +6,11 @@
     perspective: 1500px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 576px)
+{
+    .flippable_card
+    {
+        border-radius: 20px;
+    }
+}

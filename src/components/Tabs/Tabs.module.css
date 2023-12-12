@@ -151,7 +151,12 @@
 
     .tabs__header
     {
-        /* overflow: scroll; */
         margin-top: 40px;
+        gap: 5px;
+    }
+    .btn__mobile
+    {
+        padding: 8px 10px 10px !important;
+        font-size: 14px !important;
     }
 }

@@ -75,7 +75,17 @@
     .subheader_btns
     {
         width: 100%;
-        /* justify-content: start; */
-        /* gap: 10px; */
+    }
+}
+
+@media screen and (max-width: 409px)
+{
+    .subheader
+    {
+        padding: 12px 40.5px;
+    }
+    .subheader_btns
+    {
+        flex-direction: column;
     }
 }
