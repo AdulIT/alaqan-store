@@ -32,12 +32,12 @@
     }
 }
 
-@media screen and (max-width: 992px)
+@media screen and (max-width: 991px)
 {
     .benefits
     {
-        margin: 0 auto;
-        padding: 60px 0;
+        margin: -1px auto;
+        padding: 64px 0;
         background-color: var(--heading-color);
         flex-direction: column;
     }

@@ -4,7 +4,7 @@ import { useMatchMedia } from '../../hooks/useMatchMedia'
 
 import cl from './ProductMain.module.css'
 
-import ts2000 from '../../assets/img/products/turnstile-ts2000-old.png'
+import ts2000 from '../../assets/img/products/turnstile-ts2000.svg'
 import ts1000 from '../../assets/img/products/turnstile-ts1000.svg'
 import fbl700 from '../../assets/img/products/turnstile-fbl700.svg'
 import terminalT1 from '../../assets/img/products/alaqan-terminalT1.svg'

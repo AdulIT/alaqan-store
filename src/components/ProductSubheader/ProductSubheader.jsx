@@ -53,7 +53,7 @@ const ProductSubheader = ({ name, ...props }) => {
         fontSize: isSmallMobile ? '16px' : '18px',
         border: '1px solid #E7E9EA',
         gap: '4px',
-        display: isMicroMobile ? 'flex' : isSmallMobile ? 'block' : 'flex',
+        // display: isMicroMobile ? 'flex' : isSmallMobile ? 'block' : 'flex',
         justifyContent: isMicroMobile ? 'center' : '',
     }
 
@@ -65,7 +65,7 @@ const ProductSubheader = ({ name, ...props }) => {
         border: 'none',
         gap: '4px',
         fontSize: isSmallMobile ? '16px' : '18px',
-        display: isMicroMobile ? 'flex' : isSmallMobile || isMicroMobile ? 'block' : 'flex',
+        // display: isMicroMobile ? 'flex' : isSmallMobile || isMicroMobile ? 'block' : 'flex',
         justifyContent: isMicroMobile ? 'center' : '',
     }
 

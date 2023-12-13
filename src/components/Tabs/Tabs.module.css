@@ -51,6 +51,18 @@
     gap: 10px;
 }
 
+@media screen and (min-width: 1202px)
+{
+    .tabs_decorative_up
+    {
+        left: 50px;
+    }
+    .tabs_decorative_down
+    {
+        right: 20px;
+    }
+}
+
 @media screen and (max-width: 1202px)
 {
     .tabs_decorative_up

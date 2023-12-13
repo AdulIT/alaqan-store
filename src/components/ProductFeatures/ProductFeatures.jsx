@@ -31,7 +31,8 @@ const ProductFeatures = () => {
         },
         1: {
             position: 'absolute',
-            width: isMediumTablet ? '90%' : 'auto',
+            // width: isMediumTablet ? '90%' : 'auto',
+            width: '100%',
             left: 0,
             right: 0,
             bottom: '0px',
@@ -42,7 +43,7 @@ const ProductFeatures = () => {
             right: '0',
             // transform: 'translateX(-50%)',
             bottom: '0',
-            width: '342px',
+            // width: '342px',
             height: '290px',
             borderRadius: '0 0 30px 0'
         }
