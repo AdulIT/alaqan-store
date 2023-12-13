@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import { scroller } from 'react-scroll';
 import { useInView } from 'react-intersection-observer';
 import { HashLink } from 'react-router-hash-link';
+import { useTranslation } from 'react-i18next';
 
 import { useMatchMedia } from '../../hooks/useMatchMedia'
 
@@ -15,6 +16,7 @@ import fileIcon from '../../assets/icons/file.svg'
 
 // eslint-disable-next-line react/prop-types
 const ProductSubheader = ({ name, ...props }) => {
+    const { t } = useTranslation(["tabs", "products"])
     const location = useLocation()
     const [computedStyle, setComputedStyle] = useState(null)
 
@@ -39,10 +41,10 @@ const ProductSubheader = ({ name, ...props }) => {
     }, [inView])
 
     const turnstileNames = {
-        '/product/1': 'Турникет Alaqan TS2000 Pro',
-        '/product/2': 'Турникет Alaqan TS1000M Pro',
-        '/product/3': 'Турникет Alaqan FBL700',
-        '/product/10': 'Терминал учета рабочего времени Alaqan T1',
+        '/product/1': t(`products:all.${0}.name`),
+        '/product/2': t(`products:all.${1}.name`),
+        '/product/3': t(`products:all.${2}.name`),
+        '/product/10': t(`products:all.${9}.name`),
     }
 
     const specificationBtnStyles = {
@@ -115,11 +117,11 @@ const ProductSubheader = ({ name, ...props }) => {
                     {
                         isMicroMobile ? '' : <img src={fileIcon} alt='file-icon' />
                     }
-                    Спецификация
+                    {t("tabs:specificationBtn")}
                 </Button>
                 
                 <Button styles={constructorBtnStyles} className={cl.subheader_btn__constructor}>
-                    Собрать турникет
+                    {t("tabs:constructorBtn")}
                     {
                         isMicroMobile ? '' : <img src={arrowRightIcon} alt='arrow-right-icon' />
                     }

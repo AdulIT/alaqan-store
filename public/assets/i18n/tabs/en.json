@@ -3,5 +3,8 @@
     "turnstiles": "Turnstile",
     "lockers": "Locker",
     "scanners": "Scanner",
-    "btn": "Choose"
+    "btn": "Choose",
+    "specificationBtn": "Specification",
+    "constructorBtn": "Assemble the turnstile",
+    "moreBtn": "Specification"
 }

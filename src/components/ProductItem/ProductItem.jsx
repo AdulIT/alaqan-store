@@ -3,8 +3,8 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
-import { useMatchMedia } from '../../hooks/useMatchMedia'
 
+import { useMatchMedia } from '../../hooks/useMatchMedia'
 import cl from './ProductItem.module.css'
 
 import Button from '../UI/button/Button'
@@ -19,7 +19,7 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
     const location = useLocation()
 
     const [isVisible, setIsVisible] = useState(false)
-    const { t } = useTranslation(["tabs"])
+    const { t } = useTranslation(["tabs", "hitProductInfo"])
 
     const {isMicroMobile, isSmallMobile, isMobile, isMediumTablet, isTablet} = useMatchMedia();
 
@@ -175,16 +175,16 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
                         tag && (
                             <div className={cl.benefits}>
                                 <div className={cl.benefit__item}>
-                                    <img className={cl.benefit__item_img} src={encryptionIcon} alt="" />
-                                    <p className={cl.benefit__item_title}> {isMediumTablet ? 'Сталь SUS' : 'Корпус из нержавеющей стали марки SUS'}</p>
+                                    <img className={cl.benefit__item_img} src={encryptionIcon} alt="encryption-Icon" loading='lazy' />
+                                    <p className={cl.benefit__item_title}> {isMediumTablet ? t("hitProductInfo:benefitFirstShort") : t("hitProductInfo:benefitFirst")}</p>
                                 </div>
                                 <div className={cl.benefit__item}>
-                                    <img className={cl.benefit__item_img} src={speedIcon} alt="" />
-                                    <p className={cl.benefit__item_title + ' ' + cl.benefit__item_title_2}>{isMediumTablet ? '30 чел/мин' : 'Скорость прохода 30 человек / минуту' }</p>
+                                    <img className={cl.benefit__item_img} src={speedIcon} alt="speed-Icon" loading='lazy' />
+                                    <p className={cl.benefit__item_title + ' ' + cl.benefit__item_title_2}>{isMediumTablet ? t("hitProductInfo:benefitSecondShort") : t("hitProductInfo:benefitSecond") }</p>
                                 </div>
                                 <div className={cl.benefit__item}>
-                                    <img className={cl.benefit__item_img} src={smileyIcon} alt="" />
-                                    <p className={cl.benefit__item_title}> Планки «анти-паника» </p>
+                                    <img className={cl.benefit__item_img} src={smileyIcon} alt="smiley-Icon" loading='lazy' />
+                                    <p className={cl.benefit__item_title}> {t("hitProductInfo:benefitThird")} </p>
                                 </div>
                             </div>
                         )
@@ -209,7 +209,7 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
                                     className={cl.btn}
                                     onClick={openProductCard}
                                 >
-                                    <Link to={`/product/${id}`} style={tag ? hitBtnTextStyle : btnTextStyle}>{t("btn")}</Link>
+                                    <Link to={`/product/${id}`} style={tag ? hitBtnTextStyle : btnTextStyle}>{t("tabs:btn")}</Link>
                                     <img style={tag ? hitProductBtnIcon : productBtnIcon} src={arrowRightIcon} alt="arrow-right-icon" />    
                                 </Button>
                             </>

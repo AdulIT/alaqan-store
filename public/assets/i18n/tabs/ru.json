@@ -3,5 +3,8 @@
     "turnstiles": "Турникет",
     "lockers": "Локер",
     "scanners": "Сканер",
-    "btn": "Выбрать"
+    "btn": "Выбрать",
+    "specificationBtn": "Спецификация",
+    "constructorBtn": "Собрать турникет",
+    "moreBtn": "Specification"
 }

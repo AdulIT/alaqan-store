@@ -3,5 +3,8 @@
     "turnstiles": "Турникет",
     "lockers": "Локер",
     "scanners": "Сканер",
-    "btn": "Таңдау"
+    "btn": "Таңдау",
+    "specificationBtn": "Спецификация",
+    "constructorBtn": "Турникетті жинау",
+    "moreBtn": "Specification"
 }
