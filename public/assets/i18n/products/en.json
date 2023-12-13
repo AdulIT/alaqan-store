@@ -2,15 +2,31 @@
     "all": [
         {
             "name": "TS2000 Pro Turnstile",
-            "price": "from {{price}}"
+            "price": "from {{price}}",
+            "mainTitle": "Safe classics",
+            "mainTitleSmallMobile": "Safe \n classic",
+            "mainText": "Turnstile tripod Alaqan TS2000 Pro \n classic for office buildings",
+            "mainTextSmallMobile": "Turnstile tripod Alaqan \n TS2000 Pro classic \n for office buildings"
         },
         {
             "name": "Turnstile TS1000M Pro",
-            "price": "from {{price}}"
+            "price": "from {{price}}",
+            "mainTitle": "Profitable and practical",
+            "mainTitleSmallMobile": "Profitable \n and practical",
+            "mainTitleMicroMobile": "Profitable \n and\n practical",
+            "mainText": "Turnstile tripod Alaqan TS1000M Pro \n is an economical option for office buildings",
+            "mainTextSmallMobile": "Turnstile tripod Alaqan \n TS1000M Pro is an \n economical option \n for office buildings",
+            "mainTextMicroMobile": "Turnstile tripod Alaqan \n TS1000M Pro is an \n economical option \n for office buildings"
         },
         {
             "name": "Turnstile FBL700",
-            "price": "from {{price}}"
+            "price": "from {{price}}",
+            "mainTitle": "Comfortable and efficient",
+            "mainTitleMobile": "Comfortable \n and efficient",
+            "mainTitleMicroMobile": "Comfortable \n and \n efficient",
+            "mainText": "Automated turnstile Alaqan FBL700 \n is ideal for office buildings \n with a large number of employees",
+            "mainTextSmallMobile": "Automated turnstile \n Alaqan FBL700 is ideal \n for office buildings \n with a large \n number of employees",
+            "mainTextMicroMobile": "Automated turnstile \n Alaqan FBL700 is ideal \n for office buildings \n with a large \n number of employees"
         },
         {
             "name": "Locker Mini",
@@ -38,7 +54,11 @@
         },
         {
             "name": "Time tracking terminal",
-            "price": "from {{price}}"
+            "price": "from {{price}}",
+            "mainTitle": "Fast and practical",
+            "mainTitleSmallMobile": "Fast \n and practical",
+            "mainText": "Wall-mounted time tracking terminal \n with Alaqan system. \n Perhaps the best solution \n for optimizing the workflow.",
+            "mainTextMicroMobile": "Wall-mounted \n time tracking terminal \n with Alaqan system. \n Perhaps the best solution \n for optimizing \n the workflow."
         }
     ],
     "turnstile": [

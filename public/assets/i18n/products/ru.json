@@ -2,15 +2,31 @@
     "all": [
         {
             "name": "Турникет TS2000 Pro",
-            "price": "от {{price}}"
+            "price": "от {{price}}",
+            "mainTitle": "Безопасная классика",
+            "mainTitleSmallMobile": "Безопасная \n классика",
+            "mainText": "Турникет-трипод Alaqan TS2000 Pro \n классика для офисных зданий",
+            "mainTextSmallMobile": "Турникет-трипод Alaqan \n TS2000 Pro классика \n для офисных зданий"
         },
         {
             "name": "Турникет TS1000M Pro",
-            "price": "от {{price}}"
+            "price": "от {{price}}",
+            "mainTitle": "Выгодно и практично",
+            "mainTitleSmallMobile": "Выгодно \n и практично",
+            "mainTitleMicroMobile": "Выгодно \n и\n практично",
+            "mainText": "Турникет-трипод Alaqan TS1000M Pro \n экономичный вариант для офисных зданий",
+            "mainTextSmallMobile": "Турникет-трипод Alaqan \n TS1000M Pro экономичный вариант \n для офисных зданий",
+            "mainTextMicroMobile": "Турникет-трипод Alaqan \n TS2000 Pro классика \n для офисных зданий"
         },
         {
             "name": "Турникет FBL700",
-            "price": "от {{price}}"
+            "price": "от {{price}}",
+            "mainTitle": "Комфортно и эффективно",
+            "mainTitleMobile": "Комфортно \n и эффективно",
+            "mainTitleMicroMobile": "Комфортно \n и\n эффективно",
+            "mainText": "Автоматизированный турникет Alaqan FBL700 \n идеален для офисных зданий \n с большим количеством сотрудников",
+            "mainTextSmallMobile": "Автоматизированный турникет\nAlaqan FBL700 идеален \nдля офисных зданий \nс большим количеством \nсотрудников",
+            "mainTextMicroMobile": "Автоматизированный \n турникет\nAlaqan FBL700 идеален \nдля офисных зданий \nс большим количеством \nсотрудников"
         },
         {
             "name": "Локер Mini",
@@ -38,7 +54,11 @@
         },
         {
             "name": "Терминал учета рабочего времени",
-            "price": "от {{price}}"
+            "price": "от {{price}}",
+            "mainTitle": "Быстро и практично",
+            "mainTitleSmallMobile": "Быстро \n и практично",
+            "mainText": "Настенный терминал учета рабочего \n времени с системой Alaqan. \n Пожалуй лучшее решение для \n оптимизации рабочего процесса.",
+            "mainTextMicroMobile": "Настенный терминал \n учета рабочего времени \n с системой Alaqan. \n Пожалуй лучшее решение\n для оптимизации\n рабочего процесса."
         }
     ],
     "turnstile": [
