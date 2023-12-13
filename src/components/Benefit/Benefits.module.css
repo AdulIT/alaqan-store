@@ -22,6 +22,7 @@
     line-height: 140%;
     text-align: center;
     color: #fff;
+    white-space: pre-line;
 }
 
 @media screen and (max-width: 1202px)

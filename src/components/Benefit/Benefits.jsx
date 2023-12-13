@@ -15,7 +15,7 @@ import crosshairIcon from '../../assets/icons/products/crosshair.svg'
 import passwordIcon from '../../assets/icons/products/password.svg'
 
 const Benefits = () => {
-    // const { t } = useTranslation(["benefits"])
+    const { t } = useTranslation(["benefits"])
     const location = useLocation()
     // const benefitItem = benefits.map((item, i) =>
     //     {
@@ -30,34 +30,34 @@ const Benefits = () => {
                 <>
                     <div className={cl.benefit__item}>
                         <img className={cl.benefit__item_img} src={shieldPlusIcon} alt="" />
-                        <p className={cl.benefit__item_title}> Бесконтактное <br /> сканирование </p>
+                        <p className={cl.benefit__item_title}> {t("benefitTerminal1")} </p>
                     </div>
                     <div className={cl.benefit__item}>
                         <img className={cl.benefit__item_img} src={speedIcon} alt="" />
-                        <p className={cl.benefit__item_title + ' ' + cl.benefit__item_title_2}> Скорость <br /> 0.3 сек </p>
+                        <p className={cl.benefit__item_title + ' ' + cl.benefit__item_title_2}> {t("benefitTerminal2")} </p>
                     </div>
                     <div className={cl.benefit__item}>
                         <img className={cl.benefit__item_img} src={crosshairIcon} alt="" />
-                        <p className={cl.benefit__item_title}> Точность <br /> 99.9% </p>
+                        <p className={cl.benefit__item_title}> {t("benefitTerminal3")} </p>
                     </div>
                     <div className={cl.benefit__item}>
                         <img className={cl.benefit__item_img} src={passwordIcon} alt="" />
-                        <p className={cl.benefit__item_title}> Шифрование </p>
+                        <p className={cl.benefit__item_title}> {t("benefitTerminal4")} </p>
                     </div>
                 </>
                 :
                 <>
                     <div className={cl.benefit__item}>
                         <img className={cl.benefit__item_img} src={encryptionIcon} alt="" />
-                        <p className={cl.benefit__item_title}> Корпус из <br /> стали SUS </p>
+                        <p className={cl.benefit__item_title}> {t("benefitTurnstile1")} </p>
                     </div>
                     <div className={cl.benefit__item}>
                         <img className={cl.benefit__item_img} src={speedIcon} alt="" />
-                        <p className={cl.benefit__item_title + ' ' + cl.benefit__item_title_2}> Скорость прохода <br /> 30 человек / минуту </p>
+                        <p className={cl.benefit__item_title + ' ' + cl.benefit__item_title_2}> {t("benefitTurnstile2")} </p>
                     </div>
                     <div className={cl.benefit__item}>
                         <img className={cl.benefit__item_img} src={smileyIcon} alt="" />
-                        <p className={cl.benefit__item_title}> Система <br /> “анти-паника” </p>
+                        <p className={cl.benefit__item_title}> {t("benefitTurnstile3")} </p>
                     </div>
                 </>
             }
