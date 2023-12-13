@@ -12,7 +12,7 @@ import terminalT1 from '../../assets/img/products/alaqan-terminalT1.svg'
 const ProductMain = () => {
     const location = useLocation()
 
-    const {isMobile, isSmallMobile} = useMatchMedia();
+    const {isMobile, isSmallMobile, isMicroMobile} = useMatchMedia();
 
     const turnstileNames = {
         '/product/1': {
@@ -22,18 +22,25 @@ const ProductMain = () => {
             img: ts2000,
         },
         '/product/2': {
-            text: 'Турникет-трипод Alaqan TS1000M Pro \n экономичный вариант для офисных зданий',
-            title: 'Выгодно и практично',
+            text: isMicroMobile ? 'Турникет-трипод Alaqan\n TS1000M Pro экономичный \n вариант для офисных зданий'
+            : isSmallMobile ? 'Турникет-трипод Alaqan \n TS1000M Pro экономичный вариант \n для офисных зданий'
+            : 'Турникет-трипод Alaqan TS1000M Pro \n экономичный вариант для офисных зданий',
+            title: isMicroMobile ? 'Выгодно \n и\n практично'
+            : isSmallMobile ? 'Выгодно \n и практично' : 'Выгодно и практично',
             img: ts1000,
         },
         '/product/3': {
-            text: 'Автоматизированный турникет Alaqan FBL700 \n идеален для офисных зданий с большим количеством сотрудников',
-            title: 'Комфортно и эффективно',
+            text: isMicroMobile ? 'Автоматизированный \n турникет\nAlaqan FBL700 идеален \nдля офисных зданий \nс большим количеством \nсотрудников'
+            : isSmallMobile ? 'Автоматизированный турникет\nAlaqan FBL700 идеален \nдля офисных зданий \nс большим количеством \nсотрудников'
+            : 'Автоматизированный турникет Alaqan FBL700 \n идеален для офисных зданий \n с большим количеством сотрудников',
+            title: isMicroMobile ? 'Комфортно \nи\n эффективно'
+            : isMobile ? 'Комфортно \nи эффективно'  : 'Комфортно и эффективно',
             img: fbl700,
         },
         '/product/10': {
-            text: 'Настенный терминал учета рабочего времени с системой Alaqan. \n Пожалуй лучшее решение для оптимизации рабочего процесса.',
-            title: 'Быстро и практично',
+            text: isMicroMobile ? 'Настенный терминал \n учета рабочего времени \nс системой Alaqan. \n Пожалуй лучшее решение\n для оптимизации\n рабочего процесса.'
+            : 'Настенный терминал учета рабочего \n времени с системой Alaqan. \n Пожалуй лучшее решение для \n оптимизации рабочего процесса.',
+            title: isSmallMobile ? 'Быстро\n и практично' : 'Быстро и практично',
             img: terminalT1,
         },
     }

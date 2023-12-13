@@ -20,7 +20,7 @@ const Specificity = () => {
     const [showFront, setShowFront] = useState(true)
     const location = useLocation()
 
-    const {isMediumTablet, isMobile, isSmallMobile, isMicroMobile} = useMatchMedia();
+    const {isMobile, isSmallMobile, isMicroMobile} = useMatchMedia();
 
     const turnstileImgs = {
         '/product/1': {
@@ -30,21 +30,27 @@ const Specificity = () => {
         '/product/2': {
             img: ts1000,
             style: {
-                padding: '0 100px 40px 0',
+                padding: isSmallMobile ? '0' : isMobile ? '0 65px 40px 0' : '0 100px 40px 0',
                 borderRadius: '30px 0 0 0'
             }
         },
         '/product/3': {
             img: fbl700,
             style: {
-                padding: '0 100px 40px 0',
+                padding: isMicroMobile ? '0 5px 40px 0'
+                         : isSmallMobile ? '0 1px'
+                         : isMobile ? '0 64px 40px 0'
+                         : '0 100px 40px 0',
                 borderRadius: '30px 0 0 0'
             }
         },
         '/product/10': {
             img: terminalT1,
             style: {
-                padding: '0 100px 70px 0',
+                padding: isMicroMobile ? '0 5px 40px 0'
+                         : isSmallMobile ? '0 1px'
+                         : isMobile ? '0 64px 40px 0'
+                         : '0 100px 70px 0',
                 borderRadius: '30px 0 0 0'
             }
         },
@@ -67,7 +73,7 @@ const Specificity = () => {
 
     const imgStyles =
     {
-        borderRadius: isMicroMobile ? '20px' : isMobile ? '30px 0 30px' :'30px 0 0 0',
+        borderRadius: isMicroMobile ? '20px' : isSmallMobile ? '20px 0 30px' : '30px 0 0 0',
         width: isMicroMobile ? '250px' : isMobile ? '336px' : '100%',
         height: isMicroMobile ? '290px' : isMobile ? '390px' : '100%',
         marginLeft: isMicroMobile ? '-9px' : isSmallMobile ? '73px' : '0',

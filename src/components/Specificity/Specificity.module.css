@@ -217,12 +217,18 @@
 }
 @media screen and (max-width: 409px)
 {
-    .wrapper
-    {
-        min-height: 580px;
-    }
     .front
     {
         gap: 50px;
+    }
+    .back
+    {
+        padding: 25px 40px 30px 25px;
+        gap: 20px;
+    }
+    .close_btn
+    {
+        right: 10px;
+        bottom: 10px;
     }
 }

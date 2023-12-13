@@ -12,7 +12,7 @@
     font-weight: 600;
     line-height: 120%; /* 48px */
     letter-spacing: -1.6px;
-    white-space: pre-line;
+    white-space: pre-wrap;
 }
 
 .mobileapp__text_descr
@@ -106,6 +106,7 @@
     .mobileapp__text
     {
         margin-left: 40px;
+        text-align: left;
     }
     .mobileapp__text_title, .mobileapp__text_descr
     {
@@ -114,6 +115,10 @@
     .mobileapp__text_title
     {
         font-size: 3.2rem;
+        text-align-last: left;
+    }
+    .mobileapp__text_descr
+    {
         text-align-last: left;
     }
     .mobileapp__img_mobile

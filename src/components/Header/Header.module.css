@@ -56,10 +56,18 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
     .header
     {
-        padding: 14px 100px;
+        padding: 14px 70px;
+    }
+    .header__left
+    {
+        gap: 24px;
+    }
+    .header__btn
+    {
+        padding: 11px 17px !important;
     }
 }
 

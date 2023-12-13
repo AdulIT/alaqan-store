@@ -112,10 +112,18 @@
     display: none;
 }
 
-@media screen and (max-width: 1202px) {
+@media screen and (max-width: 1200px) {
     .lang_select
     {
         margin-left: 0;
+    }
+    .lang
+    {
+        gap: 17px;
+    }
+    .langs_menu
+    {
+        left: -60px;
     }
 }
 

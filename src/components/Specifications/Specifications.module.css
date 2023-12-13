@@ -48,6 +48,11 @@ table
     margin-bottom: 49px;
 }
 
+td
+{
+    vertical-align: text-top;
+}
+
 @media screen and (max-width: 1200px)
 {
     .specification

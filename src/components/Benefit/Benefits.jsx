@@ -30,15 +30,15 @@ const Benefits = () => {
                 <>
                     <div className={cl.benefit__item}>
                         <img className={cl.benefit__item_img} src={shieldPlusIcon} alt="" />
-                        <p className={cl.benefit__item_title}> Бесконтактное сканирование </p>
+                        <p className={cl.benefit__item_title}> Бесконтактное <br /> сканирование </p>
                     </div>
                     <div className={cl.benefit__item}>
                         <img className={cl.benefit__item_img} src={speedIcon} alt="" />
-                        <p className={cl.benefit__item_title + ' ' + cl.benefit__item_title_2}> Скорость 0.3 сек </p>
+                        <p className={cl.benefit__item_title + ' ' + cl.benefit__item_title_2}> Скорость <br /> 0.3 сек </p>
                     </div>
                     <div className={cl.benefit__item}>
                         <img className={cl.benefit__item_img} src={crosshairIcon} alt="" />
-                        <p className={cl.benefit__item_title}> Точность 99.9% </p>
+                        <p className={cl.benefit__item_title}> Точность <br /> 99.9% </p>
                     </div>
                     <div className={cl.benefit__item}>
                         <img className={cl.benefit__item_img} src={passwordIcon} alt="" />

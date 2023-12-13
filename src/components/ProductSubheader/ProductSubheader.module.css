@@ -29,11 +29,11 @@
 }
 
 
-@media screen and (max-width: 1200px)
+@media screen and (max-width: 1199px)
 {
     .subheader
     {
-        padding: 14px 100px;
+        padding: 14px 70px;
     }
 }
 
