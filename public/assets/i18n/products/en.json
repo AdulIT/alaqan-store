@@ -3,20 +3,20 @@
         {
             "name": "TS2000 Pro Turnstile",
             "price": "from {{price}}",
-            "mainTitle": "Safe classics",
+            "mainTitle": "Safe classic",
             "mainTitleSmallMobile": "Safe \n classic",
-            "mainText": "Turnstile tripod Alaqan TS2000 Pro \n classic for office buildings",
-            "mainTextSmallMobile": "Turnstile tripod Alaqan \n TS2000 Pro classic \n for office buildings"
+            "mainText": "Turnstile Alaqan TS2000 Pro \n is a classic for an office building",
+            "mainTextSmallMobile": "Turnstile Alaqan \n TS2000 Pro is a classic \n for an office building"
         },
         {
             "name": "Turnstile TS1000M Pro",
             "price": "from {{price}}",
-            "mainTitle": "Profitable and practical",
-            "mainTitleSmallMobile": "Profitable \n and practical",
-            "mainTitleMicroMobile": "Profitable \n and\n practical",
-            "mainText": "Turnstile tripod Alaqan TS1000M Pro \n is an economical option for office buildings",
-            "mainTextSmallMobile": "Turnstile tripod Alaqan \n TS1000M Pro is an \n economical option \n for office buildings",
-            "mainTextMicroMobile": "Turnstile tripod Alaqan \n TS1000M Pro is an \n economical option \n for office buildings"
+            "mainTitle": "Budget and practical",
+            "mainTitleSmallMobile": "Budget \n and practical",
+            "mainTitleMicroMobile": "Budget \n and\n practical",
+            "mainText": "Turnstile Alaqan TS1000M Pro is a \n cost-effective choice for an office building",
+            "mainTextSmallMobile": "Turnstile Alaqan \n TS1000M Pro is a \n cost-effective choice \n for an office building",
+            "mainTextMicroMobile": "Turnstile Alaqan \n TS1000M Pro \n is a cost-effective choice \n for an office building"
         },
         {
             "name": "Turnstile FBL700",
@@ -24,9 +24,9 @@
             "mainTitle": "Comfortable and efficient",
             "mainTitleMobile": "Comfortable \n and efficient",
             "mainTitleMicroMobile": "Comfortable \n and \n efficient",
-            "mainText": "Automated turnstile Alaqan FBL700 \n is ideal for office buildings \n with a large number of employees",
-            "mainTextSmallMobile": "Automated turnstile \n Alaqan FBL700 is ideal \n for office buildings \n with a large \n number of employees",
-            "mainTextMicroMobile": "Automated turnstile \n Alaqan FBL700 is ideal \n for office buildings \n with a large \n number of employees"
+            "mainText": "Automative flap barrier turnstile \n Alaqan FBL700 is an ideal choice \n for office buildings \n with a large number of employees",
+            "mainTextSmallMobile": "Automative flap barrier turnstile \n Alaqan FBL700 is an ideal choice \n for office buildings \n with a large \n number of employees",
+            "mainTextMicroMobile": "Automative flap barrier \n turnstile Alaqan FBL700 \n is an ideal choice \n for office buildings \n with a large \n number of employees"
         },
         {
             "name": "Locker Mini",
