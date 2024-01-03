@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { useLocation } from 'react-router-dom';
 
@@ -19,6 +20,7 @@ import closeIcon from '../../assets/icons/productFeatures/closeGreen.svg'
 const Specificity = () => {
     const [showFront, setShowFront] = useState(true)
     const location = useLocation()
+    const { t } = useTranslation(["specificity"]);
 
     const {isMobile, isSmallMobile, isMicroMobile} = useMatchMedia();
 
@@ -82,7 +84,7 @@ const Specificity = () => {
 
     return (
         <div className={cl.specificity}>
-            <h3 className={cl.title}> Особенности</h3>
+            <h3 className={cl.title}>{t("title")}</h3>
 
             <CSSTransition
                 in={showFront}
@@ -99,10 +101,10 @@ const Specificity = () => {
                         <img style={imgStyles} src={turnstileImgs[location.pathname]?.img} alt="turnstile" />
                         <div>
                             <p className={cl.text}>
-                                Как это <br /> работает?
+                                {t("cardTitle")}
                             </p>
                             <Button styles={btnStyles} className={cl.front_btn__learn_more}>
-                                Узнать больше
+                                {t("cardBtn")}
                                 <img src={arrowRightIcon} alt="arrow-right-icon" />
                             </Button>
                         </div>
@@ -110,34 +112,30 @@ const Specificity = () => {
 
                     <div className={cl.back}>
                         <div className={cl.back_info}>
-                            <h3 className={cl.back_title}> Сканирование </h3>
+                            <h3 className={cl.back_title}> {t("backTitle1")} </h3>
                             <p className={cl.back_text}>
-                                Сканируйте уникальный <br />
-                                рисунок вен ладони.
+                                {t("backText1")}
                             </p>
                         </div>
 
                         <div className={cl.back_info}>
-                            <h3 className={cl.back_title}> Шифрование </h3>
+                            <h3 className={cl.back_title}> {t("backTitle2")} </h3>
                             <p className={cl.back_text}>
-                                Рисунок вен ладони <br />
-                                зашифрован в цифровой код.
+                                {t("backText2")}
                             </p>
                         </div>
 
                         <div className={cl.back_info}>
-                            <h3 className={cl.back_title}> Поиск </h3>
+                            <h3 className={cl.back_title}> {t("backTitle3")} </h3>
                             <p className={cl.back_text}>
-                                Код сравнивается в базе зарегистрированных <br />
-                                пользователей.
+                                {t("backText3")}
                             </p>
                         </div>
 
                         <div className={cl.back_info}>
-                            <h3 className={cl.back_title}> Доступ </h3>
+                            <h3 className={cl.back_title}> {t("backTitle4")} </h3>
                             <p className={cl.back_text}>
-                                Уникальный код найден – <br />
-                                доступ подтвержден.
+                                {t("backText4")}
                             </p>
                         </div>
                         <img className={cl.close_btn} src={closeIcon} alt="close-green-icon" />
