@@ -1,0 +1,42 @@
+{
+    "title": "Advantages",
+    "featuresTurnstile": [
+        {
+            "frontTitle": "Quality of materials",
+            "backTitle": "Housing made of stainless steel",
+            "backText": "SUS304 stainless steel was used to design the durable housing."
+        },
+        {
+            "frontTitle": "Response speed",
+            "backTitle": "Response speed",
+            "backText": "Speed of throughput ~30/min."
+        },
+        {
+            "frontTitle": "Emergency system",
+            "backTitle": "Emergency system",
+            "backText": "Panic hardware. During emergency situation and power outages, the turnstile bars are lowered to allow people to leave the area quickly and safely."
+        }
+    ],
+    "featuresScaner": [
+        {
+            "frontTitle": "Contactless scanning",
+            "backTitle": "Health care",
+            "backText": "Alaqan does not require surface contact. Technology prevents the spread of diseases."
+        },
+        {
+            "frontTitle": "Reading speed",
+            "backTitle": "Reading speed",
+            "backText": "Scanning of the veins of the palm is fast - in 0.3 seconds."
+        },
+        {
+            "frontTitle": "Scanning accuracy",
+            "backTitle": "Identification accuracy",
+            "backText": "The probability that you will be mistaken for another person is ~0.0001%. The probability of recognition error is ~0.068%."
+        },
+        {
+            "frontTitle": "Data security",
+            "backTitle": "Encryption",
+            "backText": "Biometrics are not stored anywhere. The vein pattern is encrypted into a code without the risk of data leakage."
+        }
+    ]
+}

@@ -1,14 +1,17 @@
+import { useTranslation } from 'react-i18next';
+
 import {FlippableCard, FlippableCardHorizontal} from '../FlippableCard/FlippableCard';
 
-import cl from './ProductFeatures.module.css'
-import glowImg from '../../assets/img/productFeatures/glow.png'
-import plusSignIconBlack from '../../assets/icons/productFeatures/plusSignIconBlack.svg'
+import cl from './ProductFeatures.module.css';
+import glowImg from '../../assets/img/productFeatures/glow.png';
+import plusSignIconBlack from '../../assets/icons/productFeatures/plusSignIconBlack.svg';
 
-import { useMatchMedia } from '../../hooks/useMatchMedia'
+import { useMatchMedia } from '../../hooks/useMatchMedia';
 
 import {productFeatures, scanerProductFeatures} from '../../data/productFeatures';
 
 const ProductFeatures = () => {
+    const { t } = useTranslation(["productFeatures"]);
     // const [showfront, setshowfront] = useState(true)
     const {isMediumTablet} = useMatchMedia();
 
@@ -64,17 +67,12 @@ const ProductFeatures = () => {
             return (
                 <FlippableCard
                     key={i}
-                    // showfront={showfront}
-                    frontTitle={item.frontTitle}
-                    backTitle={item.backTitle}
-                    backText={item.backText}
+                    frontTitle={t(`featuresTurnstile.${i}.frontTitle`)}
+                    backTitle={t(`featuresTurnstile.${i}.backTitle`)}
+                    backText={t(`featuresTurnstile.${i}.backText`)}
                 >
                     <img src={item.img} alt="shield-img" style={imgStyles[i]} />
                     {i === 1 ? <img src={glowImg} alt="glow-img" style={glowImgStyles} /> : ''}
-
-                    {/* <FrontCard key={i} frontTitle={item.frontTitle}> */}
-                    {/* </FrontCard>
-                    <BackCard backTitle={item.backTitle} backText={item.backText} /> */}
                 </FlippableCard>
             )
         } else {
@@ -83,17 +81,14 @@ const ProductFeatures = () => {
                 return (
                     <FlippableCard
                         key={i}
-                        // showfront={showfront}
-                        frontTitle={item.frontTitle}
-                        backTitle={item.backTitle}
-                        backText={item.backText}
+                        frontTitle={t(`featuresTurnstile.${i}.frontTitle`)}
+                        backTitle={t(`featuresTurnstile.${i}.backTitle`)}
+                        backText={t(`featuresTurnstile.${i}.backText`)}
+                        // backTitle={item.backTitle}
+                        // backText={item.backText}
                         style={i === 2 ? lastItemStyles : {}}>
                         <img src={item.img} alt="shield-img" style={imgStyles[i]} />
                         {i === 1 ? <img src={glowImg} alt="glow-img" style={glowImgStyles} /> : ''}
-    
-                        {/* <FrontCard key={i} frontTitle={item.frontTitle}> */}
-                        {/* </FrontCard>
-                        <BackCard backTitle={item.backTitle} backText={item.backText} /> */}
                     </FlippableCard>
                 )
             } else
@@ -101,16 +96,11 @@ const ProductFeatures = () => {
                 return (
                     <FlippableCardHorizontal
                         key={i}
-                        // showfront={showfront}
-                        frontTitle={item.frontTitle}
-                        backTitle={item.backTitle}
-                        backText={item.backText}
+                        frontTitle={t(`featuresTurnstile.${i}.frontTitle`)}
+                        backTitle={t(`featuresTurnstile.${i}.backTitle`)}
+                        backText={t(`featuresTurnstile.${i}.backText`)}
                         style={i === 2 ? lastItemStyles : {}}>
                         <img src={item.img} alt="shield-img" style={imgStyles[i]} />
-                        {/* <img src={glowImg} alt="glow-img" style={glowImgStyles} /> */}
-                        {/* <FrontCard key={i} frontTitle={item.frontTitle}> */}
-                        {/* </FrontCard>
-                        <BackCard backTitle={item.backTitle} backText={item.backText} /> */}
                     </FlippableCardHorizontal>
                 )
             }
@@ -123,9 +113,9 @@ const ProductFeatures = () => {
         return (
             <FlippableCard
                 key={i}
-                frontTitle={item.frontTitle}
-                backTitle={item.backTitle}
-                backText={item.backText}
+                frontTitle={t(`featuresScaner.${i}.frontTitle`)}
+                backTitle={t(`featuresScaner.${i}.backTitle`)}
+                backText={t(`featuresScaner.${i}.backText`)}
             >
                 <img src={item.img} alt="shield-img" style={imgStyles[0]} />
                 {i === 1 ? <img src={glowImg} alt="glow-img" style={glowImgStyles} /> : ''}
@@ -146,7 +136,7 @@ const ProductFeatures = () => {
     return (
         <section className={cl.features}>
             {/* <h2 className={cl.title}> Узнайте... </h2> */}
-            <h2 className={cl.title}> Преимущества </h2>
+            <h2 className={cl.title}> {t("title")} </h2>
             <div className={cl.features_wrapper} style={featuresWrapperStyles}>
                 { location.pathname === '/product/10' ? scanerProductFeaturesItem : productFeaturesItem }
             </div>
