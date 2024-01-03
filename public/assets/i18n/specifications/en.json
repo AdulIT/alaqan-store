@@ -1,0 +1,247 @@
+{
+    "title": "Specification",
+    "basicTable": "Main",
+    "additionalTable": "Additional",
+    "commonTable": "Common",
+    "downloadBtn": "Download PDF",
+    "columnBasicScaner": [
+        {
+            "heading": "Country",
+            "/product/10": "Alaqan"
+        },
+        {
+            "heading": "Country of origin",
+            "/product/10": "China"
+        },
+        {
+            "heading": "Device Type",
+            "/product/10": "Biometric Scanner"
+        },
+        {
+            "heading": "Type of installation",
+            "/product/10": "Wall mounted"
+        }
+    ],
+    "columnAdditionalScaner": [
+        {
+            "heading": "Device management",
+            "/product/10": "Touch keyboard, TFT screen"
+        },
+        {
+            "heading": "Display",
+            "/product/10": "2.4-inch color (TFT)"
+        },
+        {
+            "heading": "Indication",
+            "/product/10": "Light"
+        },
+        {
+            "heading": "Encryption Standard",
+            "/product/10": "AES-128"
+        }
+    ],
+    "columnCommonScaner": [
+        {
+            "heading": "Power supply",
+            "/product/10": "12V, 3A"
+        },
+        {
+            "heading": "Network communication",
+            "/product/10": "Wi-Fi, TCP/IP"
+        },
+        {
+            "heading": "Connecting to the emergency system",
+            "/product/10": "Yes"
+        },
+        {
+            "heading": "Recognition speed",
+            "/product/10": "<0.4 sec."
+        },
+        {
+            "heading": "Palm recognition distance range",
+            "/product/10": "18-35 cm"
+        },
+        {
+            "heading": "Minimum operating temperature",
+            "/product/10": "0 degrees."
+        },
+        {
+            "heading": "Maximum operating temperature",
+            "/product/10": "40 degrees."
+        },
+        {
+            "heading": "Length",
+            "/product/10": "159.8 mm"
+        },
+        {
+            "heading": "Width",
+            "/product/10": "80.7 mm"
+        },
+        {
+            "heading": "Height",
+            "/product/10": "41 mm"
+        }
+    ],
+    "columnBasic": [
+        {
+            "heading": "Country",
+            "/product/1": "ZKTeco",
+            "/product/2": "ZKTeco",
+            "/product/3": "ZKTeco"
+        },
+        {
+            "heading": "Country of origin",
+            "/product/1": "China",
+            "/product/2": "China",
+            "/product/3": "China"
+        },
+        {
+            "heading": "Device Type",
+            "/product/1": "Tripod bedside table",
+            "/product/2": "Tripod bedside table",
+            "/product/3": "Single-lane turnstile with folding barrier"
+        },
+        {
+            "heading": "Type of installation",
+            "/product/1": "Floor",
+            "/product/2": "Floor",
+            "/product/3": "Floor"
+        },
+        {
+            "heading": "Type of drive",
+            "/product/1": "Electromechanical",
+            "/product/2": "Electromechanical",
+            "/product/3": "Electromechanical"
+        },
+        {
+            "heading": "The width of the passage",
+            "/product/1": "520 mm",
+            "/product/2": "520 mm",
+            "/product/3": "600 mm"
+        },
+        {
+            "heading": "Bandwidth",
+            "/product/1": "30 people/min",
+            "/product/2": "25 people/min",
+            "/product/3": "30 people/min"
+        }
+    ],
+    "columnAdditional": [
+        {
+            "heading": "Device management",
+            "/product/1": "Console buttons, Remote control, Remote control, PC (optional), ACS (optional)",
+            "/product/2": "Console buttons, Remote control, Remote control, PC (optional), ACS (optional)",
+            "/product/3": "Console buttons, Remote control, Remote control, PC (optional), ACS (optional)"
+        },
+        {
+            "heading": "Console with buttons in standard configuration",
+            "/product/1": "Yes",
+            "/product/2": "Yes",
+            "/product/3": "Yes"
+        },
+        {
+            "heading": "Passage sensor",
+            "/product/1": "Tripod bedside table",
+            "/product/2": "Tripod bedside table",
+            "/product/3": "Yes"
+        },
+        {
+            "heading": "Passage counter",
+            "/product/1": "Yes",
+            "/product/2": "Yes",
+            "/product/3": "Yes"
+        },
+        {
+            "heading": "Heater",
+            "/product/1": "Yes",
+            "/product/2": "Yes",
+            "/product/3": "Yes"
+        },
+        {
+            "heading": "Indication",
+            "/product/1": "Light/Sound",
+            "/product/2": "Light/Sound",
+            "/product/3": "Light/Sound"
+        },
+        {
+            "heading": "Protection of equipment from water and dust",
+            "/product/1": "IP34",
+            "/product/2": "IP34",
+            "/product/3": "IP34"
+        },
+        {
+            "heading": "Vandal-proof",
+            "/product/1": "Yes",
+            "/product/2": "Yes",
+            "/product/3": "Yes"
+        }
+    ],
+    "columnCommon": [
+        {
+            "heading": "Power supply",
+            "/product/1": "220V network",
+            "/product/2": "220V network",
+            "/product/3": "240V network"
+        },
+        {
+            "heading": "Voltage",
+            "/product/1": "220V",
+            "/product/2": "220V",
+            "/product/3": "240V"
+        },
+        {
+            "heading": "Emergency recharge",
+            "/product/1": "Yes",
+            "/product/2": "Yes",
+            "/product/3": "Yes"
+        },
+        {
+            "heading": "Surge protection in the network",
+            "/product/1": "Yes",
+            "/product/2": "Yes",
+            "/product/3": "Yes"
+        },
+        {
+            "heading": "Minimum operating temperature",
+            "/product/1": "0 degrees.",
+            "/product/2": "0 degrees.",
+            "/product/3": "0 degrees."
+        },
+        {
+            "heading": "Maximum operating temperature",
+            "/product/1": "40 degrees.",
+            "/product/2": "40 degrees.",
+            "/product/3": "40 degrees."
+        },
+        {
+            "heading": "Length",
+            "/product/1": "1110 mm",
+            "/product/2": "520 mm",
+            "/product/3": "1200 mm"
+        },
+        {
+            "heading": "Width",
+            "/product/1": "260 mm",
+            "/product/2": "310 mm",
+            "/product/3": "300 mm"
+        },
+        {
+            "heading": "Height",
+            "/product/1": "980 mm",
+            "/product/2": "1010 mm",
+            "/product/3": "980 mm"
+        },
+        {
+            "heading": "Gross/Net weight",
+            "/product/1": "46 kg",
+            "/product/2": "50 kg",
+            "/product/3": "90 kg/80 kg"
+        },
+        {
+            "heading": "The warranty period",
+            "/product/1": "12 months",
+            "/product/2": "12 months",
+            "/product/3": "12 months"
+        }
+    ]
+}

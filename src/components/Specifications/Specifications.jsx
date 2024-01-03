@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Element } from 'react-scroll';
 
 import Table from '../UI/table/Table'
@@ -16,41 +17,37 @@ import { useLocation } from 'react-router-dom'
 
 const Specifications = () => {
     const location = useLocation()
-    // console.log(location);
     const {isSmallMobile, isMicroMobile} = useMatchMedia();
+    const { t } = useTranslation(["specifications"]);
 
     const rowsBasic = location.pathname === '/product/10'
         ?
         columnBasicScaner.map((item, i) => {
-            return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
+            return <TableRow key={i} heading={t(`columnBasicScaner.${i}.heading`)} value={t(`columnBasicScaner.${i}.${location.pathname}`)} />
         })
         :
         columnBasic.map((item, i) => {
-            return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
+            return <TableRow key={i} heading={t(`columnBasic.${i}.heading`)} value={t(`columnBasic.${i}.${location.pathname}`)} />
         })
-
-    // const rowsBasic = columnBasic.map((item, i) => {
-    //     return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
-    // })
 
     const rowsAdditional = location.pathname === '/product/10'
         ?
         columnAdditionalScaner.map((item, i) => {
-            return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
+            return <TableRow key={i} heading={t(`columnAdditionalScaner.${i}.heading`)} value={t(`columnAdditionalScaner.${i}.${location.pathname}`)} />
         })
         :
         columnAdditional.map((item, i) => {
-            return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
+            return <TableRow key={i} heading={t(`columnAdditional.${i}.heading`)} value={t(`columnAdditional.${i}.${location.pathname}`)} />
         })
 
     const rowsCommon = location.pathname === '/product/10'
         ?
         columnCommonScaner.map((item, i) => {
-            return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
+            return <TableRow key={i} heading={t(`columnCommonScaner.${i}.heading`)} value={t(`columnCommonScaner.${i}.${location.pathname}`)} />
         })
         :
         columnCommon.map((item, i) => {
-            return <TableRow key={i} heading={item.heading} value={item[location.pathname]} />
+            return <TableRow key={i} heading={t(`columnCommon.${i}.heading`)} value={t(`columnCommon.${i}.${location.pathname}`)} />
         })
 
     const btnStyles = {
@@ -63,16 +60,16 @@ const Specifications = () => {
 
     return (
         <Element name='specification' id='specification' className={cl.specification}>
-            <h2 className={cl.title}> Спецификация </h2>
+            <h2 className={cl.title}> {t("title")} </h2>
 
             <div className={cl.wrapper}>
-                <h3 className={cl.table_title}>Основные</h3>
+                <h3 className={cl.table_title}>{t("basicTable")}</h3>
                 <Table>{rowsBasic}</Table>
 
-                <h3 className={cl.table_title}>Дополнительные</h3>
+                <h3 className={cl.table_title}>{t("additionalTable")}</h3>
                 <Table>{rowsAdditional}</Table>
 
-                <h3 className={cl.table_title}>Общие</h3>
+                <h3 className={cl.table_title}>{t("commonTable")}</h3>
                 <Table>{rowsCommon}</Table>
 
                 <Button styles={btnStyles} className={cl.btn}>
@@ -85,7 +82,7 @@ const Specifications = () => {
                     >
                         {' '}
                         {
-                            isSmallMobile ? ' ' : 'Скачать PDF'
+                            isSmallMobile ? ' ' : t("downloadBtn")
                         }
                     </a>
                 </Button>
