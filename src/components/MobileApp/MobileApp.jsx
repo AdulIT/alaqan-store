@@ -4,11 +4,15 @@ import { useTranslation } from 'react-i18next'
 // import Button from '../UI/button/Button'
 // import { useMatchMedia } from '../../hooks/useMatchMedia'
 
-import iphoneMockup from '../../assets/img/mobileApp/iPhone-ru.png'
-import mobileiPhoneMockup from '../../assets/img/mobileApp/mobileiPhone-ru.png'
+import iphoneMockupRU from '../../assets/img/mobileApp/iPhone-ru.png'
+import iphoneMockupEN from '../../assets/img/mobileApp/iPhone.png'
+import mobileiPhoneMockupRU from '../../assets/img/mobileApp/mobileiPhone-ru.png'
+import mobileiPhoneMockupEN from '../../assets/img/mobileApp/mobileiPhone.png'
 
 const MobileApp = () => {
     const { t } = useTranslation("mobileApp")
+
+    console.log(localStorage.getItem('i18nextLng'));
 
     // const {isMobile} = useMatchMedia();
 
@@ -24,10 +28,17 @@ const MobileApp = () => {
     //     backgroundColor: 'transparent',
     // }
 
+    const images = {
+        en: iphoneMockupEN,
+        enMobile: mobileiPhoneMockupEN,
+        ru: iphoneMockupRU,
+        ruMobile: mobileiPhoneMockupRU
+    }
+
     return (
         <section className={cl.mobileapp} id="mobileapp">
-            <img className={cl.mobileapp__img} src={iphoneMockup} alt="iphone-mockup" />
-            <img className={cl.mobileapp__img_mobile} src={mobileiPhoneMockup} alt="iphone-mockup" />
+            <img className={cl.mobileapp__img} src={images[localStorage.getItem('i18nextLng')]} alt="iphone-mockup" />
+            <img className={cl.mobileapp__img_mobile} src={images[localStorage.getItem('i18nextLng')+'Mobile']} alt="iphone-mockup" />
             <div className={cl.mobileapp__text}>
                 <h3 className={cl.mobileapp__text_title}>
                     {t("mobileappTitle")}
