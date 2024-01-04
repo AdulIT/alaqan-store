@@ -20,9 +20,6 @@
     min-height: 520px;
     border-radius: 30px;
     background: #FFF;
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
     cursor: pointer;
 
     position: relative;
@@ -62,6 +59,7 @@
     line-height: 120%;
     letter-spacing: -2.56px;
     margin-bottom: 40px;
+    white-space: pre-line;
 }
 
 .back
@@ -89,6 +87,7 @@
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 140%;
+    white-space: pre-line;
 }
 
 .close_btn

@@ -1,13 +1,13 @@
 {
     "title": "Specificity",
-    "cardTitle": "How does \n it work?",
+    "cardTitle": "How does it work?",
     "cardBtn": "Learn more",
-    "backTitle1": "Scanning",
-    "backText1": "Scan the unique pattern of \n the veins of the palm.",
+    "backTitle1": "Scan",
+    "backText1": "Scan the unique pattern \n of your palm veins.",
     "backTitle2": "Encryption",
-    "backText2": "The pattern of the veins of the palm \n is encrypted into a digital code.",
+    "backText2": "The pattern of the veins \n is encrypted into a digital code.",
     "backTitle3": "Search",
-    "backText3": "The code is compared in the database of registered \n users.",
+    "backText3": "The code is compared \n in the registered user database.",
     "backTitle4": "Access",
-    "backText4": "A unique code has been found – \n access has been confirmed."
+    "backText4": "The unique code is found – \n access confirmed."
 }
