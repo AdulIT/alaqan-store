@@ -26,7 +26,7 @@ const FlippableCard = ({ frontTitle, backTitle, backText, children, ...props }) 
                     { children }
                 </Card>
             </CSSTransition>
-        </div>
+        </div> 
     );
 };
 

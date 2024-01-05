@@ -6,13 +6,13 @@ import { useTranslation } from 'react-i18next'
 
 import iphoneMockupRU from '../../assets/img/mobileApp/iPhone-ru.png'
 import iphoneMockupEN from '../../assets/img/mobileApp/iPhone.png'
+import iphoneMockupKZ from '../../assets/img/mobileApp/iPhone-kz.png'
 import mobileiPhoneMockupRU from '../../assets/img/mobileApp/mobileiPhone-ru.png'
 import mobileiPhoneMockupEN from '../../assets/img/mobileApp/mobileiPhone.png'
+import mobileiPhoneMockupKZ from '../../assets/img/mobileApp/mobileiPhone-kz.png'
 
 const MobileApp = () => {
     const { t } = useTranslation("mobileApp")
-
-    console.log(localStorage.getItem('i18nextLng'));
 
     // const {isMobile} = useMatchMedia();
 
@@ -32,7 +32,9 @@ const MobileApp = () => {
         en: iphoneMockupEN,
         enMobile: mobileiPhoneMockupEN,
         ru: iphoneMockupRU,
-        ruMobile: mobileiPhoneMockupRU
+        ruMobile: mobileiPhoneMockupRU,
+        kz: iphoneMockupKZ,
+        kzMobile: mobileiPhoneMockupKZ,
     }
 
     return (

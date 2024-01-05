@@ -1,18 +1,18 @@
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 
 import {FlippableCard, FlippableCardHorizontal} from '../FlippableCard/FlippableCard';
+import { useMatchMedia } from '../../hooks/useMatchMedia';
 
 import cl from './ProductFeatures.module.css';
 import glowImg from '../../assets/img/productFeatures/glow.png';
 import plusSignIconBlack from '../../assets/icons/productFeatures/plusSignIconBlack.svg';
 
-import { useMatchMedia } from '../../hooks/useMatchMedia';
-
 import {productFeatures, scanerProductFeatures} from '../../data/productFeatures';
 
 const ProductFeatures = () => {
     const { t } = useTranslation(["productFeatures"]);
-    // const [showfront, setshowfront] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
     const {isMediumTablet} = useMatchMedia();
 
     const lastItemStyles =
@@ -59,11 +59,13 @@ const ProductFeatures = () => {
         transform: 'translate(-50%, -35%)',
         // zIndex: 10,
     }
+    // console.log(isOpen)
 
     const productFeaturesItem = productFeatures.map((item, i) =>
     {
         if (isMediumTablet)
         {
+            console.log(isOpen);
             return (
                 <FlippableCard
                     key={i}
@@ -84,9 +86,8 @@ const ProductFeatures = () => {
                         frontTitle={t(`featuresTurnstile.${i}.frontTitle`)}
                         backTitle={t(`featuresTurnstile.${i}.backTitle`)}
                         backText={t(`featuresTurnstile.${i}.backText`)}
-                        // backTitle={item.backTitle}
-                        // backText={item.backText}
-                        style={i === 2 ? lastItemStyles : {}}>
+                        style={i === 2 ? lastItemStyles : {}}
+                    >
                         <img src={item.img} alt="shield-img" style={imgStyles[i]} />
                         {i === 1 ? <img src={glowImg} alt="glow-img" style={glowImgStyles} /> : ''}
                     </FlippableCard>
@@ -99,7 +100,8 @@ const ProductFeatures = () => {
                         frontTitle={t(`featuresTurnstile.${i}.frontTitle`)}
                         backTitle={t(`featuresTurnstile.${i}.backTitle`)}
                         backText={t(`featuresTurnstile.${i}.backText`)}
-                        style={i === 2 ? lastItemStyles : {}}>
+                        style={i === 2 ? lastItemStyles : {}}
+                    >
                         <img src={item.img} alt="shield-img" style={imgStyles[i]} />
                     </FlippableCardHorizontal>
                 )

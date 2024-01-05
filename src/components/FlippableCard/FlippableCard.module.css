@@ -1,4 +1,4 @@
-.flippable_card
+.flippable_card, .overlay
 {
     position: relative;
     border-radius: 30px;
@@ -9,7 +9,7 @@
 
 @media screen and (max-width: 576px)
 {
-    .flippable_card
+    .flippable_card, .overlay
     {
         border-radius: 20px;
     }
