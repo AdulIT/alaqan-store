@@ -22,7 +22,7 @@ function App() {
           <div className="container">
             <FilterTabs />
           </div>
-            {/* <ContactUs /> */}
+            <ContactUs />
         </main>
           <Footer />
       </Suspense>

@@ -106,6 +106,8 @@ const Language = ({footer, mobile}) => {
     const dropdownStyles = stylesForFooter || stylesForMobile
 
     // console.log(langItem[currentLangIndex]);
+    console.log(localStorage.getItem('i18nextLng'));
+    console.log(languages[localStorage.getItem('i18nextLng')]);
 
     return (
         <div className={cl.lang_select} ref={rootRef}>
@@ -127,8 +129,7 @@ const Language = ({footer, mobile}) => {
                     </svg>
                 }
                     <p style={mobile ? {marginTop: '44px'} : {}}>
-                        { footer && mobile ? languages[localStorage.getItem('i18nextLng')] : '' }
-                        { mobile ? languages[localStorage.getItem('i18nextLng')] : '' }
+                        { footer || mobile ? languages[localStorage.getItem('i18nextLng')] : '' }
                     </p>
                 <img
                     style={mobile ? {marginTop: '44px'} : {}}
