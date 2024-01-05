@@ -15,6 +15,11 @@ const Language = ({footer, mobile}) => {
     const [currentLang, setCurrentLang] = useState('')
 
     // console.log(i18n.language);
+    const languages = {
+        en: 'English',
+        ru: 'Русский',
+        kz: 'Қазақша'
+    }
 
     useEffect(() =>
     {
@@ -33,21 +38,21 @@ const Language = ({footer, mobile}) => {
         }
     }, [isClicked])
 
-    useEffect(() =>
-    {
-        switch(localStorage.getItem('i18nextLng'))
-        {
-            case 'en':
-                setCurrentLangIndex(0)
-                break;
-            case 'kz':
-                setCurrentLangIndex(1)
-                break;
-            case 'ru':
-                setCurrentLangIndex(2)
-                break;
-        }
-    }, [i18n.changeLanguage])
+    // useEffect(() =>
+    // {
+    //     switch(localStorage.getItem('i18nextLng'))
+    //     {
+    //         case 'en':
+    //             setCurrentLangIndex(0)
+    //             break;
+    //         case 'kz':
+    //             setCurrentLangIndex(1)
+    //             break;
+    //         case 'ru':
+    //             setCurrentLangIndex(2)
+    //             break;
+    //     }
+    // }, [i18n.changeLanguage])
 
     function handleLanguageChange(langKey)
     {
@@ -122,7 +127,8 @@ const Language = ({footer, mobile}) => {
                     </svg>
                 }
                     <p style={mobile ? {marginTop: '44px'} : {}}>
-                        { currentLanguage }
+                        { footer && mobile ? languages[localStorage.getItem('i18nextLng')] : '' }
+                        { mobile ? languages[localStorage.getItem('i18nextLng')] : '' }
                     </p>
                 <img
                     style={mobile ? {marginTop: '44px'} : {}}

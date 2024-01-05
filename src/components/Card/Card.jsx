@@ -1,5 +1,3 @@
-import { CSSTransition } from 'react-transition-group';
-
 import Button from '../UI/button/Button';
 import cl from './Card.module.css'
 import './flip-transition.css'

@@ -6,13 +6,11 @@ import { useMatchMedia } from '../../hooks/useMatchMedia';
 
 import cl from './ProductFeatures.module.css';
 import glowImg from '../../assets/img/productFeatures/glow.png';
-import plusSignIconBlack from '../../assets/icons/productFeatures/plusSignIconBlack.svg';
 
 import {productFeatures, scanerProductFeatures} from '../../data/productFeatures';
 
 const ProductFeatures = () => {
     const { t } = useTranslation(["productFeatures"]);
-    const [isOpen, setIsOpen] = useState(false)
     const {isMediumTablet} = useMatchMedia();
 
     const lastItemStyles =
@@ -65,7 +63,6 @@ const ProductFeatures = () => {
     {
         if (isMediumTablet)
         {
-            console.log(isOpen);
             return (
                 <FlippableCard
                     key={i}

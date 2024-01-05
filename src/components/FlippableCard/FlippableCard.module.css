@@ -1,6 +1,12 @@
-.flippable_card, .overlay
+.overlay
 {
-    position: relative;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+}
+.flippable_card
+{
+    /* position: relative; */
     border-radius: 30px;
     /* background: #F5F5F7; */
     perspective: 1500px;
@@ -9,7 +15,7 @@
 
 @media screen and (max-width: 576px)
 {
-    .flippable_card, .overlay
+    .flippable_card
     {
         border-radius: 20px;
     }

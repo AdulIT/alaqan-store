@@ -7,6 +7,7 @@ import cl from './FlippableCard.module.css';
 
 const FlippableCard = ({ frontTitle, backTitle, backText, children, ...props }) => {
     const [showFront, setShowFront] = useState(true)
+    const [isOverlayOpen, setOverlayOpen] = useState(false)
 
     return (
         <div className={cl.flippable_card} {...props}>
@@ -26,31 +27,34 @@ const FlippableCard = ({ frontTitle, backTitle, backText, children, ...props }) 
                     { children }
                 </Card>
             </CSSTransition>
-        </div> 
+        </div>
     );
 };
 
 const FlippableCardHorizontal = ({ frontTitle, backTitle, backText, children, ...props }) => {
     const [showFront, setShowFront] = useState(true)
+    const [isOverlayOpen, setOverlayOpen] = useState(false)
 
     return (
         <div className={cl.flippable_card} {...props}>
-            <CSSTransition
-                in={showFront}
-                timeout={300}
-                classNames='flip-h'
-            >
-                <CardHorizontal
-                    frontTitle={frontTitle}
-                    backTitle={backTitle}
-                    backText={backText}
-                    onClick={() => {
-                        setShowFront((prev) => !prev)
-                    }}
+            <div className={cl.overlay}>
+                <CSSTransition
+                    in={showFront}
+                    timeout={300}
+                    classNames='flip-h'
                 >
-                    { children }
-                </CardHorizontal>
-            </CSSTransition>
+                    <CardHorizontal
+                        frontTitle={frontTitle}
+                        backTitle={backTitle}
+                        backText={backText}
+                        onClick={() => {
+                            setShowFront((prev) => !prev)
+                        }}
+                    >
+                        { children }
+                    </CardHorizontal>
+                </CSSTransition>
+            </div>
         </div>
     );
 };
