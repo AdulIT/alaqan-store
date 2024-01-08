@@ -25,24 +25,54 @@ const Footer = () => {
                 <div className={cl.footer__wrapper}>
                     <div className={cl.footer__alaqan}>
                         <div className={cl.footer__logo}>
-                            <img className={cl.footer__alaqan_img} src={alaqanLogo} alt="alaqan-logo" />
-                            <img className={cl.footer__alaqan_img} src={alaqanText} alt="alaqan-logo-text" />
+                            <img
+                                className={cl.footer__alaqan_img}
+                                src={alaqanLogo}
+                                alt="alaqan-logo"
+                                loading='lazy'
+                            />
+                            <img
+                                className={cl.footer__alaqan_img}
+                                src={alaqanText}
+                                alt="alaqan-logo-text"
+                                loading='lazy'
+                            />
                         </div>
 
                         <p className={cl.footer__alaqan_info}> {t("footerAlaqanInfo")} </p>
 
                         <div className={cl.footer__alaqan_social}>
                             <a href="#">
-                                <img className={cl.footer__alaqan_social__img} src={instaLogo} alt="instagram-logo" />
+                                <img
+                                    className={cl.footer__alaqan_social__img}
+                                    src={instaLogo}
+                                    alt="instagram-logo"
+                                    loading='lazy'
+                                />
                             </a>
                             <a href="#">
-                                <img className={cl.footer__alaqan_social__img} src={youtubeLogo} alt="youtube-logo" />
+                                <img
+                                    className={cl.footer__alaqan_social__img}
+                                    src={youtubeLogo}
+                                    alt="youtube-logo"
+                                    loading='lazy'
+                                />
                             </a>
                             <a href="#">
-                                <img className={cl.footer__alaqan_social__img} src={fbLogo} alt="facebook-logo" />
+                                <img
+                                    className={cl.footer__alaqan_social__img}
+                                    src={fbLogo}
+                                    alt="facebook-logo"
+                                    loading='lazy'
+                                />
                             </a>
                             <a href="#">
-                                <img className={cl.footer__alaqan_social__img} src={inLogo} alt="linkedin-logo" />
+                                <img
+                                    className={cl.footer__alaqan_social__img}
+                                    src={inLogo}
+                                    alt="linkedin-logo"
+                                    loading='lazy'
+                                />
                             </a>
                         </div>
                     </div>

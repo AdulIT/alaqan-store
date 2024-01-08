@@ -22,7 +22,11 @@ const Modal = ({closeModal, ...props}) => {
 
             <div className={cl.modal__info}>
                 <div className={cl.modal__info_checkmark}>
-                    <img src={checkMarkIcon} alt="check-mark-icon" />
+                    <img
+                        src={checkMarkIcon}
+                        alt="check-mark-icon"
+                        loading='lazy'
+                    />
                 </div>
                 <h2 className={cl.modal__info_title}> {t("modalTitle")} </h2>
                 <p className={cl.modal__info_text}>{t("modalText")}</p>

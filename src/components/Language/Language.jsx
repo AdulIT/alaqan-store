@@ -136,6 +136,7 @@ const Language = ({footer, mobile}) => {
                     className={!isClicked ? cl.lang_arrowDownIcon : cl.lang_arrowDownIcon + ' ' + cl.rotateArrow}
                     src={arrowDownIcon}
                     alt="arrow-down-icon"
+                    loading='lazy'
                 />
             </div>
         </div>

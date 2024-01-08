@@ -39,8 +39,18 @@ const MobileApp = () => {
 
     return (
         <section className={cl.mobileapp} id="mobileapp">
-            <img className={cl.mobileapp__img} src={images[localStorage.getItem('i18nextLng')]} alt="iphone-mockup" />
-            <img className={cl.mobileapp__img_mobile} src={images[localStorage.getItem('i18nextLng')+'Mobile']} alt="iphone-mockup" />
+            <img 
+                className={cl.mobileapp__img}
+                src={images[localStorage.getItem('i18nextLng')]}
+                alt="iphone-mockup"
+                loading='lazy'    
+            />
+            <img
+                className={cl.mobileapp__img_mobile}
+                src={images[localStorage.getItem('i18nextLng')+'Mobile']}
+                alt="iphone-mockup"
+                loading='lazy'    
+            />
             <div className={cl.mobileapp__text}>
                 <h3 className={cl.mobileapp__text_title}>
                     {t("mobileappTitle")}

@@ -73,7 +73,11 @@ const Specifications = () => {
                 <Table>{rowsCommon}</Table>
 
                 <Button styles={btnStyles} className={cl.btn}>
-                    <img src={downloadIcon} alt='download-icon' />
+                    <img
+                        src={downloadIcon}
+                        alt='download-icon'
+                        loading='lazy'
+                    />
                     <a
                         className={cl.download_link}
                         href={specificationFile}

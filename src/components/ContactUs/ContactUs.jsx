@@ -81,7 +81,12 @@ const ContactUs = () => {
                         </form>
                     </div>
 
-                    <img className={cl.contact__img} src={contactImg} alt="contact-img" />
+                    <img
+                        className={cl.contact__img}
+                        src={contactImg}
+                        alt="contact-img"
+                        loading='lazy'
+                    />
                 </div>
 
                 <div className={cl.contact__line}></div>

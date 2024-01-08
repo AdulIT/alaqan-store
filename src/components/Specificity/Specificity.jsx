@@ -98,14 +98,23 @@ const Specificity = () => {
                     }}
                 >
                     <div className={cl.front} style={turnstileImgs[location.pathname]?.style}>
-                        <img style={imgStyles} src={turnstileImgs[location.pathname]?.img} alt="turnstile" />
+                        <img
+                            style={imgStyles}
+                            src={turnstileImgs[location.pathname]?.img}
+                            alt="turnstile"
+                            loading='lazy'
+                        />
                         <div>
                             <p className={cl.text}>
                                 {t("cardTitle")}
                             </p>
                             <Button styles={btnStyles} className={cl.front_btn__learn_more}>
                                 {t("cardBtn")}
-                                <img src={arrowRightIcon} alt="arrow-right-icon" />
+                                <img
+                                    src={arrowRightIcon}
+                                    alt="arrow-right-icon"
+                                    loading='lazy'
+                                />
                             </Button>
                         </div>
                     </div>
@@ -138,7 +147,12 @@ const Specificity = () => {
                                 {t("backText4")}
                             </p>
                         </div>
-                        <img className={cl.close_btn} src={closeIcon} alt="close-green-icon" />
+                        <img
+                            className={cl.close_btn}
+                            src={closeIcon}
+                            alt="close-green-icon"
+                            loading='lazy'
+                        />
                     </div>
                 </div>
             </CSSTransition>

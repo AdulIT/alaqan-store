@@ -115,7 +115,13 @@ const ProductSubheader = ({ name, ...props }) => {
             <div className={cl.subheader_btns} style={subheaderBtnsStyles}>
                 <Button styles={specificationBtnStyles} onClick={handleClick}>
                     {
-                        isMicroMobile ? '' : <img src={fileIcon} alt='file-icon' />
+                        isMicroMobile ? ''
+                        :
+                        <img
+                            src={fileIcon}
+                            alt='file-icon'
+                            loading='lazy'
+                        />
                     }
                     {t("tabs:specificationBtn")}
                 </Button>
@@ -123,7 +129,13 @@ const ProductSubheader = ({ name, ...props }) => {
                 <Button styles={constructorBtnStyles} className={cl.subheader_btn__constructor}>
                     {t("tabs:constructorBtn")}
                     {
-                        isMicroMobile ? '' : <img src={arrowRightIcon} alt='arrow-right-icon' />
+                        isMicroMobile ? ''
+                        :
+                        <img
+                            src={arrowRightIcon}
+                            alt='arrow-right-icon'
+                            loading='lazy'
+                        />
                     }
                 </Button>
             </div>

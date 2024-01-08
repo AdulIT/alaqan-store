@@ -72,16 +72,30 @@ const Header = ({...props}) => {
     return (
         <header className={cl.header} ref={headerRef} {...props}>
                 <div className={cl.header__left}>
-                    <img className={cl.header_logo} src={alaqanLogo} alt="alaqan-logo" />
+                    <img
+                        className={cl.header_logo}
+                        src={alaqanLogo}
+                        alt="alaqan-logo"
+                        loading='lazy'
+                    />
                     <Navbar className={cl.header__nav} />
                 </div>
 
                 <div className={cl.header__left_mobile}>
                     <Hamburger className={cl.header__hamburger} onClick={handleClick} isActive={hamburgerActive} />
-                    <img className={cl.header_logo} src={alaqanLogo} alt="alaqan-logo" />
+                    <img
+                        className={cl.header_logo}
+                        src={alaqanLogo}
+                        alt="alaqan-logo"
+                        loading='lazy'
+                    />
                     <HashLink to={'#contactus'}>
                         <Button styles={btnStylesMobile} className={cl.header__btn_mobile}>
-                            <img src={paperPlaneTilt} alt="paper-plane-tilt" />
+                            <img
+                                src={paperPlaneTilt}
+                                alt="paper-plane-tilt"
+                                loading='lazy'
+                            />
                         </Button>
                     </HashLink>
                     <NavbarMobile hamburgerState={hamburgerActive} />

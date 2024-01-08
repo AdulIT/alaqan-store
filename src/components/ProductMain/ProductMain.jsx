@@ -54,7 +54,11 @@ const ProductMain = () => {
                 {turnstileNames[location.pathname]?.text}
             </p>
 
-            <img src={turnstileNames[location.pathname]?.img} alt="turnstileImg" />
+            <img
+                src={turnstileNames[location.pathname]?.img}
+                alt="turnstileImg"
+                loading='lazy'
+            />
         </section>
     );
 };

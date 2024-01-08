@@ -29,34 +29,69 @@ const Benefits = () => {
                 ?
                 <>
                     <div className={cl.benefit__item}>
-                        <img className={cl.benefit__item_img} src={shieldPlusIcon} alt="" />
+                        <img
+                            className={cl.benefit__item_img}
+                            src={shieldPlusIcon}
+                            alt=""
+                            loading='lazy'
+                        />
                         <p className={cl.benefit__item_title}> {t("benefitTerminal1")} </p>
                     </div>
                     <div className={cl.benefit__item}>
-                        <img className={cl.benefit__item_img} src={speedIcon} alt="" />
+                        <img
+                            className={cl.benefit__item_img}
+                            src={speedIcon}
+                            alt=""
+                            loading='lazy'
+                        />
                         <p className={cl.benefit__item_title + ' ' + cl.benefit__item_title_2}> {t("benefitTerminal2")} </p>
                     </div>
                     <div className={cl.benefit__item}>
-                        <img className={cl.benefit__item_img} src={crosshairIcon} alt="" />
+                        <img
+                            className={cl.benefit__item_img}
+                            src={crosshairIcon}
+                            alt=""
+                            loading='lazy'    
+                        />
                         <p className={cl.benefit__item_title}> {t("benefitTerminal3")} </p>
                     </div>
                     <div className={cl.benefit__item}>
-                        <img className={cl.benefit__item_img} src={passwordIcon} alt="" />
+                        <img
+                            className={cl.benefit__item_img}
+                            src={passwordIcon}
+                            alt=""
+                            loading='lazy'
+                        />
                         <p className={cl.benefit__item_title}> {t("benefitTerminal4")} </p>
                     </div>
                 </>
                 :
                 <>
                     <div className={cl.benefit__item}>
-                        <img className={cl.benefit__item_img} src={encryptionIcon} alt="" />
+                        <img
+                            className={cl.benefit__item_img}
+                            src={encryptionIcon}
+                            alt=""
+                            loading='lazy'
+                        />
                         <p className={cl.benefit__item_title}> {t("benefitTurnstile1")} </p>
                     </div>
                     <div className={cl.benefit__item}>
-                        <img className={cl.benefit__item_img} src={speedIcon} alt="" />
+                        <img
+                            className={cl.benefit__item_img}
+                            src={speedIcon}
+                            alt=""
+                            loading='lazy'
+                        />
                         <p className={cl.benefit__item_title + ' ' + cl.benefit__item_title_2}> {t("benefitTurnstile2")} </p>
                     </div>
                     <div className={cl.benefit__item}>
-                        <img className={cl.benefit__item_img} src={smileyIcon} alt="" />
+                        <img
+                            className={cl.benefit__item_img}
+                            src={smileyIcon}
+                            alt=""
+                            loading='lazy'
+                        />
                         <p className={cl.benefit__item_title}> {t("benefitTurnstile3")} </p>
                     </div>
                 </>

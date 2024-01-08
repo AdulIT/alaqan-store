@@ -159,6 +159,7 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
                         src={productImg}
                         alt={imgAlt}
                         style={tag ? hitProductImgStyles : productImgStyles}
+                        loading='lazy'
                     />
                 </picture>
 
@@ -209,7 +210,12 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
                                     onClick={openProductCard}
                                 >
                                     <Link to={`/product/${id}`} style={tag ? hitBtnTextStyle : btnTextStyle}>{t("tabs:btn")}</Link>
-                                    <img style={tag ? hitProductBtnIcon : productBtnIcon} src={arrowRightIcon} alt="arrow-right-icon" />    
+                                    <img
+                                        style={tag ? hitProductBtnIcon : productBtnIcon}
+                                        src={arrowRightIcon}
+                                        alt="arrow-right-icon"
+                                        loading='lazy'
+                                    />    
                                 </Button>
                             </>
                         }

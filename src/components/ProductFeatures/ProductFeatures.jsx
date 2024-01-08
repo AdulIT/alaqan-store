@@ -70,8 +70,18 @@ const ProductFeatures = () => {
                     backTitle={t(`featuresTurnstile.${i}.backTitle`)}
                     backText={t(`featuresTurnstile.${i}.backText`)}
                 >
-                    <img src={item.img} alt="shield-img" style={imgStyles[i]} />
-                    {i === 1 ? <img src={glowImg} alt="glow-img" style={glowImgStyles} /> : ''}
+                    <img
+                        src={item.img}
+                        alt="shield-img"
+                        style={imgStyles[i]}
+                        loading='lazy'
+                    />
+                    {i === 1 ? <img 
+                        src={glowImg}
+                        alt="glow-img"
+                        style={glowImgStyles}
+                        loading='lazy'
+                    /> : ''}
                 </FlippableCard>
             )
         } else {
@@ -85,8 +95,18 @@ const ProductFeatures = () => {
                         backText={t(`featuresTurnstile.${i}.backText`)}
                         style={i === 2 ? lastItemStyles : {}}
                     >
-                        <img src={item.img} alt="shield-img" style={imgStyles[i]} />
-                        {i === 1 ? <img src={glowImg} alt="glow-img" style={glowImgStyles} /> : ''}
+                        <img
+                            src={item.img}
+                            alt="shield-img"
+                            style={imgStyles[i]}
+                            loading='lazy'
+                        />
+                        {i === 1 ? <img
+                            src={glowImg}
+                            alt="glow-img"
+                            style={glowImgStyles}
+                            loading='lazy'
+                        /> : ''}
                     </FlippableCard>
                 )
             } else
@@ -99,7 +119,12 @@ const ProductFeatures = () => {
                         backText={t(`featuresTurnstile.${i}.backText`)}
                         style={i === 2 ? lastItemStyles : {}}
                     >
-                        <img src={item.img} alt="shield-img" style={imgStyles[i]} />
+                        <img
+                            src={item.img}
+                            alt="shield-img"
+                            style={imgStyles[i]}
+                            loading='lazy'
+                        />
                     </FlippableCardHorizontal>
                 )
             }
@@ -116,8 +141,18 @@ const ProductFeatures = () => {
                 backTitle={t(`featuresScaner.${i}.backTitle`)}
                 backText={t(`featuresScaner.${i}.backText`)}
             >
-                <img src={item.img} alt="shield-img" style={imgStyles[0]} />
-                {i === 1 ? <img src={glowImg} alt="glow-img" style={glowImgStyles} /> : ''}
+                <img
+                    src={item.img}
+                    alt="shield-img"
+                    style={imgStyles[0]}
+                    loading='lazy'
+                />
+                {i === 1 ? <img
+                    src={glowImg}
+                    alt="glow-img"
+                    style={glowImgStyles}
+                    loading='lazy'
+                /> : ''}
             </FlippableCard>
         )
     })

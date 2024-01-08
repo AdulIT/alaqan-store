@@ -21,7 +21,12 @@ const Card = ({frontTitle, backTitle, backText, onClick, children, ...props}) =>
                 <h3 className={cl.front_title}> {frontTitle} </h3>
                     {children}
                 <Button styles={btnStyles}>
-                    <img className={cl.btn_icon} src={plusSignIcon} alt="plus-sign-icon" />
+                    <img
+                        className={cl.btn_icon}
+                        src={plusSignIcon}
+                        alt="plus-sign-icon"
+                        loading='lazy'
+                    />
                 </Button>
             </div>
 
@@ -30,7 +35,12 @@ const Card = ({frontTitle, backTitle, backText, onClick, children, ...props}) =>
                 <p className={cl.back_text}>
                     { backText }
                 </p>
-                <img className={cl.back__btn_icon} src={closeSignIcon} alt="close-sign-icon" />
+                <img
+                    className={cl.back__btn_icon}
+                    src={closeSignIcon}
+                    alt="close-sign-icon"
+                    loading='lazy'
+                />
             </div>
         </div>
     );
@@ -50,7 +60,12 @@ const CardHorizontal = ({frontTitle, backTitle, backText, onClick, children, ...
                     {children}
                 <Button styles={btnStyles}>
                     {/* <img className={cl.btn_icon} src={plusSignIcon} alt="plus-sign-icon" /> */}
-                    <img className={cl.btn_icon} src={plusSignIconBlack} alt="plus-sign-icon" />
+                    <img
+                        className={cl.btn_icon}
+                        src={plusSignIconBlack}
+                        alt="plus-sign-icon"
+                        loading='lazy'
+                    />
                 </Button>
             </div>
 
@@ -59,7 +74,12 @@ const CardHorizontal = ({frontTitle, backTitle, backText, onClick, children, ...
                 <p className={cl.back_text}>
                     { backText }
                 </p>
-                <img className={cl.back__btn_icon} src={closeSignIcon} alt="close-sign-icon" />
+                <img
+                    className={cl.back__btn_icon}
+                    src={closeSignIcon}
+                    alt="close-sign-icon"
+                    loading='lazy'
+                />
             </div>
         </div>
     );
