@@ -16,9 +16,9 @@ import smileyIcon from '../../assets/icons/products/smiley-stroke.svg'
 
 const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) => {
     const navigate = useNavigate()
-    const location = useLocation()
+    // const location = useLocation()
 
-    const [isVisible, setIsVisible] = useState(false)
+    // const [isVisible, setIsVisible] = useState(false)
     const { t } = useTranslation(["tabs", "hitProductInfo"])
 
     const {isMicroMobile, isSmallMobile, isMobile, isMediumTablet, isTablet} = useMatchMedia();
@@ -49,7 +49,6 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
 
     const hitBtnStyle =
     {
-
         padding: isTablet ? '12px 15px 14px' : '14px',
         borderRadius: '17px',
         backgroundColor: '#1D1D1F',
@@ -63,11 +62,11 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
 
     const hitProductStyles =
     {
-        padding: isMicroMobile ? '0' : isMobile ? '0 19px 0 15px' : (isMediumTablet ? '0 39px 0 44px' : '35px 39px 39px 44px'),
+        padding: isMicroMobile || isMobile ? '0': (isMediumTablet ? '0 39px 0 44px' : '35px 39px 39px 44px'),
         gridColumn: isMediumTablet ? '1/3' : '1/4',
         display: 'grid',
         gridTemplateColumns: isMediumTablet ? '1fr 1fr' : '357px 2fr',
-        gap: isMicroMobile ? '0' : isMobile ? '40px' : (isMediumTablet ? '10px' : '84px'),
+        gap: isMicroMobile || isMobile ? '0' : (isMediumTablet ? '10px' : '84px'),
     }
 
     const productImgStyles =
@@ -214,7 +213,6 @@ const ProductItem = ({id, productImg, imgAlt, productName, productPrice, tag}) =
                                 </Button>
                             </>
                         }
-                        
                     </div>
                 </div>
             </div>

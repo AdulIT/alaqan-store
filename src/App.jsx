@@ -1,15 +1,13 @@
-import { Suspense } from 'react'
+import { Suspense } from 'react';
 
 import { useScrollHeader } from './hooks/useScrollHeader';
 
-import Header from './components/Header/Header'
-import HrApp from './components/HrApp/HrApp'
-import MobileApp from './components/MobileApp/MobileApp'
-import ContactUs from './components/ContactUs/ContactUs'
-import Footer from './components/Footer/Footer'
-import FilterTabs from './components/FilterTabs/FilterTabs'
+import Header from './components/Header/Header';
+import ContactUs from './components/ContactUs/ContactUs';
+import Footer from './components/Footer/Footer';
+import FilterTabs from './components/FilterTabs/FilterTabs';
 
-import './App.css'
+import './App.css';
 
 function App() {
   const {headerClosedStyles} = useScrollHeader()
@@ -27,7 +25,7 @@ function App() {
           <Footer />
       </Suspense>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

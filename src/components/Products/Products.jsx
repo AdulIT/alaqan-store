@@ -12,13 +12,12 @@ import products from '../../data/products'
 import cl from './Products.module.css'
 
 const Products = ({filter}) => {
-    const { t } = useTranslation(["products"])
+    const { t } = useTranslation(["products"]);
 
     const {isSmallMobile, isMobile, isMediumTablet} = useMatchMedia();
 
-    let productsStyle = {}
-
-    let productItem
+    let productsStyle = {};
+    let productItem;
 
     if (filter === 'all')
     {

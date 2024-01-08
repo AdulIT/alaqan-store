@@ -41,25 +41,33 @@ const Tabs = () => {
 
     return (
         <div className={cl.tabs__container}>
-            <img className={cl.tabs_decorative_up} src={tripleStickIcon} alt="triple-stick" />
+            <img className={cl.tabs_decorative_up} src={tripleStickIcon} alt="triple-stick" loading='lazy' />
             <div className={cl.tabs__content}>
                 <img
                     className={toggleState === 1 ? cl.tabs__content_img + ' ' + cl.show : cl.tabs__content_img + ' ' + cl.hide}
                     src={historyImg}
                     alt="history-page"
+                    loading='lazy'
                 />
                 <img
                     className={toggleState === 2 ? cl.tabs__content_img + ' ' + cl.show : cl.tabs__content_img + ' ' + cl.hide}
                     src={usersImg}
                     alt="users-page"
+                    loading='lazy'
                 />
                 <img
                     className={toggleState === 3 ? cl.tabs__content_img + ' ' + cl.show : cl.tabs__content_img + ' ' + cl.hide}
                     src={schedulesImg}
                     alt="schedules-page"
+                    loading='lazy'
                 />
             </div>
-            <img className={cl.tabs_decorative_down} src={curlyArrowIcon} alt="curly-arrow" />
+            <img
+                className={cl.tabs_decorative_down}
+                src={curlyArrowIcon}
+                alt="curly-arrow" 
+                loading='lazy'
+            />
 
             <div className={cl.tabs__header}>
                 <Button
