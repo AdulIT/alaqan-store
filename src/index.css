@@ -68,6 +68,33 @@ textarea
   margin: 0 auto;
 }
 
+.errorpage_main
+{
+  padding: 100px 0 50px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  background-color: #fff;
+}
+
+.errorpage_main img
+{
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+}
+
+.errorpage_main p
+{
+  color: #1D1D1F;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 76.8px */
+}
+
 @media screen and (max-width: 1202px) {
   /* .container
   {
