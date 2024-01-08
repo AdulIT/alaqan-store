@@ -1,3 +1,4 @@
+import { Dialog } from '@headlessui/react';
 import { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
@@ -7,7 +8,7 @@ import cl from './FlippableCard.module.css';
 
 const FlippableCard = ({ frontTitle, backTitle, backText, children, ...props }) => {
     const [showFront, setShowFront] = useState(true)
-    const [isOverlayOpen, setOverlayOpen] = useState(false)
+    // const [isOpen, setIsOpen] = useState(false)
 
     return (
         <div className={cl.flippable_card} {...props}>
@@ -20,8 +21,11 @@ const FlippableCard = ({ frontTitle, backTitle, backText, children, ...props }) 
                     frontTitle={frontTitle}
                     backTitle={backTitle}
                     backText={backText}
+                    // isOpen={isOpen}
+                    // setIsOpen={setIsOpen}
                     onClick={() => {
                         setShowFront((prev) => !prev)
+                        // setIsOpen(true)
                     }}
                 >
                     { children }
@@ -33,7 +37,7 @@ const FlippableCard = ({ frontTitle, backTitle, backText, children, ...props }) 
 
 const FlippableCardHorizontal = ({ frontTitle, backTitle, backText, children, ...props }) => {
     const [showFront, setShowFront] = useState(true)
-    const [isOverlayOpen, setOverlayOpen] = useState(false)
+    // const [isOpen, setIsOpen] = useState(false)
 
     return (
         <div className={cl.flippable_card} {...props}>
@@ -47,8 +51,11 @@ const FlippableCardHorizontal = ({ frontTitle, backTitle, backText, children, ..
                         frontTitle={frontTitle}
                         backTitle={backTitle}
                         backText={backText}
+                        // isOpen={isOpen}
+                        // setIsOpen={setIsOpen}
                         onClick={() => {
                             setShowFront((prev) => !prev)
+                            // setIsOpen(true)
                         }}
                     >
                         { children }

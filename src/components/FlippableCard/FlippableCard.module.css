@@ -1,12 +1,6 @@
-.overlay
-{
-    position: fixed;
-    inset: 0;
-    width: 100%;
-}
 .flippable_card
 {
-    /* position: relative; */
+    position: relative;
     border-radius: 30px;
     /* background: #F5F5F7; */
     perspective: 1500px;

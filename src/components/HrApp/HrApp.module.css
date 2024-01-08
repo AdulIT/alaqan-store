@@ -20,14 +20,20 @@
 .title_underlined
 {
     position: relative;
-    display: flex;
+    /* display: flex; */
 }
 .title_underlined::after
 {
-    content: url(../../assets/icons/prefectUnderline.svg);
+    content: url(../../assets/icons/perfectUnderline.svg);
     position: absolute;
-    top: 30px;
-    left: -20%;
+    top: 40px;
+    left: -50%;
+    transform: translateX(11%);
+}
+
+.en::after
+{
+    transform: translateX(50%);
 }
 
 @media screen and (max-width: 1202px)

@@ -1,5 +1,7 @@
 {
-    "hrappTitle": "Easy time tracking",
+    "hrappTitle": "Easy ",
+    "hrappTitleUnderlined": "time ",
+    "hrappTitleLast": " tracking",
     "hrappHistoryBtn": "History",
     "hrappUsersBtn": "Users",
     "hrappSchedulesBtn": " Schedules"

@@ -5,8 +5,10 @@ import './flip-transition.css'
 import closeSignIcon from '../../assets/icons/productFeatures/closeBlack.svg'
 import plusSignIcon from '../../assets/icons/productFeatures/plusSignIconWhite.svg'
 import plusSignIconBlack from '../../assets/icons/productFeatures/plusSignIconBlack.svg'
+import { Dialog } from '@headlessui/react';
 
 const Card = ({frontTitle, backTitle, backText, onClick, children, ...props}) => {
+
     const btnStyles =
     {
         padding: 0,

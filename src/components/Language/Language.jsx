@@ -105,9 +105,9 @@ const Language = ({footer, mobile}) => {
 
     const dropdownStyles = stylesForFooter || stylesForMobile
 
-    // console.log(langItem[currentLangIndex]);
-    console.log(localStorage.getItem('i18nextLng'));
-    console.log(languages[localStorage.getItem('i18nextLng')]);
+    // // console.log(langItem[currentLangIndex]);
+    // console.log(localStorage.getItem('i18nextLng'));
+    // console.log(languages[localStorage.getItem('i18nextLng')]);
 
     return (
         <div className={cl.lang_select} ref={rootRef}>
